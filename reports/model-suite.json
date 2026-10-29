@@ -1,0 +1,2420 @@
+{
+  "schema": 1,
+  "oracle": "UnityPy direct MeshHandler + raw typetree",
+  "unitypy": "1.25.4",
+  "oracle_sha256": "3480539648758907de79777c430ae60224f697993a1bc622636e2ee18fd173a8",
+  "scope": "仅保留固定输入、数量与源数组哈希；数值oracle在本地prepare生成，不随仓库分发游戏顶点或模型",
+  "cases": [
+    {
+      "root": "3d_costume_1001102101",
+      "closure": {
+        "bundle_count": 153,
+        "total_bytes": 6914473,
+        "edges": [
+          [
+            "3d_costume_1001102101",
+            "__kozue_expression_controller.controller"
+          ],
+          [
+            "3d_costume_1001102101",
+            "__scsch012koz_face_normal.fbx"
+          ],
+          [
+            "3d_costume_1001102101",
+            "__scsch012kozdea.fbx"
+          ],
+          [
+            "3d_costume_1001102101",
+            "__scsch012kozdea_cos_mt.mat"
+          ],
+          [
+            "3d_costume_1001102101",
+            "__scsch012kozdea_hair_mt.mat"
+          ],
+          [
+            "3d_costume_1001102101",
+            "__scsch012kozdea_indoorshoes_mt.mat"
+          ],
+          [
+            "3d_costume_1001102101",
+            "__scsch012kozdea_skin_mt.mat"
+          ],
+          [
+            "3d_costume_1001102101",
+            "__subbone_gate4_scs_base.asset"
+          ],
+          [
+            "__scsch012kozdea_skin_mt.mat",
+            "__scsch012kozdea_skin_col0.png"
+          ],
+          [
+            "__scsch012kozdea_skin_mt.mat",
+            "__scsch012kozdea_skin_col1.png"
+          ],
+          [
+            "__scsch012kozdea_skin_mt.mat",
+            "__scsch012kozdea_skin_controlmap2.png"
+          ],
+          [
+            "__scsch012kozdea_skin_mt.mat",
+            "__ubertoonshader.shader"
+          ],
+          [
+            "__ubertoonshader.shader",
+            "__t_controlmap_default.png"
+          ],
+          [
+            "__scsch012kozdea_indoorshoes_mt.mat",
+            "__scsch012kozdea_indoorshoes_col0.png"
+          ],
+          [
+            "__scsch012kozdea_indoorshoes_mt.mat",
+            "__scsch012kozdea_indoorshoes_col1.png"
+          ],
+          [
+            "__scsch012kozdea_indoorshoes_mt.mat",
+            "__ubertoonshader.shader"
+          ],
+          [
+            "__scsch012kozdea_hair_mt.mat",
+            "__scsch012kozdea_hair_col0.png"
+          ],
+          [
+            "__scsch012kozdea_hair_mt.mat",
+            "__scsch012kozdea_hair_col1.png"
+          ],
+          [
+            "__scsch012kozdea_hair_mt.mat",
+            "__scsch012kozdea_hair_controlmap2.png"
+          ],
+          [
+            "__scsch012kozdea_hair_mt.mat",
+            "__ubertoonshader.shader"
+          ],
+          [
+            "__scsch012kozdea_cos_mt.mat",
+            "__scsch012kozdea_cos_col0.png"
+          ],
+          [
+            "__scsch012kozdea_cos_mt.mat",
+            "__scsch012kozdea_cos_col1.png"
+          ],
+          [
+            "__scsch012kozdea_cos_mt.mat",
+            "__scsch012kozdea_cos_controlmap2.png"
+          ],
+          [
+            "__scsch012kozdea_cos_mt.mat",
+            "__ubertoonshader.shader"
+          ],
+          [
+            "__scsch012kozdea.fbx",
+            "__scsch012kozdea_cos_mt.mat"
+          ],
+          [
+            "__scsch012kozdea.fbx",
+            "__scsch012kozdea_hair_mt.mat"
+          ],
+          [
+            "__scsch012kozdea.fbx",
+            "__scsch012kozdea_indoorshoes_mt.mat"
+          ],
+          [
+            "__scsch012kozdea.fbx",
+            "__scsch012kozdea_skin_mt.mat"
+          ],
+          [
+            "__scsch012koz_face_normal.fbx",
+            "__face_cheek_cry.png"
+          ],
+          [
+            "__scsch012koz_face_normal.fbx",
+            "__scsch011kah_eye_col0.png"
+          ],
+          [
+            "__scsch012koz_face_normal.fbx",
+            "__scsch011kah_eye_highlightmain.png"
+          ],
+          [
+            "__scsch012koz_face_normal.fbx",
+            "__scsch011kah_eye_lens.png"
+          ],
+          [
+            "__scsch012koz_face_normal.fbx",
+            "__scsch012koz_brow_mt.mat"
+          ],
+          [
+            "__scsch012koz_face_normal.fbx",
+            "__scsch012koz_eye_col0.png"
+          ],
+          [
+            "__scsch012koz_face_normal.fbx",
+            "__scsch012koz_eye_highlightmain.png"
+          ],
+          [
+            "__scsch012koz_face_normal.fbx",
+            "__scsch012koz_eye_lens.png"
+          ],
+          [
+            "__scsch012koz_face_normal.fbx",
+            "__scsch012koz_eyesh_mt.mat"
+          ],
+          [
+            "__scsch012koz_face_normal.fbx",
+            "__scsch012koz_face_col0.png"
+          ],
+          [
+            "__scsch012koz_face_normal.fbx",
+            "__scsch012koz_face_col1.png"
+          ],
+          [
+            "__scsch012koz_face_normal.fbx",
+            "__scsch012koz_face_controlmap2.png"
+          ],
+          [
+            "__scsch012koz_face_normal.fbx",
+            "__ubertoonshader.shader"
+          ],
+          [
+            "__scsch012koz_eyesh_mt.mat",
+            "__scsch_eyesh_controlmap2.png"
+          ],
+          [
+            "__scsch012koz_eyesh_mt.mat",
+            "__ubertoonshader.shader"
+          ],
+          [
+            "__scsch012koz_brow_mt.mat",
+            "__scsch012koz_face_col0.png"
+          ],
+          [
+            "__scsch012koz_brow_mt.mat",
+            "__scsch012koz_face_col1.png"
+          ],
+          [
+            "__scsch012koz_brow_mt.mat",
+            "__scsch012koz_face_controlmap2.png"
+          ],
+          [
+            "__scsch012koz_brow_mt.mat",
+            "__ubertoonshader.shader"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_face_adult-smile-blink.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_face_adult-smile.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_face_angry.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_face_angry_blink.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_face_bitter-smile.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_face_cool-blink.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_face_cool-wink-l.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_face_cool-wink-r.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_face_cool.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_face_doubt-close.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_face_doubt.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_face_doubt_blink.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_face_glare.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_face_glare_blink.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_face_happy.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_face_happy_blink.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_face_laugh-blink.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_face_laugh-close.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_face_laugh-wink-l.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_face_laugh-wink-r.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_face_laugh.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_face_motivation-blink.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_face_motivation.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_face_normal-blink.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_face_normal-close.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_face_normal.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_face_painful-blink.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_face_painful.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_face_panic.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_face_panic_blink.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_face_pout.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_face_pout_blink.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_face_puzzled.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_face_puzzled_blink.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_face_sad-close.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_face_sad.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_face_sad_blink.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_face_serious.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_face_serious_blink.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_face_shock.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_face_shock_blink.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_face_sleepy.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_face_sleepy_blink.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_face_smile-close.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_face_smile.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_face_smile_blink.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_face_sulk-01.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_face_sulk-01_blink.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_face_sulk-02.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_face_sulk-02_blink.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_face_surprised-little.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_face_surprised-little_blink.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_face_trouble-smile.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_face_wink-l.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_face_wink-r.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_angry_a.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_angry_close.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_angry_e.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_angry_i.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_angry_o.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_angry_u.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_bitter-smile-a.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_bitter-smile-e.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_bitter-smile-i.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_bitter-smile-o.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_bitter-smile-u.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_cool-wink_close.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_doubt_a.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_doubt_close.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_doubt_e.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_doubt_i.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_doubt_o.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_doubt_u.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_glare_close.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_laugh-a.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_laugh-close.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_laugh-e.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_laugh-i.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_laugh-o.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_laugh-u.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_laugh-wink_close.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_normal-a.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_normal-close.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_normal-e.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_normal-i.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_normal-o.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_normal-u.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_panic_close.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_pout_close.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_puzzled_open.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_sad_a.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_sad_close.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_sad_e.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_sad_i.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_sad_o.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_sad_u.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_serious_close.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_shock_open.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_sleepy_a.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_sleepy_close.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_sleepy_e.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_sleepy_i.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_sleepy_o.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_sleepy_u.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_smile_a.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_smile_close.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_smile_e.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_smile_i.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_smile_o.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_smile_u.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_sulk-01_a.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_sulk-01_close.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_sulk-01_e.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_sulk-01_i.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_sulk-01_o.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_sulk-01_u.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_sulk-02_open.anim"
+          ],
+          [
+            "__kozue_expression_controller.controller",
+            "__kozue_mouth_surprised-little_close.anim"
+          ]
+        ],
+        "files": [
+          {
+            "label": "3d_costume_1001102101",
+            "path": "archive/game/plain/3d_costume_1001102101.assetbundle",
+            "bytes": 109743,
+            "sha256": "24ad7e4f35c323079eed9f00b144d2d209ffe1f49f8e20a9034fcf7efe7f3c20",
+            "catalog_type": "prefab"
+          },
+          {
+            "label": "__face_cheek_cry.png",
+            "path": "archive/game/plain/__face_cheek_cry.png.assetbundle",
+            "bytes": 35646,
+            "sha256": "8f447320f2708497dfd699b88732c8ed0a7668848443af8ec903eb427f1c735a",
+            "catalog_type": "png"
+          },
+          {
+            "label": "__kozue_expression_controller.controller",
+            "path": "archive/game/plain/__kozue_expression_controller.controller.assetbundle",
+            "bytes": 16211,
+            "sha256": "c67bf1bbe4d160e4a3b44037c810dc3dfca58cda2498c718cdb7ac1f140ad0e7",
+            "catalog_type": "controller"
+          },
+          {
+            "label": "__kozue_face_adult-smile-blink.anim",
+            "path": "archive/game/plain/__kozue_face_adult-smile-blink.anim.assetbundle",
+            "bytes": 6598,
+            "sha256": "1e15a086fffcfd852f186ebb5ec4ccdd02198e586790f93d8cdb04c5abc61c6e",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_face_adult-smile.anim",
+            "path": "archive/game/plain/__kozue_face_adult-smile.anim.assetbundle",
+            "bytes": 6614,
+            "sha256": "61fe95b6f08a271dd7eb8f47f9bb3b1cd98f2d01d66e6d0aff7ad5d083231b3b",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_face_angry.anim",
+            "path": "archive/game/plain/__kozue_face_angry.anim.assetbundle",
+            "bytes": 6548,
+            "sha256": "77d94f2e3446c7ca3a57ad4af5919d868e69df7a7435a3db5e7671de1063dd34",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_face_angry_blink.anim",
+            "path": "archive/game/plain/__kozue_face_angry_blink.anim.assetbundle",
+            "bytes": 6566,
+            "sha256": "6a018930460d21aedbb85994e5f73c0d1bef8d7853174d56f4a7ced0d55f8789",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_face_bitter-smile.anim",
+            "path": "archive/game/plain/__kozue_face_bitter-smile.anim.assetbundle",
+            "bytes": 6556,
+            "sha256": "2d6c02932e7b426693655c5d4782cd01cef393abf43963c9ebdf94f5909bc49c",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_face_cool-blink.anim",
+            "path": "archive/game/plain/__kozue_face_cool-blink.anim.assetbundle",
+            "bytes": 6574,
+            "sha256": "bf95e7362d130bcb3057f00d455a45257b6f1e9d1db37b1797afcd8d519efd33",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_face_cool-wink-l.anim",
+            "path": "archive/game/plain/__kozue_face_cool-wink-l.anim.assetbundle",
+            "bytes": 6620,
+            "sha256": "784d13c7f8c59506d09939f77f06ceefc432d5e9a1a6fdce98fb99fed2d3a7e1",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_face_cool-wink-r.anim",
+            "path": "archive/game/plain/__kozue_face_cool-wink-r.anim.assetbundle",
+            "bytes": 6616,
+            "sha256": "6ab77d3e87320dcf0b288239678f68e4ea5dfeb6d2ee1b9aa456564036d000ef",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_face_cool.anim",
+            "path": "archive/game/plain/__kozue_face_cool.anim.assetbundle",
+            "bytes": 6571,
+            "sha256": "09f12c67a6b24870ad5248f6c9cef280183ad18c95eb72990387067471a77503",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_face_doubt-close.anim",
+            "path": "archive/game/plain/__kozue_face_doubt-close.anim.assetbundle",
+            "bytes": 6579,
+            "sha256": "ae21d86128f0be9097adf9ec16832de5155faea1c64cbf546bdb35359427a771",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_face_doubt.anim",
+            "path": "archive/game/plain/__kozue_face_doubt.anim.assetbundle",
+            "bytes": 6549,
+            "sha256": "fcc1163b3eb689912d7ac5f0813086599635b7f4b095ce38b89b1d8251806b80",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_face_doubt_blink.anim",
+            "path": "archive/game/plain/__kozue_face_doubt_blink.anim.assetbundle",
+            "bytes": 6568,
+            "sha256": "0e6235614d2bf5bb6a21d959e85ae441c832c70cf0320c754bd3353f1ac29b3b",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_face_glare.anim",
+            "path": "archive/game/plain/__kozue_face_glare.anim.assetbundle",
+            "bytes": 6550,
+            "sha256": "13611df58412fd8f78145e3427dadefc92c16f9f44c5856e1ee1fafdb8caa719",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_face_glare_blink.anim",
+            "path": "archive/game/plain/__kozue_face_glare_blink.anim.assetbundle",
+            "bytes": 6567,
+            "sha256": "0c1f54a59158ee07781295c8006b5a80eb85bb992cbc5d9539e91fc61133fc1b",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_face_happy.anim",
+            "path": "archive/game/plain/__kozue_face_happy.anim.assetbundle",
+            "bytes": 6598,
+            "sha256": "96dec5f262359060989ff1278bb6a49180bc5bf8dbec255b99af9ff572bfe9fa",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_face_happy_blink.anim",
+            "path": "archive/game/plain/__kozue_face_happy_blink.anim.assetbundle",
+            "bytes": 6592,
+            "sha256": "f175682f7261e2ed8345816d40b83ab3e07606ce3db8e9b3b1f02f21cdc00d91",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_face_laugh-blink.anim",
+            "path": "archive/game/plain/__kozue_face_laugh-blink.anim.assetbundle",
+            "bytes": 6570,
+            "sha256": "37eea90b58ae6edb02a01ab002cd0a2100fae0dc4ea031f7656a351705f7f5a1",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_face_laugh-close.anim",
+            "path": "archive/game/plain/__kozue_face_laugh-close.anim.assetbundle",
+            "bytes": 6583,
+            "sha256": "33dc7c2a33bc91aaf556930fd3c39f099059c5277bbd0fd054c9f79fe4799922",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_face_laugh-wink-l.anim",
+            "path": "archive/game/plain/__kozue_face_laugh-wink-l.anim.assetbundle",
+            "bytes": 6590,
+            "sha256": "7c41f7572c326067a979055a9a78cbdab9fa9d64b6da48c023046258d1a74e9e",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_face_laugh-wink-r.anim",
+            "path": "archive/game/plain/__kozue_face_laugh-wink-r.anim.assetbundle",
+            "bytes": 6592,
+            "sha256": "7f4a0dd8d8fd0f241bb82fed3c03a04ba064b0edb9339c05a02af6670acf899e",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_face_laugh.anim",
+            "path": "archive/game/plain/__kozue_face_laugh.anim.assetbundle",
+            "bytes": 6575,
+            "sha256": "bb992eca8775edd427ba1461d12603541c5ae33ba078239fc6b951f1a3ed38f1",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_face_motivation-blink.anim",
+            "path": "archive/game/plain/__kozue_face_motivation-blink.anim.assetbundle",
+            "bytes": 6596,
+            "sha256": "3f5767f442d6a37219243a628b695b34f7ca4c6777e1aa4c21794cdbf3ff3a1e",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_face_motivation.anim",
+            "path": "archive/game/plain/__kozue_face_motivation.anim.assetbundle",
+            "bytes": 6613,
+            "sha256": "63f6bc6327fb115782b788280d824741943cc8c94747ae7f5529cd9089e00279",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_face_normal-blink.anim",
+            "path": "archive/game/plain/__kozue_face_normal-blink.anim.assetbundle",
+            "bytes": 6560,
+            "sha256": "c446ac73de2a907f7cf197d202f96e72b7644849b0a36442d09b976527c397e3",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_face_normal-close.anim",
+            "path": "archive/game/plain/__kozue_face_normal-close.anim.assetbundle",
+            "bytes": 6569,
+            "sha256": "f85e9ae81a845f696ff7c0bdb10a4bdbd6cdc13f3f3e61824ad51849f04b2f0f",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_face_normal.anim",
+            "path": "archive/game/plain/__kozue_face_normal.anim.assetbundle",
+            "bytes": 6547,
+            "sha256": "c931adeb3cb9f5e6ed042dc63f2c60d365673e1bf18eda70daf9694e4f799140",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_face_painful-blink.anim",
+            "path": "archive/game/plain/__kozue_face_painful-blink.anim.assetbundle",
+            "bytes": 6590,
+            "sha256": "151f4a351794559c735a7d006bc5ff30919c5d6a19c633738b4a909fbb41c81b",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_face_painful.anim",
+            "path": "archive/game/plain/__kozue_face_painful.anim.assetbundle",
+            "bytes": 6630,
+            "sha256": "e9d4e96decff0836c10711323c21af82fac20d50b4f52ab7c629492d26af86e0",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_face_panic.anim",
+            "path": "archive/game/plain/__kozue_face_panic.anim.assetbundle",
+            "bytes": 6610,
+            "sha256": "2aecd1c8a292fc170126781ed5be2fbd6d5d1857314130b8af1cf9ca9d87df1a",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_face_panic_blink.anim",
+            "path": "archive/game/plain/__kozue_face_panic_blink.anim.assetbundle",
+            "bytes": 6607,
+            "sha256": "9cc43409cfb457c7e28db207a99c3861d8a0603ebb98fe436e9865f0d760eccf",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_face_pout.anim",
+            "path": "archive/game/plain/__kozue_face_pout.anim.assetbundle",
+            "bytes": 6607,
+            "sha256": "cafb5c726bf9ed1caba0ba5d87b96c9089b195c0e1e5b7ac93d194461382f77e",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_face_pout_blink.anim",
+            "path": "archive/game/plain/__kozue_face_pout_blink.anim.assetbundle",
+            "bytes": 6603,
+            "sha256": "b172e97856da2fc6fbec592455bb60aaf91e2070f1f12789cdeb7f69e15db780",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_face_puzzled.anim",
+            "path": "archive/game/plain/__kozue_face_puzzled.anim.assetbundle",
+            "bytes": 6620,
+            "sha256": "54f5f87dd9c4728428c98c5cb3c022d760410da98cc8a220b57af2983c641e8c",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_face_puzzled_blink.anim",
+            "path": "archive/game/plain/__kozue_face_puzzled_blink.anim.assetbundle",
+            "bytes": 6612,
+            "sha256": "af57d91197194700de073c110cef5197c177d90db168dc1ab6c609d30044ae50",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_face_sad-close.anim",
+            "path": "archive/game/plain/__kozue_face_sad-close.anim.assetbundle",
+            "bytes": 6582,
+            "sha256": "8b54ed09f3227ddfd0db1ac3ce5efe9df51d7291179b5ff15dbcfd80ec861bdd",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_face_sad.anim",
+            "path": "archive/game/plain/__kozue_face_sad.anim.assetbundle",
+            "bytes": 6553,
+            "sha256": "62dd20c44f71558b2648364747c648c8a86ff1a9f1b5fcdab742ca5f33d83288",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_face_sad_blink.anim",
+            "path": "archive/game/plain/__kozue_face_sad_blink.anim.assetbundle",
+            "bytes": 6577,
+            "sha256": "d7e80ce90e325b1c283e89bb7d7b39f0302f9eb61f7e5b76259cc710c0ac82ed",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_face_serious.anim",
+            "path": "archive/game/plain/__kozue_face_serious.anim.assetbundle",
+            "bytes": 6577,
+            "sha256": "8b0f57dc22c84792ae1461621048483cdef827ae46c172408e2e4bad3f2cc622",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_face_serious_blink.anim",
+            "path": "archive/game/plain/__kozue_face_serious_blink.anim.assetbundle",
+            "bytes": 6588,
+            "sha256": "28cf6ee7618cf3052d731b9aeeceaabb9cef2ac55729ae5241c711e248517e0d",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_face_shock.anim",
+            "path": "archive/game/plain/__kozue_face_shock.anim.assetbundle",
+            "bytes": 6599,
+            "sha256": "ade081e8cb013e17871fb3be46f6862005e557c2af92500632193337309d9024",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_face_shock_blink.anim",
+            "path": "archive/game/plain/__kozue_face_shock_blink.anim.assetbundle",
+            "bytes": 6613,
+            "sha256": "29398fad562b30b066ab8dd2042d68eb377947b057725e7d35362c00851aa529",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_face_sleepy.anim",
+            "path": "archive/game/plain/__kozue_face_sleepy.anim.assetbundle",
+            "bytes": 6562,
+            "sha256": "f2e73047f4e86d3a968e4e128b3bb17c743ba38bfa65f25767b33eac329d6ade",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_face_sleepy_blink.anim",
+            "path": "archive/game/plain/__kozue_face_sleepy_blink.anim.assetbundle",
+            "bytes": 6572,
+            "sha256": "e92005137b10feac578d9b9af49b1c3e334cb27da4a7786c3c9a52e99fd98706",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_face_smile-close.anim",
+            "path": "archive/game/plain/__kozue_face_smile-close.anim.assetbundle",
+            "bytes": 6587,
+            "sha256": "54ffbacf0c4ed77120733cbec6382c9d20a82a45010f7b4d84cab2b175500147",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_face_smile.anim",
+            "path": "archive/game/plain/__kozue_face_smile.anim.assetbundle",
+            "bytes": 6565,
+            "sha256": "0255e6692f4e2f5eded2aa542a415f8ca9b8a642b4876c2f27b3b171e590e2af",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_face_smile_blink.anim",
+            "path": "archive/game/plain/__kozue_face_smile_blink.anim.assetbundle",
+            "bytes": 6568,
+            "sha256": "52080409e09e316c6b257df8f64ab578198c1d078632c75985c4a324ece26ddb",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_face_sulk-01.anim",
+            "path": "archive/game/plain/__kozue_face_sulk-01.anim.assetbundle",
+            "bytes": 6562,
+            "sha256": "76f563a9486a890344ee296b0dd7a073456a910a1160b5de5b990eba1135c284",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_face_sulk-01_blink.anim",
+            "path": "archive/game/plain/__kozue_face_sulk-01_blink.anim.assetbundle",
+            "bytes": 6565,
+            "sha256": "3825a94bcd2750286c46a8d4e563b39515653d99a6d169acbd0a100f4a970d66",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_face_sulk-02.anim",
+            "path": "archive/game/plain/__kozue_face_sulk-02.anim.assetbundle",
+            "bytes": 6573,
+            "sha256": "7e6f6efc131e23bd06a403f4e3a07052860b1f295a9a66915bc44dd69706c5c8",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_face_sulk-02_blink.anim",
+            "path": "archive/game/plain/__kozue_face_sulk-02_blink.anim.assetbundle",
+            "bytes": 6582,
+            "sha256": "9a2277745f33e92e376078ffa00142af6c762064cdacd207a3a1584277342263",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_face_surprised-little.anim",
+            "path": "archive/game/plain/__kozue_face_surprised-little.anim.assetbundle",
+            "bytes": 6603,
+            "sha256": "a8f70cfaa42982258f8556aef805ed3439cb51c5c22e1d9b6c5e5bfd56a1f408",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_face_surprised-little_blink.anim",
+            "path": "archive/game/plain/__kozue_face_surprised-little_blink.anim.assetbundle",
+            "bytes": 6606,
+            "sha256": "2c0fd94c113c27170ca619c505b6651daf64e00177175cd90b8dac7625d6720f",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_face_trouble-smile.anim",
+            "path": "archive/game/plain/__kozue_face_trouble-smile.anim.assetbundle",
+            "bytes": 6599,
+            "sha256": "4e2ec5262f5f5129071b24d420c133ee4f2f674cb21b91d57f26f4719b3ebe31",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_face_wink-l.anim",
+            "path": "archive/game/plain/__kozue_face_wink-l.anim.assetbundle",
+            "bytes": 6574,
+            "sha256": "2524c1f94223ea9737e8c22ae5a3598211fc971ae36a033f38429624e4044c53",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_face_wink-r.anim",
+            "path": "archive/game/plain/__kozue_face_wink-r.anim.assetbundle",
+            "bytes": 6575,
+            "sha256": "bd27ad5b9e566bba02d8060d82abe7e7ee67ade97016ba8b95deacf255cc39ca",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_angry_a.anim",
+            "path": "archive/game/plain/__kozue_mouth_angry_a.anim.assetbundle",
+            "bytes": 6542,
+            "sha256": "43716c0c61c39d93e4a4fe8ef7d928c40991c7c72682b6e437a8d67c304b0d09",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_angry_close.anim",
+            "path": "archive/game/plain/__kozue_mouth_angry_close.anim.assetbundle",
+            "bytes": 6540,
+            "sha256": "82ef9232bb672bf50b7c2dc2084b9e8152215173480287b59b77eae411d89ad3",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_angry_e.anim",
+            "path": "archive/game/plain/__kozue_mouth_angry_e.anim.assetbundle",
+            "bytes": 6529,
+            "sha256": "b910945e851c8d26dfeb5b26f0769c559241e99f588c3e5e7bff6ead506a078c",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_angry_i.anim",
+            "path": "archive/game/plain/__kozue_mouth_angry_i.anim.assetbundle",
+            "bytes": 6542,
+            "sha256": "68302ce14e54c409960467be3c7f6dc8e339464749fdd784a77c2bc96e847db2",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_angry_o.anim",
+            "path": "archive/game/plain/__kozue_mouth_angry_o.anim.assetbundle",
+            "bytes": 6542,
+            "sha256": "383da035b7c7085859ca6741121598e683670c131ba67a698c69b73d03cb07d5",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_angry_u.anim",
+            "path": "archive/game/plain/__kozue_mouth_angry_u.anim.assetbundle",
+            "bytes": 6542,
+            "sha256": "9b56c31a048cfde3c62de4fb6d0ed4b0712d8f616841c7e1c81276f68122bfa1",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_bitter-smile-a.anim",
+            "path": "archive/game/plain/__kozue_mouth_bitter-smile-a.anim.assetbundle",
+            "bytes": 6533,
+            "sha256": "3c91ea4e5b06f4bda180aea78357c7d4d08d7a3c22f3d6380e909d0b6cab4e77",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_bitter-smile-e.anim",
+            "path": "archive/game/plain/__kozue_mouth_bitter-smile-e.anim.assetbundle",
+            "bytes": 6520,
+            "sha256": "3b85c01ec8137e97f7c50de88de80f00fff0ac8afabcd63916edfed5e14ab5aa",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_bitter-smile-i.anim",
+            "path": "archive/game/plain/__kozue_mouth_bitter-smile-i.anim.assetbundle",
+            "bytes": 6534,
+            "sha256": "36dcafd9d760232e484007af4a49538f416e30db10ce67452cee725057f6613d",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_bitter-smile-o.anim",
+            "path": "archive/game/plain/__kozue_mouth_bitter-smile-o.anim.assetbundle",
+            "bytes": 6533,
+            "sha256": "4b919e80e79d3b4def989f0d64aadb9da43cf18e4bb1bff1b7a43f4a6824f614",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_bitter-smile-u.anim",
+            "path": "archive/game/plain/__kozue_mouth_bitter-smile-u.anim.assetbundle",
+            "bytes": 6546,
+            "sha256": "e6214704933621649486edf66bc7b5a71b3787de9708769de5adec967156ba94",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_cool-wink_close.anim",
+            "path": "archive/game/plain/__kozue_mouth_cool-wink_close.anim.assetbundle",
+            "bytes": 6532,
+            "sha256": "a93dd1f797e3c1e89fd31f1fc5c3ea89a285da130a2b7baad812fc1ec6d80b47",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_doubt_a.anim",
+            "path": "archive/game/plain/__kozue_mouth_doubt_a.anim.assetbundle",
+            "bytes": 6527,
+            "sha256": "56edafe4a1ff01fc3898ab0af0c66f8f2f3db4fc60470c01fc8e4a95ea8cf191",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_doubt_close.anim",
+            "path": "archive/game/plain/__kozue_mouth_doubt_close.anim.assetbundle",
+            "bytes": 6540,
+            "sha256": "7fd145ac92d8ae78dcddcbceb773ce148db34318a622cb0ae594d94c3cba4556",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_doubt_e.anim",
+            "path": "archive/game/plain/__kozue_mouth_doubt_e.anim.assetbundle",
+            "bytes": 6540,
+            "sha256": "da5a68d1657b5c01c53fb7b2b7ef53aa209d0f8da5763d769ac8a720138fc84f",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_doubt_i.anim",
+            "path": "archive/game/plain/__kozue_mouth_doubt_i.anim.assetbundle",
+            "bytes": 6527,
+            "sha256": "07bf45f5804b89c84d95afde29f1325113824503e06b7873e981bef05f81b924",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_doubt_o.anim",
+            "path": "archive/game/plain/__kozue_mouth_doubt_o.anim.assetbundle",
+            "bytes": 6539,
+            "sha256": "89e7760f6af0c4b385c7d16ef0a499fb4ee666d464c3b58631be482bfbc90e8a",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_doubt_u.anim",
+            "path": "archive/game/plain/__kozue_mouth_doubt_u.anim.assetbundle",
+            "bytes": 6540,
+            "sha256": "dce8995c902797a72acc6d2fdce2e9935bad5efb870af1f3caeca597d2fc2c2f",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_glare_close.anim",
+            "path": "archive/game/plain/__kozue_mouth_glare_close.anim.assetbundle",
+            "bytes": 6538,
+            "sha256": "2519072892cb1cb9563f3fc71f9451311b17e649da33ff13dc825fc083f42f88",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_laugh-a.anim",
+            "path": "archive/game/plain/__kozue_mouth_laugh-a.anim.assetbundle",
+            "bytes": 6528,
+            "sha256": "7d7443d4b8348a9c6b00daf1c0ed9dd7219eae55bd263b2761dbc82904ebe30c",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_laugh-close.anim",
+            "path": "archive/game/plain/__kozue_mouth_laugh-close.anim.assetbundle",
+            "bytes": 6516,
+            "sha256": "0768e6c4d0842317e1d06c3297d8347917ccd79e6a1a7b7912dd19c16a6572be",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_laugh-e.anim",
+            "path": "archive/game/plain/__kozue_mouth_laugh-e.anim.assetbundle",
+            "bytes": 6528,
+            "sha256": "61680706efcde0688ca02fec4c6e43bcb9be24aea9a6859f93b9500f76da46cf",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_laugh-i.anim",
+            "path": "archive/game/plain/__kozue_mouth_laugh-i.anim.assetbundle",
+            "bytes": 6528,
+            "sha256": "9480434160bb2bf536d22a2e3cb1065455ac4a4561e1cd1d9e6a365c76961954",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_laugh-o.anim",
+            "path": "archive/game/plain/__kozue_mouth_laugh-o.anim.assetbundle",
+            "bytes": 6514,
+            "sha256": "e86976834ef74ca8e8a0de839d825136e2a6aedb825464c18e29cb362b6f5818",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_laugh-u.anim",
+            "path": "archive/game/plain/__kozue_mouth_laugh-u.anim.assetbundle",
+            "bytes": 6528,
+            "sha256": "df4931df374bb0dfebf935439bb01126ff9f26de38948c6a4eb607dd1afcb1b7",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_laugh-wink_close.anim",
+            "path": "archive/game/plain/__kozue_mouth_laugh-wink_close.anim.assetbundle",
+            "bytes": 6533,
+            "sha256": "705f7bfd24267354a406fc61f872bee3b63f5f609c1fc3786365461db94a61ff",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_normal-a.anim",
+            "path": "archive/game/plain/__kozue_mouth_normal-a.anim.assetbundle",
+            "bytes": 6514,
+            "sha256": "d9b3a0c17ff5ddd6504f4703f6aea8d8a620b64df215df11b47d003ba17e6679",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_normal-close.anim",
+            "path": "archive/game/plain/__kozue_mouth_normal-close.anim.assetbundle",
+            "bytes": 6515,
+            "sha256": "87b4c3b750e41d69215fba389bd078f4d26816e3c4a177db4c1e9dd94addff73",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_normal-e.anim",
+            "path": "archive/game/plain/__kozue_mouth_normal-e.anim.assetbundle",
+            "bytes": 6514,
+            "sha256": "6af57ebbeca70898819b4e9c883bfd8d2a6562a8dbdc32ff2c73023bfd58db05",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_normal-i.anim",
+            "path": "archive/game/plain/__kozue_mouth_normal-i.anim.assetbundle",
+            "bytes": 6527,
+            "sha256": "c07d98ef33031a1a627a8b6d34bf6f5a3e286f596441e0a5a3780fd7785b2eb0",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_normal-o.anim",
+            "path": "archive/game/plain/__kozue_mouth_normal-o.anim.assetbundle",
+            "bytes": 6514,
+            "sha256": "dcae2b2f22d7c1b7fa0b81ea73a9a6a2e4786b04ff0e0137c0280ebbfbc3f707",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_normal-u.anim",
+            "path": "archive/game/plain/__kozue_mouth_normal-u.anim.assetbundle",
+            "bytes": 6527,
+            "sha256": "2da1f48a8b3a15c7b81ac1fbc7670a65bf2fe1e254615a90551e3afea1beba63",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_panic_close.anim",
+            "path": "archive/game/plain/__kozue_mouth_panic_close.anim.assetbundle",
+            "bytes": 6531,
+            "sha256": "c412a04c3e40f10aa99470310642689b44e7a6e54a9043ef937f96855559d9d6",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_pout_close.anim",
+            "path": "archive/game/plain/__kozue_mouth_pout_close.anim.assetbundle",
+            "bytes": 6531,
+            "sha256": "aa0b02129c9b014eb67b5939c27de219e8ec812d50f62a6f76e5a9e057577e92",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_puzzled_open.anim",
+            "path": "archive/game/plain/__kozue_mouth_puzzled_open.anim.assetbundle",
+            "bytes": 6533,
+            "sha256": "f1e8dd9212a702dfaf2ce2cfc0994498d13eff31a8da2ed44fa0442663559674",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_sad_a.anim",
+            "path": "archive/game/plain/__kozue_mouth_sad_a.anim.assetbundle",
+            "bytes": 6538,
+            "sha256": "4a44153768287c5cce620590955c59e7d518bacb6c1ecd13b2ea70dd5e349da0",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_sad_close.anim",
+            "path": "archive/game/plain/__kozue_mouth_sad_close.anim.assetbundle",
+            "bytes": 6544,
+            "sha256": "f5824196553e8c1c479d385f6bf2fbbd12528c85de8030b12507f87d483d698e",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_sad_e.anim",
+            "path": "archive/game/plain/__kozue_mouth_sad_e.anim.assetbundle",
+            "bytes": 6540,
+            "sha256": "ba46d8a8f3ed151251a6fcb86ca689187c09fcbcd786082a1b00c32221dc1653",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_sad_i.anim",
+            "path": "archive/game/plain/__kozue_mouth_sad_i.anim.assetbundle",
+            "bytes": 6538,
+            "sha256": "2d30f9f69310d0b40c95218468df4d88cbe65d58bc45f39fce95200e4fd85779",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_sad_o.anim",
+            "path": "archive/game/plain/__kozue_mouth_sad_o.anim.assetbundle",
+            "bytes": 6525,
+            "sha256": "9ed3d42156938eaab175b10106dca44311ed3dc44272e81d0fcabdacd67a880e",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_sad_u.anim",
+            "path": "archive/game/plain/__kozue_mouth_sad_u.anim.assetbundle",
+            "bytes": 6553,
+            "sha256": "b2a185021aaa997961faff60163e1d2ae366e00b390432e5fad177cd991fffcf",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_serious_close.anim",
+            "path": "archive/game/plain/__kozue_mouth_serious_close.anim.assetbundle",
+            "bytes": 6532,
+            "sha256": "11233da80831d7bd1052ed4dd5b90118081418b210f59c9cfe4e8916f00e6ffe",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_shock_open.anim",
+            "path": "archive/game/plain/__kozue_mouth_shock_open.anim.assetbundle",
+            "bytes": 6532,
+            "sha256": "a3cee2e464b49e4cca1882a4dd212419a3a055dc31602f0f440f15e8ba5d2f20",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_sleepy_a.anim",
+            "path": "archive/game/plain/__kozue_mouth_sleepy_a.anim.assetbundle",
+            "bytes": 6528,
+            "sha256": "6c15246911950cd866cbfb7818d7e81215111ba56a1403122f3849b3a6afc718",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_sleepy_close.anim",
+            "path": "archive/game/plain/__kozue_mouth_sleepy_close.anim.assetbundle",
+            "bytes": 6532,
+            "sha256": "f1f45d4c2f284172f9754ef57bddeda8c76f35e53c4e027a2239bf3bdc6587d6",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_sleepy_e.anim",
+            "path": "archive/game/plain/__kozue_mouth_sleepy_e.anim.assetbundle",
+            "bytes": 6528,
+            "sha256": "b0877a89ed32a41fdf295109d2e5a1dbb36f23f73e7cd57d17455c16df86da0b",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_sleepy_i.anim",
+            "path": "archive/game/plain/__kozue_mouth_sleepy_i.anim.assetbundle",
+            "bytes": 6528,
+            "sha256": "f219984235b55ee4351df95388cec70b477838cae69a175376e0c21df4247715",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_sleepy_o.anim",
+            "path": "archive/game/plain/__kozue_mouth_sleepy_o.anim.assetbundle",
+            "bytes": 6528,
+            "sha256": "302f2e9e2a5ba2c432bf97d49306c77ccce3d024a9d37ef0c4f1dad4c2d49062",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_sleepy_u.anim",
+            "path": "archive/game/plain/__kozue_mouth_sleepy_u.anim.assetbundle",
+            "bytes": 6528,
+            "sha256": "707dacfba584898252eace17beee86643656d7450ba103d70a91701ff01798b7",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_smile_a.anim",
+            "path": "archive/game/plain/__kozue_mouth_smile_a.anim.assetbundle",
+            "bytes": 6541,
+            "sha256": "1d11df33310719bc598c613307f6a92b13c1d507d389e5ee7f2cbb78dc0ca518",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_smile_close.anim",
+            "path": "archive/game/plain/__kozue_mouth_smile_close.anim.assetbundle",
+            "bytes": 6540,
+            "sha256": "cba0df6a499412700c3838c90cef2af68a0cc111b22fa74c3f5c57e40b63ffce",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_smile_e.anim",
+            "path": "archive/game/plain/__kozue_mouth_smile_e.anim.assetbundle",
+            "bytes": 6541,
+            "sha256": "1bc68a5324203c23677f411f79c76364e4dcf1553272f5ef4d56a0bca5407cde",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_smile_i.anim",
+            "path": "archive/game/plain/__kozue_mouth_smile_i.anim.assetbundle",
+            "bytes": 6528,
+            "sha256": "b7627edd84b3eabc4bf93e90cde5973364fedeaa95bc5c27c662e5337c3c95d3",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_smile_o.anim",
+            "path": "archive/game/plain/__kozue_mouth_smile_o.anim.assetbundle",
+            "bytes": 6528,
+            "sha256": "17f63eabc57d5a3d546698a45a3368b567892f76a9e3fe4a21d5e6460f4ffbb8",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_smile_u.anim",
+            "path": "archive/game/plain/__kozue_mouth_smile_u.anim.assetbundle",
+            "bytes": 6541,
+            "sha256": "8479fd5769d4fff042aac5a44415e52d96ae5706ee6f607160e81096bef586ee",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_sulk-01_a.anim",
+            "path": "archive/game/plain/__kozue_mouth_sulk-01_a.anim.assetbundle",
+            "bytes": 6530,
+            "sha256": "8200c3d218f5bc378b2521ef93d6ce54eb54e2fc514ae61b3fe75909d2b10f1a",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_sulk-01_close.anim",
+            "path": "archive/game/plain/__kozue_mouth_sulk-01_close.anim.assetbundle",
+            "bytes": 6542,
+            "sha256": "c3044b37ab70c10fc469725e7c605ccb3517ed16d087f7340f260992d205f38e",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_sulk-01_e.anim",
+            "path": "archive/game/plain/__kozue_mouth_sulk-01_e.anim.assetbundle",
+            "bytes": 6530,
+            "sha256": "f9c15fb4aefc62af1f5e8ecb92e479e0acbfc8ebef5de3f3a9491d4220554be8",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_sulk-01_i.anim",
+            "path": "archive/game/plain/__kozue_mouth_sulk-01_i.anim.assetbundle",
+            "bytes": 6530,
+            "sha256": "4905d80a86496ba98c1852983dded6f944434e75f0202e18dccb8f9d34953f4f",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_sulk-01_o.anim",
+            "path": "archive/game/plain/__kozue_mouth_sulk-01_o.anim.assetbundle",
+            "bytes": 6543,
+            "sha256": "5a6462260e6004035ebd0f67a8220c89acbc85d0d45c78691d7269742f485ef4",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_sulk-01_u.anim",
+            "path": "archive/game/plain/__kozue_mouth_sulk-01_u.anim.assetbundle",
+            "bytes": 6530,
+            "sha256": "b7b0360bf7bed45e382d1ec18ae81b2b79a20d04826cd9752904ef2bc773e87b",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_sulk-02_open.anim",
+            "path": "archive/game/plain/__kozue_mouth_sulk-02_open.anim.assetbundle",
+            "bytes": 6539,
+            "sha256": "f8b2dc25a219fb51a934829d851e38a547c5ba1f38f8fcf9ccf24f52a6242e1a",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__kozue_mouth_surprised-little_close.anim",
+            "path": "archive/game/plain/__kozue_mouth_surprised-little_close.anim.assetbundle",
+            "bytes": 6532,
+            "sha256": "0d40557eebc0ad09cfb22992ce150dc39c930dac2d3180ea4cc1b47316a55572",
+            "catalog_type": "anim"
+          },
+          {
+            "label": "__scsch011kah_eye_col0.png",
+            "path": "archive/game/plain/__scsch011kah_eye_col0.png.assetbundle",
+            "bytes": 114766,
+            "sha256": "b4e6261bdde49fcb90440bb04978ef1cf97064807a7d7b27b7d0c991d05c0832",
+            "catalog_type": "png"
+          },
+          {
+            "label": "__scsch011kah_eye_highlightmain.png",
+            "path": "archive/game/plain/__scsch011kah_eye_highlightmain.png.assetbundle",
+            "bytes": 9575,
+            "sha256": "ac1c9090298f856c84cd0649edb40f13773923f4ddb62ffe93d0a652608d49f1",
+            "catalog_type": "png"
+          },
+          {
+            "label": "__scsch011kah_eye_lens.png",
+            "path": "archive/game/plain/__scsch011kah_eye_lens.png.assetbundle",
+            "bytes": 33311,
+            "sha256": "44106ee023e68cdd0d74b75433b02602ec9be2e4e3f4c68b52486caa78019c3f",
+            "catalog_type": "png"
+          },
+          {
+            "label": "__scsch012koz_brow_mt.mat",
+            "path": "archive/game/plain/__scsch012koz_brow_mt.mat.assetbundle",
+            "bytes": 4368,
+            "sha256": "2a00e2054e497bb83005397cb309ae1d7dafe39a4b82b43e527e77236c6c550d",
+            "catalog_type": "mat"
+          },
+          {
+            "label": "__scsch012koz_eye_col0.png",
+            "path": "archive/game/plain/__scsch012koz_eye_col0.png.assetbundle",
+            "bytes": 131977,
+            "sha256": "94af91c29166c1f57bc8fdacd10da9f482d32339850adc9ce1a0c40e6acdbca5",
+            "catalog_type": "png"
+          },
+          {
+            "label": "__scsch012koz_eye_highlightmain.png",
+            "path": "archive/game/plain/__scsch012koz_eye_highlightmain.png.assetbundle",
+            "bytes": 9575,
+            "sha256": "9b02c14a8818f61e8039539ae0e441665622fd31d4ced49130b5116713c1cca0",
+            "catalog_type": "png"
+          },
+          {
+            "label": "__scsch012koz_eye_lens.png",
+            "path": "archive/game/plain/__scsch012koz_eye_lens.png.assetbundle",
+            "bytes": 22764,
+            "sha256": "223ec5d386d0f5a3b9f0acfaab3bc88253588b00f2acf1ebc0b88076376f464e",
+            "catalog_type": "png"
+          },
+          {
+            "label": "__scsch012koz_eyesh_mt.mat",
+            "path": "archive/game/plain/__scsch012koz_eyesh_mt.mat.assetbundle",
+            "bytes": 4168,
+            "sha256": "786063f9b5d1fef4b097550b349c48c28d865e596673ec357d5ca2007111870e",
+            "catalog_type": "mat"
+          },
+          {
+            "label": "__scsch012koz_face_col0.png",
+            "path": "archive/game/plain/__scsch012koz_face_col0.png.assetbundle",
+            "bytes": 199293,
+            "sha256": "dd128b7d0fa8ae0bec850f5adb013e93a89d1844864f9298a2aac7b354e23bbd",
+            "catalog_type": "png"
+          },
+          {
+            "label": "__scsch012koz_face_col1.png",
+            "path": "archive/game/plain/__scsch012koz_face_col1.png.assetbundle",
+            "bytes": 93176,
+            "sha256": "802088bda1eba037729b42a6d11e1d770d66a245a1e08d112cef241b529cc65d",
+            "catalog_type": "png"
+          },
+          {
+            "label": "__scsch012koz_face_controlmap2.png",
+            "path": "archive/game/plain/__scsch012koz_face_controlmap2.png.assetbundle",
+            "bytes": 283802,
+            "sha256": "19ab8b81172d33ba9975cef5eea0eec64c418bddafedae0b4d1dcffca32ef8ea",
+            "catalog_type": "png"
+          },
+          {
+            "label": "__scsch012koz_face_normal.fbx",
+            "path": "archive/game/plain/__scsch012koz_face_normal.fbx.assetbundle",
+            "bytes": 540957,
+            "sha256": "57d69d0fad8399cc257e86f084e783638b52d8dad2b61fa80f573e61d2d93d43",
+            "catalog_type": "fbx"
+          },
+          {
+            "label": "__scsch012kozdea.fbx",
+            "path": "archive/game/plain/__scsch012kozdea.fbx.assetbundle",
+            "bytes": 1209782,
+            "sha256": "5bf7f5415b642822430601178dcbda81def4789bc6a8988f3c3a07c7d505f72e",
+            "catalog_type": "fbx"
+          },
+          {
+            "label": "__scsch012kozdea_cos_col0.png",
+            "path": "archive/game/plain/__scsch012kozdea_cos_col0.png.assetbundle",
+            "bytes": 747997,
+            "sha256": "250b5211ea0b1f986c53394c7a41da6501049474d01beec04b6db7a39aa0e573",
+            "catalog_type": "png"
+          },
+          {
+            "label": "__scsch012kozdea_cos_col1.png",
+            "path": "archive/game/plain/__scsch012kozdea_cos_col1.png.assetbundle",
+            "bytes": 677463,
+            "sha256": "b7007fdb1b76edc0a44ff1934dff60b883117108832bd93b51481b33749cc51f",
+            "catalog_type": "png"
+          },
+          {
+            "label": "__scsch012kozdea_cos_controlmap2.png",
+            "path": "archive/game/plain/__scsch012kozdea_cos_controlmap2.png.assetbundle",
+            "bytes": 353935,
+            "sha256": "209b4ceac425977536840b4e111fc9c151d82d606d25658aae83d04ee6775b94",
+            "catalog_type": "png"
+          },
+          {
+            "label": "__scsch012kozdea_cos_mt.mat",
+            "path": "archive/game/plain/__scsch012kozdea_cos_mt.mat.assetbundle",
+            "bytes": 6602,
+            "sha256": "b995505df80c9ba6844e0ea5e733e09dffdcb7c94c2fcdd82021f36ce1c44500",
+            "catalog_type": "mat"
+          },
+          {
+            "label": "__scsch012kozdea_hair_col0.png",
+            "path": "archive/game/plain/__scsch012kozdea_hair_col0.png.assetbundle",
+            "bytes": 307083,
+            "sha256": "cc280811aa222abc7f620d18bfe345714d02782e6028669a3c1ae10381458214",
+            "catalog_type": "png"
+          },
+          {
+            "label": "__scsch012kozdea_hair_col1.png",
+            "path": "archive/game/plain/__scsch012kozdea_hair_col1.png.assetbundle",
+            "bytes": 277064,
+            "sha256": "d1c1e46a14ba4b42d565a85ed27fb51b749a14aac37c41021ec3ec6cacacee57",
+            "catalog_type": "png"
+          },
+          {
+            "label": "__scsch012kozdea_hair_controlmap2.png",
+            "path": "archive/game/plain/__scsch012kozdea_hair_controlmap2.png.assetbundle",
+            "bytes": 128487,
+            "sha256": "0c1c24c22ce4b14bcb23239775cd060ca664e26c3b24720bdf6bc810ba566073",
+            "catalog_type": "png"
+          },
+          {
+            "label": "__scsch012kozdea_hair_mt.mat",
+            "path": "archive/game/plain/__scsch012kozdea_hair_mt.mat.assetbundle",
+            "bytes": 6589,
+            "sha256": "13f09e54f7fe64948f6a93de9c6b169dd27e05d7ef5e0b0b3d500a2796177627",
+            "catalog_type": "mat"
+          },
+          {
+            "label": "__scsch012kozdea_indoorshoes_col0.png",
+            "path": "archive/game/plain/__scsch012kozdea_indoorshoes_col0.png.assetbundle",
+            "bytes": 170909,
+            "sha256": "3b4c462a84652a9bcf11e01726f8087eb59c1edeac7ee3ef292d38bfb278659f",
+            "catalog_type": "png"
+          },
+          {
+            "label": "__scsch012kozdea_indoorshoes_col1.png",
+            "path": "archive/game/plain/__scsch012kozdea_indoorshoes_col1.png.assetbundle",
+            "bytes": 164067,
+            "sha256": "bc22919dc6a7fff08161a40be5f3285408df2ad669f4475a64529302fd546fa2",
+            "catalog_type": "png"
+          },
+          {
+            "label": "__scsch012kozdea_indoorshoes_mt.mat",
+            "path": "archive/game/plain/__scsch012kozdea_indoorshoes_mt.mat.assetbundle",
+            "bytes": 6522,
+            "sha256": "fede06e2405948ac1b7d955723682346a17afc5afcf654d9b10200323d408f1a",
+            "catalog_type": "mat"
+          },
+          {
+            "label": "__scsch012kozdea_skin_col0.png",
+            "path": "archive/game/plain/__scsch012kozdea_skin_col0.png.assetbundle",
+            "bytes": 131089,
+            "sha256": "95ddb3b2fdc131aa40ffff5b506b7f32f25e06d652c34840c887ec4dd6d92267",
+            "catalog_type": "png"
+          },
+          {
+            "label": "__scsch012kozdea_skin_col1.png",
+            "path": "archive/game/plain/__scsch012kozdea_skin_col1.png.assetbundle",
+            "bytes": 101912,
+            "sha256": "a582514d3906a96802fb8c2cb76462e33bb63000843feff949010d9f14d403bf",
+            "catalog_type": "png"
+          },
+          {
+            "label": "__scsch012kozdea_skin_controlmap2.png",
+            "path": "archive/game/plain/__scsch012kozdea_skin_controlmap2.png.assetbundle",
+            "bytes": 107622,
+            "sha256": "b1d7fa1f1579ab4fa9b7f616f5482337f0bb55d02deafd1697d22f23b882ef08",
+            "catalog_type": "png"
+          },
+          {
+            "label": "__scsch012kozdea_skin_mt.mat",
+            "path": "archive/game/plain/__scsch012kozdea_skin_mt.mat.assetbundle",
+            "bytes": 6561,
+            "sha256": "2ea81b0a88d5e5908413dd9e726bd032a70799bccd4a0d9da193f477c82b1ff7",
+            "catalog_type": "mat"
+          },
+          {
+            "label": "__scsch_eyesh_controlmap2.png",
+            "path": "archive/game/plain/__scsch_eyesh_controlmap2.png.assetbundle",
+            "bytes": 2019,
+            "sha256": "7a6a2831846795eceb2ab257abb87b9279a0a9c7693c2cfa47c5320dc2c9ebeb",
+            "catalog_type": "png"
+          },
+          {
+            "label": "__subbone_gate4_scs_base.asset",
+            "path": "archive/game/plain/__subbone_gate4_scs_base.asset.assetbundle",
+            "bytes": 2637,
+            "sha256": "68e5f0d5b1ed3ccfe77bdc3fc1178ca9ebb4a658600994bf9107994ad1127dc9",
+            "catalog_type": "asset"
+          },
+          {
+            "label": "__t_controlmap_default.png",
+            "path": "archive/game/plain/__t_controlmap_default.png.assetbundle",
+            "bytes": 2477,
+            "sha256": "79a547de4138180934d1e9deb8d4936420d70162a8124284c4838e478585a4b0",
+            "catalog_type": "png"
+          },
+          {
+            "label": "__ubertoonshader.shader",
+            "path": "archive/game/plain/__ubertoonshader.shader.assetbundle",
+            "bytes": 120666,
+            "sha256": "c09777b1f1ca6839b92d1f108fa478a68b79074b8e8b83d0ffc3c5b5c4310a21",
+            "catalog_type": "shader"
+          }
+        ],
+        "all_source_hashes_verified": true
+      },
+      "totals": {
+        "nodes": 254,
+        "renderers": 12,
+        "meshes": 12,
+        "vertices": 23238,
+        "morph_frames": 129,
+        "morph_channels": 129
+      },
+      "meshes": [
+        {
+          "identity": "cab-285bc62d903327bd04727af11fe5b8b1:-4814148560302514838",
+          "name": "EyeShadow",
+          "vertices": 48,
+          "attributes": {
+            "POSITION": {
+              "count": 48,
+              "dimension": 3,
+              "component": "f32",
+              "sha256": "a2b9b8338f8ccb06e07a8983c67a8882d087d63ede11e506e51dbd45eb5142b5"
+            },
+            "NORMAL": {
+              "count": 48,
+              "dimension": 3,
+              "component": "f32",
+              "sha256": "d665b24039c7c21fe43d6eb66e95c77f58bd4115badd386acd0d865f9fc3775b"
+            },
+            "TANGENT": {
+              "count": 48,
+              "dimension": 4,
+              "component": "f32",
+              "sha256": "a591cad4e1f0810da454957724653eeb81d32da41fd25cbbe9772538b7605e67"
+            },
+            "JOINTS": {
+              "count": 48,
+              "dimension": 1,
+              "component": "u32",
+              "sha256": "5d89f056865052bcb89c910d2d62872e029fb273c3db03f8968a52a41593c1b5"
+            },
+            "UV0": {
+              "count": 48,
+              "dimension": 2,
+              "component": "f32",
+              "sha256": "d88c1ad02158e1c0f8ae5dd2c15b4ceb078b13b80e3e19364c18ce5a0f3e86ea"
+            }
+          },
+          "submesh_count": 1,
+          "morph_frames": 19,
+          "morph_channels": 19
+        },
+        {
+          "identity": "cab-285bc62d903327bd04727af11fe5b8b1:-7140222088507988268",
+          "name": "EyeLens",
+          "vertices": 98,
+          "attributes": {
+            "POSITION": {
+              "count": 98,
+              "dimension": 3,
+              "component": "f32",
+              "sha256": "e9dea985df40e80c70296e932a81e2bc8f4422103cd1e1059b5198f5c7b9890b"
+            },
+            "NORMAL": {
+              "count": 98,
+              "dimension": 3,
+              "component": "f32",
+              "sha256": "e62d939ef50bb4ac6647fe793b2edac5cf0d9f56660879d96c3d1577fe101a41"
+            },
+            "TANGENT": {
+              "count": 98,
+              "dimension": 4,
+              "component": "f32",
+              "sha256": "138f3ab5b41339609da005b203d478e6b9009e5032797cde4e260fb6df725a8c"
+            },
+            "JOINTS": {
+              "count": 98,
+              "dimension": 1,
+              "component": "u32",
+              "sha256": "f64fb0748a63adb0de0bc1f3df2fa71d9bb988aa9c9f035b6d0ae54b705b3818"
+            },
+            "UV0": {
+              "count": 98,
+              "dimension": 2,
+              "component": "f32",
+              "sha256": "cec2493dad7243ec364244ddd847012f70d32725ea6865a0d92a0f1d29c3349b"
+            }
+          },
+          "submesh_count": 1,
+          "morph_frames": 0,
+          "morph_channels": 0
+        },
+        {
+          "identity": "cab-285bc62d903327bd04727af11fe5b8b1:497734139673030613",
+          "name": "Brow",
+          "vertices": 128,
+          "attributes": {
+            "POSITION": {
+              "count": 128,
+              "dimension": 3,
+              "component": "f32",
+              "sha256": "f654f75bd0fc18e086fec1e3535d88d17c716e9688c63bb03768f91808611381"
+            },
+            "NORMAL": {
+              "count": 128,
+              "dimension": 3,
+              "component": "f32",
+              "sha256": "fbb5e03297251a198c1a4d4d14df65739efeb85fc5be02fa1482da2679f9d972"
+            },
+            "TANGENT": {
+              "count": 128,
+              "dimension": 4,
+              "component": "f32",
+              "sha256": "3e6b5a0050ad473d45c155e7d3874e080645b125e939c98ce030db2fb88b2e62"
+            },
+            "JOINTS": {
+              "count": 128,
+              "dimension": 1,
+              "component": "u32",
+              "sha256": "076a27c79e5ace2a3d47f9dd2e83e4ff6ea8872b3c2218f66c92b89b55f36560"
+            },
+            "UV0": {
+              "count": 128,
+              "dimension": 2,
+              "component": "f32",
+              "sha256": "1aa5c64fa2661c0354dfe0ddc0baadf53104fb4f51402f534a23543d8155fd98"
+            }
+          },
+          "submesh_count": 1,
+          "morph_frames": 19,
+          "morph_channels": 19
+        },
+        {
+          "identity": "cab-285bc62d903327bd04727af11fe5b8b1:7247458222415894616",
+          "name": "Face",
+          "vertices": 2281,
+          "attributes": {
+            "POSITION": {
+              "count": 2281,
+              "dimension": 3,
+              "component": "f32",
+              "sha256": "6e722493d078b649ad7efe2c4da373f60a7e87de46d589ded6e9c5bfc36143bf"
+            },
+            "NORMAL": {
+              "count": 2281,
+              "dimension": 3,
+              "component": "f32",
+              "sha256": "900699e6913ca1380f82c3d30a742014c203c6588b56442367f6288209bfa3f3"
+            },
+            "TANGENT": {
+              "count": 2281,
+              "dimension": 4,
+              "component": "f32",
+              "sha256": "921976b15f928dd802298ab7003a5cd3b0033973b5fcda8c51ab97f4ca4daf08"
+            },
+            "JOINTS": {
+              "count": 2281,
+              "dimension": 1,
+              "component": "u32",
+              "sha256": "5a318de316dfda83a5dcfd9ec349996f21646d38098ff86f3e1c7a19e954df72"
+            },
+            "UV0": {
+              "count": 2281,
+              "dimension": 2,
+              "component": "f32",
+              "sha256": "ebc20756a155c2fa5a2fcbac5413642f19f12950c60c7cf2de7d770a5a3ce9bc"
+            }
+          },
+          "submesh_count": 1,
+          "morph_frames": 86,
+          "morph_channels": 86
+        },
+        {
+          "identity": "cab-285bc62d903327bd04727af11fe5b8b1:936246746350073539",
+          "name": "Eye",
+          "vertices": 534,
+          "attributes": {
+            "POSITION": {
+              "count": 534,
+              "dimension": 3,
+              "component": "f32",
+              "sha256": "5d26ea7f2ac61f28b937425ed00b4422f7db2e8c3788f914ff790ae0de5702c6"
+            },
+            "NORMAL": {
+              "count": 534,
+              "dimension": 3,
+              "component": "f32",
+              "sha256": "00ba814691377a20acba0b8b191044b8d7a2c4e70e4c02f4550c647f15f1f956"
+            },
+            "TANGENT": {
+              "count": 534,
+              "dimension": 4,
+              "component": "f32",
+              "sha256": "6097af97d63626ed30b5a53e9d7a05bdf02617ec35076b369c51f593fbc20f14"
+            },
+            "JOINTS": {
+              "count": 534,
+              "dimension": 1,
+              "component": "u32",
+              "sha256": "c68ef10b49c0779723276cee94b158cfd771c8dcb985eec6cf155355b5d32cc4"
+            },
+            "UV0": {
+              "count": 534,
+              "dimension": 2,
+              "component": "f32",
+              "sha256": "54431a13cd7350cab7e73586e874ad25dbfb5adce4657be914fabec649d25523"
+            }
+          },
+          "submesh_count": 2,
+          "morph_frames": 5,
+          "morph_channels": 5
+        },
+        {
+          "identity": "cab-46ea692492fcb028f71044ac44ee34c7:-3256250944424208684",
+          "name": "Skirt",
+          "vertices": 1490,
+          "attributes": {
+            "POSITION": {
+              "count": 1490,
+              "dimension": 3,
+              "component": "f32",
+              "sha256": "7b761beed2d997e4f1a0e92ad89a5c49f1648713e78c91b8423d926321737a06"
+            },
+            "NORMAL": {
+              "count": 1490,
+              "dimension": 3,
+              "component": "f32",
+              "sha256": "537320cae9a177ffa1ae2c2ed68c8358747e8a345a7f871da737fd9c3bedc71e"
+            },
+            "TANGENT": {
+              "count": 1490,
+              "dimension": 4,
+              "component": "f32",
+              "sha256": "40a0029515228a7c1e7bf995bd95586228257cdd05cc00e703a7a6d013685d8c"
+            },
+            "JOINTS": {
+              "count": 1490,
+              "dimension": 4,
+              "component": "u32",
+              "sha256": "73aac2938b5a1c374139c78b390b973cabce9df84f28a31df70e051a2f2095ae"
+            },
+            "WEIGHTS": {
+              "count": 1490,
+              "dimension": 4,
+              "component": "f32",
+              "sha256": "9b805b5e52e7fbd13a339220beabf0d49fff143a9c440c3ffefb0202177fcb91"
+            },
+            "UV0": {
+              "count": 1490,
+              "dimension": 2,
+              "component": "f32",
+              "sha256": "4b30bb9ecb239a68d67f9acfaa29134b90eab8257409bd21e4d85bc504ace9d6"
+            },
+            "UV1": {
+              "count": 1490,
+              "dimension": 2,
+              "component": "f32",
+              "sha256": "98ebcd3f095fdcdd4333a63d2c6453a3798e23d01bcfd8d730e930522f789a1a"
+            }
+          },
+          "submesh_count": 1,
+          "morph_frames": 0,
+          "morph_channels": 0
+        },
+        {
+          "identity": "cab-46ea692492fcb028f71044ac44ee34c7:-3304198621391734793",
+          "name": "Loafer",
+          "vertices": 616,
+          "attributes": {
+            "POSITION": {
+              "count": 616,
+              "dimension": 3,
+              "component": "f32",
+              "sha256": "aa23dd88b4b1a8133df0fd47eabdb9290848065da4c2d6964138d0bd26b08511"
+            },
+            "NORMAL": {
+              "count": 616,
+              "dimension": 3,
+              "component": "f32",
+              "sha256": "8f20a6f141d0c5890ceebfda8d6cbac7e4a7cb50bd9d1731fa5b090ec510699c"
+            },
+            "TANGENT": {
+              "count": 616,
+              "dimension": 4,
+              "component": "f32",
+              "sha256": "876cf903cc10ec93d3f5300fe4f2f0ddc5acafc258605e3aa08bb45148f80b75"
+            },
+            "JOINTS": {
+              "count": 616,
+              "dimension": 2,
+              "component": "u32",
+              "sha256": "253470d1030919ebf3b34e4090bdb8b1e0d63c62b5bb4eb8d7a62eceed507aaf"
+            },
+            "WEIGHTS": {
+              "count": 616,
+              "dimension": 2,
+              "component": "f32",
+              "sha256": "37156d48b3dd8a8e3c6a30bf87fc717b8376c73f939d35b2631260a502bcfe45"
+            },
+            "UV0": {
+              "count": 616,
+              "dimension": 2,
+              "component": "f32",
+              "sha256": "5869bfbb47720fae7eb552c846504fbd822637f0f83d84379af5bdf15375f5cc"
+            },
+            "UV1": {
+              "count": 616,
+              "dimension": 2,
+              "component": "f32",
+              "sha256": "ae38cd89ffcbe9dfe757bc620d039eb5e712a7d30926a0e83b59add1fab7bf0b"
+            }
+          },
+          "submesh_count": 1,
+          "morph_frames": 0,
+          "morph_channels": 0
+        },
+        {
+          "identity": "cab-46ea692492fcb028f71044ac44ee34c7:-6133358290357652268",
+          "name": "Hair_Ponytail_FesOnly",
+          "vertices": 5911,
+          "attributes": {
+            "POSITION": {
+              "count": 5911,
+              "dimension": 3,
+              "component": "f32",
+              "sha256": "484118cb509b6fcd05637420a05348e72225fa613c0e0653cb7becabf4750d5f"
+            },
+            "NORMAL": {
+              "count": 5911,
+              "dimension": 3,
+              "component": "f32",
+              "sha256": "be1b7d3a630effd2ec1d4d1ee2695054ac0b99463bfe52005db46b3200c86c36"
+            },
+            "TANGENT": {
+              "count": 5911,
+              "dimension": 4,
+              "component": "f32",
+              "sha256": "25b93344b4291f42ce2bc2b5b3be85c0300f1a256417ebec6674d5a1d725d14a"
+            },
+            "JOINTS": {
+              "count": 5911,
+              "dimension": 4,
+              "component": "u32",
+              "sha256": "5c90b9ae70ad359fc4adee3452ce44e1da76b265f71d516c52951188599efac0"
+            },
+            "WEIGHTS": {
+              "count": 5911,
+              "dimension": 4,
+              "component": "f32",
+              "sha256": "14fe9791e569154584c531324e83fcb78e2e4c980d3a4fe134f3fc062df72be7"
+            },
+            "UV0": {
+              "count": 5911,
+              "dimension": 2,
+              "component": "f32",
+              "sha256": "309eb780bad822029475296765ee399d92e383c7d59fe0dabeaa874b9098731f"
+            },
+            "UV1": {
+              "count": 5911,
+              "dimension": 2,
+              "component": "f32",
+              "sha256": "33cd5ca99af9238898e3b281497bf17c74d2acd1ddd0b10609621bde2e0f6f85"
+            }
+          },
+          "submesh_count": 1,
+          "morph_frames": 0,
+          "morph_channels": 0
+        },
+        {
+          "identity": "cab-46ea692492fcb028f71044ac44ee34c7:1403698554756151941",
+          "name": "Hair_Ponytail",
+          "vertices": 5951,
+          "attributes": {
+            "POSITION": {
+              "count": 5951,
+              "dimension": 3,
+              "component": "f32",
+              "sha256": "a27c1f9ec61ef22ef31855c1269c71b6a1a414c59dba05713de1fe63746313af"
+            },
+            "NORMAL": {
+              "count": 5951,
+              "dimension": 3,
+              "component": "f32",
+              "sha256": "5e77f6322990382cc2b497aca07c60c8e00ecdbb4f5e7af91a910b1bc53a62e4"
+            },
+            "TANGENT": {
+              "count": 5951,
+              "dimension": 4,
+              "component": "f32",
+              "sha256": "de8960e67d9f4b55da7d3d40d9a502cf268b9ac343a8e56b25bbca28b279c450"
+            },
+            "JOINTS": {
+              "count": 5951,
+              "dimension": 4,
+              "component": "u32",
+              "sha256": "dd1389c7fefb7224dc46e518d52ecdcd7c7b8ade9c3c6c8d19f192f6c96442d5"
+            },
+            "WEIGHTS": {
+              "count": 5951,
+              "dimension": 4,
+              "component": "f32",
+              "sha256": "5251b5213b04c7ce42d9825366b35899ebc91a1836b3c49ac096a05c9b328065"
+            },
+            "UV0": {
+              "count": 5951,
+              "dimension": 2,
+              "component": "f32",
+              "sha256": "7dac37a6d392203b1c96ea102a85cca2958df1a85d05d3c0821a6985c6f389f7"
+            },
+            "UV1": {
+              "count": 5951,
+              "dimension": 2,
+              "component": "f32",
+              "sha256": "289db8bdc8c3e5cc2b91f5ad61708de0666459d024d008771f9ee87ee69571cb"
+            }
+          },
+          "submesh_count": 1,
+          "morph_frames": 0,
+          "morph_channels": 0
+        },
+        {
+          "identity": "cab-46ea692492fcb028f71044ac44ee34c7:200330172142912212",
+          "name": "Cos",
+          "vertices": 1922,
+          "attributes": {
+            "POSITION": {
+              "count": 1922,
+              "dimension": 3,
+              "component": "f32",
+              "sha256": "e8d7d1beaa595a7dc733a771a9c60966eff8a9a859e1c3ffdefba6a2eccb94d0"
+            },
+            "NORMAL": {
+              "count": 1922,
+              "dimension": 3,
+              "component": "f32",
+              "sha256": "715e642942ae8cba6fed487bd07723e7d82a124613809dcb7ed26de29e9e5575"
+            },
+            "TANGENT": {
+              "count": 1922,
+              "dimension": 4,
+              "component": "f32",
+              "sha256": "9dc1fbf447322fb5e36f4c4c2d6c8287a83e12a9e2547f9ee944b917386fd96f"
+            },
+            "JOINTS": {
+              "count": 1922,
+              "dimension": 4,
+              "component": "u32",
+              "sha256": "e9a3cf451175cad694fece01124204f14d5dab75a5c2bff4d100fca6628a860d"
+            },
+            "WEIGHTS": {
+              "count": 1922,
+              "dimension": 4,
+              "component": "f32",
+              "sha256": "fe122d9666461111c1c1e1ba737267c097115ad75f2f669faa09545d523a63b1"
+            },
+            "UV0": {
+              "count": 1922,
+              "dimension": 2,
+              "component": "f32",
+              "sha256": "079ed7f2f46d640bf693c1cc45934095f22bef82530c0c3077619a59c20147de"
+            },
+            "UV1": {
+              "count": 1922,
+              "dimension": 2,
+              "component": "f32",
+              "sha256": "b31719e14ba4734ae10de5d3f11ff90875515595bec2ae15d8b947db5c3c6d20"
+            }
+          },
+          "submesh_count": 1,
+          "morph_frames": 0,
+          "morph_channels": 0
+        },
+        {
+          "identity": "cab-46ea692492fcb028f71044ac44ee34c7:6466772633514885703",
+          "name": "IndoorShoes",
+          "vertices": 906,
+          "attributes": {
+            "POSITION": {
+              "count": 906,
+              "dimension": 3,
+              "component": "f32",
+              "sha256": "b418d8eea7cfefddeaf9d1325f279f74bfddb61917f9a22d2b88a4c3c23de71b"
+            },
+            "NORMAL": {
+              "count": 906,
+              "dimension": 3,
+              "component": "f32",
+              "sha256": "9305264d804ce491abce2ef85c3b571c3b1f2fb2431221a271b1f6f5a4657501"
+            },
+            "TANGENT": {
+              "count": 906,
+              "dimension": 4,
+              "component": "f32",
+              "sha256": "bf346e74fb471b904002cc8033967f47df24fe0bcee8783fc8b93ffa754d03ba"
+            },
+            "JOINTS": {
+              "count": 906,
+              "dimension": 2,
+              "component": "u32",
+              "sha256": "92f74d12d9a3823f67a6718ca02c6fcd1a03c5c50fa47ff312b4d9ab71ad5fa6"
+            },
+            "WEIGHTS": {
+              "count": 906,
+              "dimension": 2,
+              "component": "f32",
+              "sha256": "0028f52df72385306ae6ec20d907f49c513f10e077569fa9e2fa3001c8edf1fc"
+            },
+            "UV0": {
+              "count": 906,
+              "dimension": 2,
+              "component": "f32",
+              "sha256": "5f1d1e876515a5100f92d637bb8856d0c53e15db4ce78e294cd29c30e01d9dfb"
+            },
+            "UV1": {
+              "count": 906,
+              "dimension": 2,
+              "component": "f32",
+              "sha256": "beb20cc6cd9cb6b16d499ea48a81e35b4fd35e99a016ef184f542018a201fe7d"
+            }
+          },
+          "submesh_count": 1,
+          "morph_frames": 0,
+          "morph_channels": 0
+        },
+        {
+          "identity": "cab-46ea692492fcb028f71044ac44ee34c7:8592639463863149580",
+          "name": "Skin",
+          "vertices": 3353,
+          "attributes": {
+            "POSITION": {
+              "count": 3353,
+              "dimension": 3,
+              "component": "f32",
+              "sha256": "8687008feaa67ec3127de1bb4e16fb36aff4f405c88243d5fd80077be0258c26"
+            },
+            "NORMAL": {
+              "count": 3353,
+              "dimension": 3,
+              "component": "f32",
+              "sha256": "76527b39c65c3388f1c7c0ee66431ee463420db4bac9ca309e1f0c72aef5982c"
+            },
+            "TANGENT": {
+              "count": 3353,
+              "dimension": 4,
+              "component": "f32",
+              "sha256": "5e0502e887dbb6689ffff414ccc2e46f7d2f7c8aae46472b2196e1e8bb006ca4"
+            },
+            "JOINTS": {
+              "count": 3353,
+              "dimension": 4,
+              "component": "u32",
+              "sha256": "1117a478ce3cebca54994f6ecf2be10f1c57d7d71fbc7674a333cdf6ec82487b"
+            },
+            "WEIGHTS": {
+              "count": 3353,
+              "dimension": 4,
+              "component": "f32",
+              "sha256": "0ff77fd54d08e649c017873ba4b03e7c3a9281d7b17883444c37ab66418fe723"
+            },
+            "UV0": {
+              "count": 3353,
+              "dimension": 2,
+              "component": "f32",
+              "sha256": "91676029c900839e07457108fb6cd5c896ff32b7f2c29eb0ac958c0464dcffce"
+            },
+            "UV1": {
+              "count": 3353,
+              "dimension": 2,
+              "component": "f32",
+              "sha256": "7160fb9c66181d5ad0f1086a8610f766c9990a55a848eea89274d0dd1b403f8a"
+            }
+          },
+          "submesh_count": 1,
+          "morph_frames": 0,
+          "morph_channels": 0
+        }
+      ]
+    },
+    {
+      "root": "ppadv010_guitar",
+      "closure": {
+        "bundle_count": 4,
+        "total_bytes": 495407,
+        "edges": [
+          [
+            "ppadv010_guitar",
+            "__mat_ppadv010_guitar.mat"
+          ],
+          [
+            "ppadv010_guitar",
+            "__ppadv010_guitar.fbx"
+          ],
+          [
+            "__ppadv010_guitar.fbx",
+            "__mat_ppadv010_guitar.mat"
+          ],
+          [
+            "__mat_ppadv010_guitar.mat",
+            "__tex_ppadv010_guitar.png"
+          ]
+        ],
+        "files": [
+          {
+            "label": "ppadv010_guitar",
+            "path": "archive/game/plain/ppadv010_guitar.assetbundle",
+            "bytes": 2830,
+            "sha256": "6f936a488f5f9e7e14b17618236dcebbe3e7831598623a86370058a34534fa4a",
+            "catalog_type": "prefab"
+          },
+          {
+            "label": "__mat_ppadv010_guitar.mat",
+            "path": "archive/game/plain/__mat_ppadv010_guitar.mat.assetbundle",
+            "bytes": 29887,
+            "sha256": "5551690c662c58687ffed98a26746512753ef9ae79d7f6d1c9fe88044c5e35a4",
+            "catalog_type": "mat"
+          },
+          {
+            "label": "__ppadv010_guitar.fbx",
+            "path": "archive/game/plain/__ppadv010_guitar.fbx.assetbundle",
+            "bytes": 48275,
+            "sha256": "95553d95fa170db401389bd1a681836d5b0673306ec162918b6a9d9fc04f7158",
+            "catalog_type": "fbx"
+          },
+          {
+            "label": "__tex_ppadv010_guitar.png",
+            "path": "archive/game/plain/__tex_ppadv010_guitar.png.assetbundle",
+            "bytes": 414415,
+            "sha256": "1a728d4b728e2d01046b907d4dbbd1885da0b8ac830c35d40f6519e0d8503c5f",
+            "catalog_type": "png"
+          }
+        ],
+        "all_source_hashes_verified": true
+      },
+      "totals": {
+        "nodes": 1,
+        "renderers": 1,
+        "meshes": 1,
+        "vertices": 2443,
+        "morph_frames": 0,
+        "morph_channels": 0
+      },
+      "meshes": [
+        {
+          "identity": "cab-a33da6af3384b07ae5e18bca5152e71e:-8858587889629446051",
+          "name": "PpAdv010_Guitar",
+          "vertices": 2443,
+          "attributes": {
+            "POSITION": {
+              "count": 2443,
+              "dimension": 3,
+              "component": "f32",
+              "sha256": "c500f49b42ecdb6b57fc631027b9f8bb615b31632e396ccead1fbaf2b06050c4"
+            },
+            "NORMAL": {
+              "count": 2443,
+              "dimension": 4,
+              "component": "f32",
+              "sha256": "a4797a3cc19032ceb955417c4213dcb9ffc3b9c9cada6fcb3551996b1de3c854"
+            },
+            "UV0": {
+              "count": 2443,
+              "dimension": 2,
+              "component": "f32",
+              "sha256": "73116a26771aa4540dbcf04ac5531cb90686c80012317ec4fa66958bd569ee5a"
+            }
+          },
+          "submesh_count": 1,
+          "morph_frames": 0,
+          "morph_channels": 0
+        }
+      ]
+    }
+  ]
+}

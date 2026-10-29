@@ -9,6 +9,7 @@
 - `extract` 支持原生载荷、Texture2D PNG／无损 WebP、Cubemap 六面与 mip、TextAsset、字体和视频原字节。
 - `verify` 核对文件 SHA-256，并可重新解码 PNG／WebP 核对尺寸与完整 RGBA。
 - 可选 PNG 体积优化，以及 PNG／无损 WebP 的逐图最小候选选择。
+- `model` 按选定 prefab 根输出 GLB 与源数据说明，支持完整顶点通道、层级、蒙皮和形态数据的独立数值回读。
 - 支持有界并发、内存软预算、输出配额、断点恢复；失败对象清理部分输出，状态写入 JSONL。
 
 核心固定为 `unity-rs-core 0.6.1`。按需 entry 及 Region 保留资源区间，避免默认加载器将所有 entry 展开为完整 Vec。
@@ -38,6 +39,8 @@ Rurino extract --input <资源.assetbundle> --class 89 --format png --mips all -
 Rurino extract --input <资源.assetbundle> --class 28 --format png --optimize balanced --output <目录>
 Rurino extract --input <资源.assetbundle> --class 28 --format auto --optimize small --jobs 1 --output <目录>
 Rurino verify --manifest <目录/manifest.jsonl> --level decoded
+Rurino model --input <角色prefab.assetbundle> --catalog <catalog.json> --output <模型目录>
+Rurino model --input <prefab.assetbundle> --dependency <依赖.assetbundle> --root-path-id <GameObject路径ID> --output <模型目录>
 ```
 
 `--class`、`--path-id`、`--input` 可重复指定。目录枚举限当前层 `.assetbundle`；catalog 仅选择 ResourceType=1，标签和类型精确相交筛选。常用类 ID：Texture2D=28、TextAsset=49、Cubemap=89、Font=128、VideoClip=329、RenderTexture=84。
@@ -69,6 +72,16 @@ RenderTexture 和 0×0 动态字体纹理没有静态画面，分别标记 `meta
 内存参数控制加载准入估计、解析上限和每任务解码工作区，包含有界 entry 缓存、候选缓冲和重新解码的估计；它是软预算，不是操作系统 RSS 硬限制。并发按原包分配预算；最大块或任务超过额度会拒绝，无法通过增大队列绕过。候选顺序编码，oxipng 不启用内部多线程；较大图片可用 `--jobs 1` 将任务预算集中到当前原包。
 
 ## 验证与性能
+
+模型命令输出 `model.glb`、`model.source.json` 和 `manifest.jsonl`。catalog 用于解析根原包父目录中的明确依赖闭包；也可重复使用 `--dependency` 指定所需原包。自动选择首个原包中唯一的根 GameObject；有多个根时须指定 `--root-path-id`，`--root-file-index` 限于首个原包的序列化文件。加载依赖不等于导出全部依赖模型，仅输出所选子树。
+
+模型预算默认 256 MiB、输出配额默认 64 MiB；顺序处理，二进制逐数组写出。输出目录必须为空，任务失败清理已写文件。首版模型任务不提供断点恢复，现有图片提取与恢复策略独立使用。
+
+GLB 保留位置、法线、切线及手性、颜色、UV0–7、三角子网格、层级、蒙皮／绑定矩阵和稀疏形态；Unity 坐标转为 glTF 坐标时进行明确的 X 镜像、绕序及矩阵排列转换。非二维 UV 通过自定义属性保留，原语义由源数据说明记录。四维位置／法线只接受已逐顶点验证的第四分量正零，并保存恢复规则；其他值明确拒绝。
+
+材质在 GLB 中为名称占位，完整源属性和引用保存在说明中；本步没有输出贴图、Shader 效果或运行时动画。多帧形态保留全部帧和原权重，注明需要自定义插值，通用查看器不保证按 Unity 方式混合。模型数据保留与原版外观、组件装配及动作效果分别验收。
+
+`verify --level files` 核对模型与说明文件哈希；完整模型数值核验使用 `scripts/validate_model.py` 从原包建立独立 UnityPy 参考，再用独立 GLB 读取器检查。`--level decoded` 对 GLB 明确提示使用该流程，不把文件哈希通过冒充数值通过。固定样本、结果及复验方式见 [模型数据验证](docs/model-data-validation.md)。
 
 当前三轮性能、无损优化收益和 UnityPy 对比见 [0.2.0 性能报告](docs/performance-v02.md)，首版基线见 [0.1.0 报告](docs/performance.md)。原始游戏资源和图片不进入仓库，测试输出使用临时目录，核验后清理。
 

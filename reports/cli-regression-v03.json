@@ -1,0 +1,591 @@
+{
+  "executable": "<资料根>\\tools\\rurino-encoding-build\\target\\release\\Rurino.exe",
+  "executable_sha256": "b01bf530e2c97dd504e069a3b8914cc6c0edb21eb1840320438d6a6f22d87e33",
+  "source_scope": "<资料根>\\archive\\game\\plain",
+  "source_sha256": {
+    "image_card_full_10217031.assetbundle": "5c93f1d162fcc386c92af55f20c25b3f60f92bb2964209759a420397825b5fce",
+    "image_card_full_10213010.assetbundle": "f75e75c71b5162e617a3b155be49228fa42f35eb05c8a7284a2fd4e6d543bc4e",
+    "__reflectionprobe-0.exr.assetbundle": "ad0140eaa504dbb45976a59c4f6eab1798ec985805126164cd1099b9e8e4b516"
+  },
+  "cases": [
+    {
+      "case": "quota_cleanup",
+      "passed": true,
+      "details": {
+        "remaining_payload_files": 0,
+        "recorded_rows": 1
+      },
+      "seconds": 0.26842089999991003,
+      "commands": [
+        {
+          "arguments": [
+            "extract",
+            "--input",
+            "<资料根>\\archive\\game\\plain\\image_card_full_10217031.assetbundle",
+            "--output",
+            "<资料根>\\tools\\rurino-model-validation\\legacy-regression\\quota_cleanup-sauxef55",
+            "--format",
+            "png",
+            "--class",
+            "28",
+            "--output-budget",
+            "1",
+            "--memory-budget",
+            "256MiB"
+          ],
+          "returncode": 1,
+          "seconds": 0.033892600004037376,
+          "stdout": "{\"event\":\"bundle_complete\",\"input\":\"<资料根>\\\\archive\\\\game\\\\plain\\\\image_card_full_10217031.assetbundle\",\"io\":{\"meaning\":\"文件源成功读取请求字节，包含重复读取，不等于物理磁盘读取量\",\"source_read_bytes\":1785617,\"source_read_calls\":92},\"loader\":{\"admission_estimate_bytes\":1294737,\"budget_contract\":\"加载准入估计与解析上限；不包含编码器工作区和操作系统分配器开销，不是硬RSS限制\",\"classes\":{\"142\":1,\"213\":1,\"28\":1},\"entries\":2,\"entry_cache_allowance_bytes\":1004220,\"input_bytes\":831713,\"maximum_compressed_block_bytes\":127598,\"maximum_uncompressed_block_bytes\":131072,\"memory_budget_bytes\":268435456,\"metadata_heap_estimate_bytes\":31847,\"objects\":3,\"resources\":1,\"serialized_files\":1,\"serialized_metadata_bytes\":10457,\"storage_blocks\":7,\"uncompressed_entry_bytes\":873148,\"unity_versions\":[\"2022.3.62f2\"]},\"selected_objects\":1,\"selected_read_bytes\":953904,\"source_hash_read_bytes\":831713,\"source_hash_read_calls\":51}\n{\"elapsed_seconds\":0.0214845,\"event\":\"summary\",\"failed\":1,\"memory_budget_bytes\":268435456,\"output_bytes\":0,\"per_worker_budget_bytes\":268435456,\"resumed\":0,\"selected\":1,\"statuses\":{},\"succeeded\":0,\"workers\":1}\n",
+          "stderr": "错误：部分对象导出失败，详见manifest.jsonl\n"
+        }
+      ]
+    },
+    {
+      "case": "resume_error_and_partial_tail",
+      "passed": true,
+      "details": {
+        "parseable_rows": 2,
+        "active_rows": 1,
+        "partial_tail_recovered": true
+      },
+      "seconds": 0.9166571000023396,
+      "commands": [
+        {
+          "arguments": [
+            "extract",
+            "--input",
+            "<资料根>\\archive\\game\\plain\\image_card_full_10217031.assetbundle",
+            "--output",
+            "<资料根>\\tools\\rurino-model-validation\\legacy-regression\\resume_error_and_partial_tail-55e8_b46",
+            "--format",
+            "png",
+            "--class",
+            "28",
+            "--output-budget",
+            "1",
+            "--memory-budget",
+            "256MiB"
+          ],
+          "returncode": 1,
+          "seconds": 0.030970799998613074,
+          "stdout": "{\"event\":\"bundle_complete\",\"input\":\"<资料根>\\\\archive\\\\game\\\\plain\\\\image_card_full_10217031.assetbundle\",\"io\":{\"meaning\":\"文件源成功读取请求字节，包含重复读取，不等于物理磁盘读取量\",\"source_read_bytes\":1785617,\"source_read_calls\":92},\"loader\":{\"admission_estimate_bytes\":1294737,\"budget_contract\":\"加载准入估计与解析上限；不包含编码器工作区和操作系统分配器开销，不是硬RSS限制\",\"classes\":{\"142\":1,\"213\":1,\"28\":1},\"entries\":2,\"entry_cache_allowance_bytes\":1004220,\"input_bytes\":831713,\"maximum_compressed_block_bytes\":127598,\"maximum_uncompressed_block_bytes\":131072,\"memory_budget_bytes\":268435456,\"metadata_heap_estimate_bytes\":31847,\"objects\":3,\"resources\":1,\"serialized_files\":1,\"serialized_metadata_bytes\":10457,\"storage_blocks\":7,\"uncompressed_entry_bytes\":873148,\"unity_versions\":[\"2022.3.62f2\"]},\"selected_objects\":1,\"selected_read_bytes\":953904,\"source_hash_read_bytes\":831713,\"source_hash_read_calls\":51}\n{\"elapsed_seconds\":0.0217369,\"event\":\"summary\",\"failed\":1,\"memory_budget_bytes\":268435456,\"output_bytes\":0,\"per_worker_budget_bytes\":268435456,\"resumed\":0,\"selected\":1,\"statuses\":{},\"succeeded\":0,\"workers\":1}\n",
+          "stderr": "错误：部分对象导出失败，详见manifest.jsonl\n"
+        },
+        {
+          "arguments": [
+            "extract",
+            "--input",
+            "<资料根>\\archive\\game\\plain\\image_card_full_10217031.assetbundle",
+            "--output",
+            "<资料根>\\tools\\rurino-model-validation\\legacy-regression\\resume_error_and_partial_tail-55e8_b46",
+            "--memory-budget",
+            "256MiB",
+            "--output-budget",
+            "64MiB",
+            "--format",
+            "png",
+            "--class",
+            "28",
+            "--resume"
+          ],
+          "returncode": 0,
+          "seconds": 0.06867500000225846,
+          "stdout": "{\"event\":\"bundle_complete\",\"input\":\"<资料根>\\\\archive\\\\game\\\\plain\\\\image_card_full_10217031.assetbundle\",\"io\":{\"meaning\":\"文件源成功读取请求字节，包含重复读取，不等于物理磁盘读取量\",\"source_read_bytes\":1785617,\"source_read_calls\":92},\"loader\":{\"admission_estimate_bytes\":1294737,\"budget_contract\":\"加载准入估计与解析上限；不包含编码器工作区和操作系统分配器开销，不是硬RSS限制\",\"classes\":{\"142\":1,\"213\":1,\"28\":1},\"entries\":2,\"entry_cache_allowance_bytes\":1004220,\"input_bytes\":831713,\"maximum_compressed_block_bytes\":127598,\"maximum_uncompressed_block_bytes\":131072,\"memory_budget_bytes\":268435456,\"metadata_heap_estimate_bytes\":31847,\"objects\":3,\"resources\":1,\"serialized_files\":1,\"serialized_metadata_bytes\":10457,\"storage_blocks\":7,\"uncompressed_entry_bytes\":873148,\"unity_versions\":[\"2022.3.62f2\"]},\"selected_objects\":1,\"selected_read_bytes\":953904,\"source_hash_read_bytes\":831713,\"source_hash_read_calls\":51}\n{\"elapsed_seconds\":0.0581426,\"event\":\"summary\",\"failed\":0,\"memory_budget_bytes\":268435456,\"output_bytes\":3297853,\"per_worker_budget_bytes\":268435456,\"resumed\":0,\"selected\":1,\"statuses\":{\"decoded_verified\":1},\"succeeded\":1,\"workers\":1}\n",
+          "stderr": ""
+        },
+        {
+          "arguments": [
+            "verify",
+            "--manifest",
+            "<资料根>\\tools\\rurino-model-validation\\legacy-regression\\resume_error_and_partial_tail-55e8_b46\\manifest.jsonl",
+            "--level",
+            "decoded",
+            "--memory-budget",
+            "256MiB"
+          ],
+          "returncode": 0,
+          "seconds": 0.03672670000378275,
+          "stdout": "{\"decoded_images\":1,\"event\":\"verified\",\"files\":1,\"statuses\":{\"decoded_verified\":1}}\n",
+          "stderr": ""
+        },
+        {
+          "arguments": [
+            "extract",
+            "--input",
+            "<资料根>\\archive\\game\\plain\\image_card_full_10217031.assetbundle",
+            "--output",
+            "<资料根>\\tools\\rurino-model-validation\\legacy-regression\\resume_error_and_partial_tail-55e8_b46",
+            "--memory-budget",
+            "256MiB",
+            "--output-budget",
+            "64MiB",
+            "--format",
+            "png",
+            "--class",
+            "28",
+            "--resume"
+          ],
+          "returncode": 0,
+          "seconds": 0.011630799999693409,
+          "stdout": "{\"event\":\"bundle_complete\",\"input\":\"<资料根>\\\\archive\\\\game\\\\plain\\\\image_card_full_10217031.assetbundle\",\"io\":{\"meaning\":\"文件源成功读取请求字节，包含重复读取，不等于物理磁盘读取量\",\"source_read_bytes\":954096,\"source_read_calls\":85},\"loader\":{\"admission_estimate_bytes\":1294737,\"budget_contract\":\"加载准入估计与解析上限；不包含编码器工作区和操作系统分配器开销，不是硬RSS限制\",\"classes\":{\"142\":1,\"213\":1,\"28\":1},\"entries\":2,\"entry_cache_allowance_bytes\":1004220,\"input_bytes\":831713,\"maximum_compressed_block_bytes\":127598,\"maximum_uncompressed_block_bytes\":131072,\"memory_budget_bytes\":268435456,\"metadata_heap_estimate_bytes\":31847,\"objects\":3,\"resources\":1,\"serialized_files\":1,\"serialized_metadata_bytes\":10457,\"storage_blocks\":7,\"uncompressed_entry_bytes\":873148,\"unity_versions\":[\"2022.3.62f2\"]},\"selected_objects\":1,\"selected_read_bytes\":122383,\"source_hash_read_bytes\":831713,\"source_hash_read_calls\":51}\n{\"elapsed_seconds\":0.0037812,\"event\":\"summary\",\"failed\":0,\"memory_budget_bytes\":268435456,\"output_bytes\":3297853,\"per_worker_budget_bytes\":268435456,\"resumed\":1,\"selected\":1,\"statuses\":{},\"succeeded\":1,\"workers\":1}\n",
+          "stderr": ""
+        },
+        {
+          "arguments": [
+            "verify",
+            "--manifest",
+            "<资料根>\\tools\\rurino-model-validation\\legacy-regression\\resume_error_and_partial_tail-55e8_b46\\manifest.jsonl",
+            "--level",
+            "decoded",
+            "--memory-budget",
+            "256MiB"
+          ],
+          "returncode": 0,
+          "seconds": 0.03203639999992447,
+          "stdout": "{\"decoded_images\":1,\"event\":\"verified\",\"files\":1,\"statuses\":{\"decoded_verified\":1}}\n",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "case": "profile_output_isolation",
+      "passed": true,
+      "details": {
+        "policies": 2,
+        "isolated_output_paths": 2,
+        "first_records": 1
+      },
+      "seconds": 1.7955537000016193,
+      "commands": [
+        {
+          "arguments": [
+            "extract",
+            "--input",
+            "<资料根>\\archive\\game\\plain\\image_card_full_10217031.assetbundle",
+            "--output",
+            "<资料根>\\tools\\rurino-model-validation\\legacy-regression\\profile_output_isolation-dguxeuym",
+            "--memory-budget",
+            "256MiB",
+            "--output-budget",
+            "64MiB",
+            "--format",
+            "png",
+            "--class",
+            "28",
+            "--profile",
+            "fast"
+          ],
+          "returncode": 0,
+          "seconds": 0.06804749999719206,
+          "stdout": "{\"event\":\"bundle_complete\",\"input\":\"<资料根>\\\\archive\\\\game\\\\plain\\\\image_card_full_10217031.assetbundle\",\"io\":{\"meaning\":\"文件源成功读取请求字节，包含重复读取，不等于物理磁盘读取量\",\"source_read_bytes\":1785617,\"source_read_calls\":92},\"loader\":{\"admission_estimate_bytes\":1294737,\"budget_contract\":\"加载准入估计与解析上限；不包含编码器工作区和操作系统分配器开销，不是硬RSS限制\",\"classes\":{\"142\":1,\"213\":1,\"28\":1},\"entries\":2,\"entry_cache_allowance_bytes\":1004220,\"input_bytes\":831713,\"maximum_compressed_block_bytes\":127598,\"maximum_uncompressed_block_bytes\":131072,\"memory_budget_bytes\":268435456,\"metadata_heap_estimate_bytes\":31847,\"objects\":3,\"resources\":1,\"serialized_files\":1,\"serialized_metadata_bytes\":10457,\"storage_blocks\":7,\"uncompressed_entry_bytes\":873148,\"unity_versions\":[\"2022.3.62f2\"]},\"selected_objects\":1,\"selected_read_bytes\":953904,\"source_hash_read_bytes\":831713,\"source_hash_read_calls\":51}\n{\"elapsed_seconds\":0.0560081,\"event\":\"summary\",\"failed\":0,\"memory_budget_bytes\":268435456,\"output_bytes\":3297853,\"per_worker_budget_bytes\":268435456,\"resumed\":0,\"selected\":1,\"statuses\":{\"decoded_verified\":1},\"succeeded\":1,\"workers\":1}\n",
+          "stderr": ""
+        },
+        {
+          "arguments": [
+            "extract",
+            "--input",
+            "<资料根>\\archive\\game\\plain\\image_card_full_10217031.assetbundle",
+            "--output",
+            "<资料根>\\tools\\rurino-model-validation\\legacy-regression\\profile_output_isolation-dguxeuym",
+            "--memory-budget",
+            "256MiB",
+            "--output-budget",
+            "64MiB",
+            "--format",
+            "png",
+            "--class",
+            "28",
+            "--profile",
+            "best",
+            "--resume"
+          ],
+          "returncode": 0,
+          "seconds": 1.182455399997707,
+          "stdout": "{\"event\":\"bundle_complete\",\"input\":\"<资料根>\\\\archive\\\\game\\\\plain\\\\image_card_full_10217031.assetbundle\",\"io\":{\"meaning\":\"文件源成功读取请求字节，包含重复读取，不等于物理磁盘读取量\",\"source_read_bytes\":1785617,\"source_read_calls\":92},\"loader\":{\"admission_estimate_bytes\":1294737,\"budget_contract\":\"加载准入估计与解析上限；不包含编码器工作区和操作系统分配器开销，不是硬RSS限制\",\"classes\":{\"142\":1,\"213\":1,\"28\":1},\"entries\":2,\"entry_cache_allowance_bytes\":1004220,\"input_bytes\":831713,\"maximum_compressed_block_bytes\":127598,\"maximum_uncompressed_block_bytes\":131072,\"memory_budget_bytes\":268435456,\"metadata_heap_estimate_bytes\":31847,\"objects\":3,\"resources\":1,\"serialized_files\":1,\"serialized_metadata_bytes\":10457,\"storage_blocks\":7,\"uncompressed_entry_bytes\":873148,\"unity_versions\":[\"2022.3.62f2\"]},\"selected_objects\":1,\"selected_read_bytes\":953904,\"source_hash_read_bytes\":831713,\"source_hash_read_calls\":51}\n{\"elapsed_seconds\":1.1717928,\"event\":\"summary\",\"failed\":0,\"memory_budget_bytes\":268435456,\"output_bytes\":6376201,\"per_worker_budget_bytes\":268435456,\"resumed\":0,\"selected\":1,\"statuses\":{\"decoded_verified\":1},\"succeeded\":1,\"workers\":1}\n",
+          "stderr": ""
+        },
+        {
+          "arguments": [
+            "verify",
+            "--manifest",
+            "<资料根>\\tools\\rurino-model-validation\\legacy-regression\\profile_output_isolation-dguxeuym\\manifest.jsonl",
+            "--level",
+            "decoded",
+            "--memory-budget",
+            "256MiB"
+          ],
+          "returncode": 0,
+          "seconds": 0.0583113000029698,
+          "stdout": "{\"decoded_images\":2,\"event\":\"verified\",\"files\":2,\"statuses\":{\"decoded_verified\":2}}\n",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "case": "jobs2_shared_quota",
+      "passed": true,
+      "details": {
+        "payload_bytes": 0,
+        "budget_bytes": 1048576,
+        "rows": 2,
+        "unrecorded_files": 0
+      },
+      "seconds": 0.2722321000037482,
+      "commands": [
+        {
+          "arguments": [
+            "extract",
+            "--input",
+            "<资料根>\\archive\\game\\plain\\image_card_full_10217031.assetbundle",
+            "--input",
+            "<资料根>\\archive\\game\\plain\\image_card_full_10213010.assetbundle",
+            "--output",
+            "<资料根>\\tools\\rurino-model-validation\\legacy-regression\\jobs2_shared_quota-5if30mn_",
+            "--format",
+            "native",
+            "--class",
+            "28",
+            "--jobs",
+            "2",
+            "--output-budget",
+            "1048576",
+            "--memory-budget",
+            "256MiB"
+          ],
+          "returncode": 1,
+          "seconds": 0.019976499999756925,
+          "stdout": "{\"event\":\"bundle_complete\",\"input\":\"<资料根>\\\\archive\\\\game\\\\plain\\\\image_card_full_10213010.assetbundle\",\"io\":{\"meaning\":\"文件源成功读取请求字节，包含重复读取，不等于物理磁盘读取量\",\"source_read_bytes\":1538057,\"source_read_calls\":86},\"loader\":{\"admission_estimate_bytes\":1282690,\"budget_contract\":\"加载准入估计与解析上限；不包含编码器工作区和操作系统分配器开销，不是硬RSS限制\",\"classes\":{\"142\":1,\"213\":1,\"28\":1},\"entries\":2,\"entry_cache_allowance_bytes\":1004220,\"input_bytes\":722526,\"maximum_compressed_block_bytes\":115551,\"maximum_uncompressed_block_bytes\":131072,\"memory_budget_bytes\":134217728,\"metadata_heap_estimate_bytes\":31847,\"objects\":3,\"resources\":1,\"serialized_files\":1,\"serialized_metadata_bytes\":10457,\"storage_blocks\":7,\"uncompressed_entry_bytes\":873148,\"unity_versions\":[\"2022.3.62f2\"]},\"selected_objects\":1,\"selected_read_bytes\":815531,\"source_hash_read_bytes\":722526,\"source_hash_read_calls\":45}\n{\"event\":\"bundle_complete\",\"input\":\"<资料根>\\\\archive\\\\game\\\\plain\\\\image_card_full_10217031.assetbundle\",\"io\":{\"meaning\":\"文件源成功读取请求字节，包含重复读取，不等于物理磁盘读取量\",\"source_read_bytes\":1785617,\"source_read_calls\":92},\"loader\":{\"admission_estimate_bytes\":1294737,\"budget_contract\":\"加载准入估计与解析上限；不包含编码器工作区和操作系统分配器开销，不是硬RSS限制\",\"classes\":{\"142\":1,\"213\":1,\"28\":1},\"entries\":2,\"entry_cache_allowance_bytes\":1004220,\"input_bytes\":831713,\"maximum_compressed_block_bytes\":127598,\"maximum_uncompressed_block_bytes\":131072,\"memory_budget_bytes\":134217728,\"metadata_heap_estimate_bytes\":31847,\"objects\":3,\"resources\":1,\"serialized_files\":1,\"serialized_metadata_bytes\":10457,\"storage_blocks\":7,\"uncompressed_entry_bytes\":873148,\"unity_versions\":[\"2022.3.62f2\"]},\"selected_objects\":1,\"selected_read_bytes\":953904,\"source_hash_read_bytes\":831713,\"source_hash_read_calls\":51}\n{\"elapsed_seconds\":0.0115383,\"event\":\"summary\",\"failed\":2,\"memory_budget_bytes\":268435456,\"output_bytes\":0,\"per_worker_budget_bytes\":134217728,\"resumed\":0,\"selected\":2,\"statuses\":{},\"succeeded\":0,\"workers\":2}\n",
+          "stderr": "错误：部分对象导出失败，详见manifest.jsonl\n"
+        }
+      ]
+    },
+    {
+      "case": "decoded_verify_forged_descriptor",
+      "passed": true,
+      "details": {
+        "forged_pixel_descriptors": 1,
+        "files_verify_passed": true,
+        "decoded_verify_rejected": true
+      },
+      "seconds": 0.38285480000195093,
+      "commands": [
+        {
+          "arguments": [
+            "extract",
+            "--input",
+            "<资料根>\\archive\\game\\plain\\image_card_full_10217031.assetbundle",
+            "--output",
+            "<资料根>\\tools\\rurino-model-validation\\legacy-regression\\decoded_verify_forged_descriptor-959a_v5i",
+            "--memory-budget",
+            "256MiB",
+            "--output-budget",
+            "64MiB",
+            "--format",
+            "png",
+            "--class",
+            "28"
+          ],
+          "returncode": 0,
+          "seconds": 0.06228160000318894,
+          "stdout": "{\"event\":\"bundle_complete\",\"input\":\"<资料根>\\\\archive\\\\game\\\\plain\\\\image_card_full_10217031.assetbundle\",\"io\":{\"meaning\":\"文件源成功读取请求字节，包含重复读取，不等于物理磁盘读取量\",\"source_read_bytes\":1785617,\"source_read_calls\":92},\"loader\":{\"admission_estimate_bytes\":1294737,\"budget_contract\":\"加载准入估计与解析上限；不包含编码器工作区和操作系统分配器开销，不是硬RSS限制\",\"classes\":{\"142\":1,\"213\":1,\"28\":1},\"entries\":2,\"entry_cache_allowance_bytes\":1004220,\"input_bytes\":831713,\"maximum_compressed_block_bytes\":127598,\"maximum_uncompressed_block_bytes\":131072,\"memory_budget_bytes\":268435456,\"metadata_heap_estimate_bytes\":31847,\"objects\":3,\"resources\":1,\"serialized_files\":1,\"serialized_metadata_bytes\":10457,\"storage_blocks\":7,\"uncompressed_entry_bytes\":873148,\"unity_versions\":[\"2022.3.62f2\"]},\"selected_objects\":1,\"selected_read_bytes\":953904,\"source_hash_read_bytes\":831713,\"source_hash_read_calls\":51}\n{\"elapsed_seconds\":0.0520875,\"event\":\"summary\",\"failed\":0,\"memory_budget_bytes\":268435456,\"output_bytes\":3297853,\"per_worker_budget_bytes\":268435456,\"resumed\":0,\"selected\":1,\"statuses\":{\"decoded_verified\":1},\"succeeded\":1,\"workers\":1}\n",
+          "stderr": ""
+        },
+        {
+          "arguments": [
+            "verify",
+            "--manifest",
+            "<资料根>\\tools\\rurino-model-validation\\legacy-regression\\decoded_verify_forged_descriptor-959a_v5i\\manifest.jsonl",
+            "--level",
+            "decoded",
+            "--memory-budget",
+            "256MiB"
+          ],
+          "returncode": 0,
+          "seconds": 0.030564299995603506,
+          "stdout": "{\"decoded_images\":1,\"event\":\"verified\",\"files\":1,\"statuses\":{\"decoded_verified\":1}}\n",
+          "stderr": ""
+        },
+        {
+          "arguments": [
+            "verify",
+            "--manifest",
+            "<资料根>\\tools\\rurino-model-validation\\legacy-regression\\decoded_verify_forged_descriptor-959a_v5i\\manifest.jsonl",
+            "--level",
+            "files",
+            "--memory-budget",
+            "256MiB"
+          ],
+          "returncode": 0,
+          "seconds": 0.009976499997719657,
+          "stdout": "{\"decoded_images\":0,\"event\":\"verified\",\"files\":1,\"statuses\":{\"decoded_verified\":1}}\n",
+          "stderr": ""
+        },
+        {
+          "arguments": [
+            "verify",
+            "--manifest",
+            "<资料根>\\tools\\rurino-model-validation\\legacy-regression\\decoded_verify_forged_descriptor-959a_v5i\\manifest.jsonl",
+            "--level",
+            "decoded",
+            "--memory-budget",
+            "256MiB"
+          ],
+          "returncode": 1,
+          "seconds": 0.028687599995464552,
+          "stdout": "",
+          "stderr": "错误：图片像素SHA-256不符\n"
+        }
+      ]
+    },
+    {
+      "case": "cubemap_all_faces_mips",
+      "passed": true,
+      "details": {
+        "faces": 6,
+        "mips": 8,
+        "pngs": 48,
+        "independent_rgba_verified": 48
+      },
+      "seconds": 12.590324100005091,
+      "commands": [
+        {
+          "arguments": [
+            "extract",
+            "--input",
+            "<资料根>\\archive\\game\\plain\\__reflectionprobe-0.exr.assetbundle",
+            "--output",
+            "<资料根>\\tools\\rurino-model-validation\\legacy-regression\\cubemap_all_faces_mips-8kqwmrby",
+            "--memory-budget",
+            "256MiB",
+            "--output-budget",
+            "64MiB",
+            "--format",
+            "png",
+            "--class",
+            "89",
+            "--mips",
+            "all"
+          ],
+          "returncode": 0,
+          "seconds": 0.04051479999907315,
+          "stdout": "{\"event\":\"bundle_complete\",\"input\":\"<资料根>\\\\archive\\\\game\\\\plain\\\\__reflectionprobe-0.exr.assetbundle\",\"io\":{\"meaning\":\"文件源成功读取请求字节，包含重复读取，不等于物理磁盘读取量\",\"source_read_bytes\":8350,\"source_read_calls\":36},\"loader\":{\"admission_estimate_bytes\":220163,\"budget_contract\":\"加载准入估计与解析上限；不包含编码器工作区和操作系统分配器开销，不是硬RSS限制\",\"classes\":{\"142\":1,\"89\":1},\"entries\":2,\"entry_cache_allowance_bytes\":136208,\"input_bytes\":2460,\"maximum_compressed_block_bytes\":2300,\"maximum_uncompressed_block_bytes\":68104,\"memory_budget_bytes\":268435456,\"metadata_heap_estimate_bytes\":13551,\"objects\":2,\"resources\":1,\"serialized_files\":1,\"serialized_metadata_bytes\":4509,\"storage_blocks\":1,\"uncompressed_entry_bytes\":68104,\"unity_versions\":[\"2022.3.62f2\"]},\"selected_objects\":1,\"selected_read_bytes\":5890,\"source_hash_read_bytes\":2460,\"source_hash_read_calls\":1}\n{\"elapsed_seconds\":0.0304052,\"event\":\"summary\",\"failed\":0,\"memory_budget_bytes\":268435456,\"output_bytes\":11235,\"per_worker_budget_bytes\":268435456,\"resumed\":0,\"selected\":1,\"statuses\":{\"decoded_verified\":1},\"succeeded\":1,\"workers\":1}\n",
+          "stderr": ""
+        },
+        {
+          "arguments": [
+            "verify",
+            "--manifest",
+            "<资料根>\\tools\\rurino-model-validation\\legacy-regression\\cubemap_all_faces_mips-8kqwmrby\\manifest.jsonl",
+            "--level",
+            "decoded",
+            "--memory-budget",
+            "256MiB"
+          ],
+          "returncode": 0,
+          "seconds": 0.016966000002867077,
+          "stdout": "{\"decoded_images\":48,\"event\":\"verified\",\"files\":48,\"statuses\":{\"decoded_verified\":1}}\n",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "case": "catalog_exact_label_selection",
+      "passed": true,
+      "details": {
+        "selected_bundles": 1,
+        "mismatched_type_rejected": true,
+        "missing_label_rejected": true
+      },
+      "seconds": 0.3768376000007265,
+      "commands": [
+        {
+          "arguments": [
+            "inspect",
+            "--input",
+            "<资料根>\\archive\\game\\plain",
+            "--catalog",
+            "<资料根>\\archive\\game\\catalog.json",
+            "--label",
+            "image_card_full_10217031",
+            "--type",
+            "png",
+            "--memory-budget",
+            "256MiB"
+          ],
+          "returncode": 0,
+          "seconds": 0.12447750000137603,
+          "stdout": "{\"event\":\"bundle\",\"input\":\"<资料根>\\\\archive\\\\game\\\\plain\\\\image_card_full_10217031.assetbundle\",\"io\":{\"meaning\":\"文件源成功读取请求字节，包含重复读取，不等于物理磁盘读取量\",\"source_read_bytes\":122383,\"source_read_calls\":34},\"stats\":{\"admission_estimate_bytes\":1294737,\"budget_contract\":\"加载准入估计与解析上限；不包含编码器工作区和操作系统分配器开销，不是硬RSS限制\",\"classes\":{\"142\":1,\"213\":1,\"28\":1},\"entries\":2,\"entry_cache_allowance_bytes\":1004220,\"input_bytes\":831713,\"maximum_compressed_block_bytes\":127598,\"maximum_uncompressed_block_bytes\":131072,\"memory_budget_bytes\":268435456,\"metadata_heap_estimate_bytes\":31847,\"objects\":3,\"resources\":1,\"serialized_files\":1,\"serialized_metadata_bytes\":10457,\"storage_blocks\":7,\"uncompressed_entry_bytes\":873148,\"unity_versions\":[\"2022.3.62f2\"]}}\n{\"bundles\":1,\"elapsed_seconds\":0.0004988,\"event\":\"summary\"}\n",
+          "stderr": ""
+        },
+        {
+          "arguments": [
+            "inspect",
+            "--input",
+            "<资料根>\\archive\\game\\plain",
+            "--catalog",
+            "<资料根>\\archive\\game\\catalog.json",
+            "--label",
+            "image_card_full_10217031",
+            "--type",
+            "prefab",
+            "--memory-budget",
+            "256MiB"
+          ],
+          "returncode": 1,
+          "seconds": 0.12445869999646675,
+          "stdout": "",
+          "stderr": "错误：下列标签没有匹配的 AssetBundle，或被 --type 排除：image_card_full_10217031 at line 1893072 column 1\n"
+        },
+        {
+          "arguments": [
+            "inspect",
+            "--input",
+            "<资料根>\\archive\\game\\plain",
+            "--catalog",
+            "<资料根>\\archive\\game\\catalog.json",
+            "--label",
+            "__missing_regression_label__",
+            "--memory-budget",
+            "256MiB"
+          ],
+          "returncode": 1,
+          "seconds": 0.12682210000639316,
+          "stdout": "",
+          "stderr": "错误：下列标签没有匹配的 AssetBundle，或被 --type 排除：__missing_regression_label__ at line 1893072 column 1\n"
+        }
+      ]
+    },
+    {
+      "case": "plan_changed_source_hash",
+      "passed": true,
+      "details": {
+        "plan_rows": 1,
+        "unchanged_source_accepted": true,
+        "changed_source_rejected": true,
+        "payload_files_after_rejection": 0
+      },
+      "seconds": 0.5594095999986166,
+      "commands": [
+        {
+          "arguments": [
+            "plan",
+            "--input",
+            "<资料根>\\tools\\rurino-model-validation\\legacy-regression\\plan_changed_source_hash-t39fhygz\\source.assetbundle",
+            "--output",
+            "<资料根>\\tools\\rurino-model-validation\\legacy-regression\\plan_changed_source_hash-t39fhygz\\plan.jsonl",
+            "--format",
+            "native",
+            "--class",
+            "28"
+          ],
+          "returncode": 0,
+          "seconds": 0.008916500002669636,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "arguments": [
+            "extract",
+            "--plan",
+            "<资料根>\\tools\\rurino-model-validation\\legacy-regression\\plan_changed_source_hash-t39fhygz\\plan.jsonl",
+            "--output",
+            "<资料根>\\tools\\rurino-model-validation\\legacy-regression\\plan_changed_source_hash-t39fhygz\\accepted",
+            "--jobs",
+            "1",
+            "--output-budget",
+            "4MiB"
+          ],
+          "returncode": 0,
+          "seconds": 0.01537800000369316,
+          "stdout": "{\"event\":\"bundle_complete\",\"input\":\"<资料根>\\\\tools\\\\rurino-model-validation\\\\legacy-regression\\\\plan_changed_source_hash-t39fhygz\\\\source.assetbundle\",\"io\":{\"meaning\":\"文件源成功读取请求字节，包含重复读取，不等于物理磁盘读取量\",\"source_read_bytes\":1785617,\"source_read_calls\":92},\"loader\":{\"admission_estimate_bytes\":1294737,\"budget_contract\":\"加载准入估计与解析上限；不包含编码器工作区和操作系统分配器开销，不是硬RSS限制\",\"classes\":{\"142\":1,\"213\":1,\"28\":1},\"entries\":2,\"entry_cache_allowance_bytes\":1004220,\"input_bytes\":831713,\"maximum_compressed_block_bytes\":127598,\"maximum_uncompressed_block_bytes\":131072,\"memory_budget_bytes\":268435456,\"metadata_heap_estimate_bytes\":31847,\"objects\":3,\"resources\":1,\"serialized_files\":1,\"serialized_metadata_bytes\":10457,\"storage_blocks\":7,\"uncompressed_entry_bytes\":873148,\"unity_versions\":[\"2022.3.62f2\"]},\"selected_objects\":1,\"selected_read_bytes\":953904,\"source_hash_read_bytes\":831713,\"source_hash_read_calls\":51}\n{\"elapsed_seconds\":0.004725,\"event\":\"summary\",\"failed\":0,\"memory_budget_bytes\":268435456,\"output_bytes\":861696,\"per_worker_budget_bytes\":268435456,\"resumed\":0,\"selected\":1,\"statuses\":{\"raw_verified\":1},\"succeeded\":1,\"workers\":1}\n",
+          "stderr": ""
+        },
+        {
+          "arguments": [
+            "verify",
+            "--manifest",
+            "<资料根>\\tools\\rurino-model-validation\\legacy-regression\\plan_changed_source_hash-t39fhygz\\accepted\\manifest.jsonl",
+            "--level",
+            "files",
+            "--memory-budget",
+            "256MiB"
+          ],
+          "returncode": 0,
+          "seconds": 0.009052800000063144,
+          "stdout": "{\"decoded_images\":0,\"event\":\"verified\",\"files\":1,\"statuses\":{\"raw_verified\":1}}\n",
+          "stderr": ""
+        },
+        {
+          "arguments": [
+            "extract",
+            "--plan",
+            "<资料根>\\tools\\rurino-model-validation\\legacy-regression\\plan_changed_source_hash-t39fhygz\\plan.jsonl",
+            "--output",
+            "<资料根>\\tools\\rurino-model-validation\\legacy-regression\\plan_changed_source_hash-t39fhygz\\rejected",
+            "--jobs",
+            "1",
+            "--output-budget",
+            "4MiB"
+          ],
+          "returncode": 1,
+          "seconds": 0.00936119999823859,
+          "stdout": "{\"elapsed_seconds\":0.0011779,\"event\":\"summary\",\"failed\":1,\"memory_budget_bytes\":268435456,\"output_bytes\":0,\"per_worker_budget_bytes\":268435456,\"resumed\":0,\"selected\":0,\"statuses\":{},\"succeeded\":0,\"workers\":1}\n",
+          "stderr": "原包失败 <资料根>\\tools\\rurino-model-validation\\legacy-regression\\plan_changed_source_hash-t39fhygz\\source.assetbundle：原包SHA-256与计划不符\n错误：部分对象导出失败，详见manifest.jsonl\n"
+        }
+      ]
+    },
+    {
+      "case": "plan_empty_source_hash",
+      "passed": true,
+      "details": {
+        "empty_hash_rejected": true,
+        "payload_files_after_rejection": 0
+      },
+      "seconds": 0.2695136999973329,
+      "commands": [
+        {
+          "arguments": [
+            "plan",
+            "--input",
+            "<资料根>\\archive\\game\\plain\\image_card_full_10217031.assetbundle",
+            "--output",
+            "<资料根>\\tools\\rurino-model-validation\\legacy-regression\\plan_empty_source_hash-chctr448\\plan.jsonl",
+            "--format",
+            "native",
+            "--class",
+            "28"
+          ],
+          "returncode": 0,
+          "seconds": 0.011415400003897958,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "arguments": [
+            "extract",
+            "--plan",
+            "<资料根>\\tools\\rurino-model-validation\\legacy-regression\\plan_empty_source_hash-chctr448\\plan.jsonl",
+            "--output",
+            "<资料根>\\tools\\rurino-model-validation\\legacy-regression\\plan_empty_source_hash-chctr448\\rejected",
+            "--jobs",
+            "1",
+            "--output-budget",
+            "4MiB"
+          ],
+          "returncode": 1,
+          "seconds": 0.007518799997342285,
+          "stdout": "",
+          "stderr": "错误：计划schema或来源SHA-256无效\n"
+        }
+      ]
+    }
+  ],
+  "passed": 9,
+  "total": 9,
+  "temporary_png_count_after_cleanup": 0,
+  "notes": [
+    "卡面只用两个原包，Cube只用一个原包；没有全量图片输出。",
+    "测试读取原包、PNG和manifest均经Git Bash cat，写入仅限任务临时输出和测试清单。",
+    "临时输出在每个用例完成后清理，原包未修改。"
+  ]
+}

@@ -1,0 +1,366 @@
+{
+  "schema": 1,
+  "executable_sha256": "b01bf530e2c97dd504e069a3b8914cc6c0edb21eb1840320438d6a6f22d87e33",
+  "oracle_sha256": "3480539648758907de79777c430ae60224f697993a1bc622636e2ee18fd173a8",
+  "cases": [
+    {
+      "case": "3d_costume_1001102101/independent_readback",
+      "passed": true,
+      "validation": {
+        "valid": true,
+        "glb_sha256": "896af72f5d0f8543c24ea369b3cd38ee9ce100a3611a586afe668e91b0edf53d",
+        "glb_bytes": 4329716,
+        "nodes": 254,
+        "renderers": 12,
+        "meshes": 12,
+        "vertices": 23238,
+        "attribute_arrays_compared": 74,
+        "morph_targets_compared": 129,
+        "skin_vertices_compared": 23238,
+        "independent_parser": "pygltflib 1.16.5 + separate byte accessor decoder",
+        "numeric_contract": "source UnityPy float32 bytes including sign of zero",
+        "material_properties_compared": 1718
+      },
+      "overwrite_rejected_without_change": true,
+      "commands": [
+        {
+          "arguments": [
+            "model",
+            "--input",
+            "<资料根>\\archive\\game\\plain\\3d_costume_1001102101.assetbundle",
+            "--catalog",
+            "<资料根>\\archive\\game\\catalog.json",
+            "--output",
+            "<资料根>\\tools\\rurino-model-validation\\scratch\\model-readback-871kau95\\output",
+            "--memory-budget",
+            "256MiB",
+            "--output-budget",
+            "64MiB"
+          ],
+          "returncode": 0,
+          "wall_seconds": 0.3701978000026429,
+          "stdout": "{\"binary_bytes\":4151616,\"elapsed_seconds\":0.3522124,\"event\":\"model_exported\",\"glb_bytes\":4329716,\"materials\":10,\"meshes\":12,\"nodes\":254,\"output_bytes\":6224311,\"policy_key\":\"67160fb5a4ead240868085f8c25cae9ef97d0e9a62bde195584359fbaffae8cf\",\"renderers\":12,\"validation\":\"requires_independent_readback\"}\n",
+          "stderr": ""
+        },
+        {
+          "arguments": [
+            "verify",
+            "--manifest",
+            "<资料根>\\tools\\rurino-model-validation\\scratch\\model-readback-871kau95\\output\\manifest.jsonl",
+            "--level",
+            "files"
+          ],
+          "returncode": 0,
+          "wall_seconds": 0.013204900002165232,
+          "stdout": "{\"decoded_images\":0,\"event\":\"verified\",\"files\":2,\"statuses\":{\"data_exported\":1}}\n",
+          "stderr": ""
+        },
+        {
+          "arguments": [
+            "verify",
+            "--manifest",
+            "<资料根>\\tools\\rurino-model-validation\\scratch\\model-readback-871kau95\\output\\manifest.jsonl",
+            "--level",
+            "decoded"
+          ],
+          "returncode": 1,
+          "wall_seconds": 0.010580699999991339,
+          "stdout": "",
+          "stderr": "错误：模型数值核验需要独立源数据与回读工具；文件哈希核验请使用 --level files\n"
+        },
+        {
+          "arguments": [
+            "model",
+            "--input",
+            "<资料根>\\archive\\game\\plain\\3d_costume_1001102101.assetbundle",
+            "--catalog",
+            "<资料根>\\archive\\game\\catalog.json",
+            "--output",
+            "<资料根>\\tools\\rurino-model-validation\\scratch\\model-readback-871kau95\\output",
+            "--memory-budget",
+            "256MiB",
+            "--output-budget",
+            "64MiB"
+          ],
+          "returncode": 1,
+          "wall_seconds": 0.00578970000060508,
+          "stdout": "",
+          "stderr": "错误：模型导出要求新的或空的输出目录\n"
+        }
+      ]
+    },
+    {
+      "case": "ppadv010_guitar/independent_readback",
+      "passed": true,
+      "validation": {
+        "valid": true,
+        "glb_sha256": "69cfebaa988b2c1460834659af300e3ecfd56099ba680374d47b471a8f9ce20f",
+        "glb_bytes": 104596,
+        "nodes": 1,
+        "renderers": 1,
+        "meshes": 1,
+        "vertices": 2443,
+        "attribute_arrays_compared": 3,
+        "morph_targets_compared": 0,
+        "skin_vertices_compared": 0,
+        "independent_parser": "pygltflib 1.16.5 + separate byte accessor decoder",
+        "numeric_contract": "source UnityPy float32 bytes including sign of zero",
+        "material_properties_compared": 32
+      },
+      "overwrite_rejected_without_change": true,
+      "commands": [
+        {
+          "arguments": [
+            "model",
+            "--input",
+            "<资料根>\\archive\\game\\plain\\ppadv010_guitar.assetbundle",
+            "--catalog",
+            "<资料根>\\archive\\game\\catalog.json",
+            "--output",
+            "<资料根>\\tools\\rurino-model-validation\\scratch\\model-readback-3o4ib5u7\\output",
+            "--memory-budget",
+            "256MiB",
+            "--output-budget",
+            "64MiB"
+          ],
+          "returncode": 0,
+          "wall_seconds": 0.2176748999991105,
+          "stdout": "{\"binary_bytes\":102728,\"elapsed_seconds\":0.2058868,\"event\":\"model_exported\",\"glb_bytes\":104596,\"materials\":1,\"meshes\":1,\"nodes\":1,\"output_bytes\":132707,\"policy_key\":\"5fb4d0ba5d355c1a6e3a3a9f927b63c4a5781e14e8db9c05b00fb62694db02a0\",\"renderers\":1,\"validation\":\"requires_independent_readback\"}\n",
+          "stderr": ""
+        },
+        {
+          "arguments": [
+            "verify",
+            "--manifest",
+            "<资料根>\\tools\\rurino-model-validation\\scratch\\model-readback-3o4ib5u7\\output\\manifest.jsonl",
+            "--level",
+            "files"
+          ],
+          "returncode": 0,
+          "wall_seconds": 0.00814649999665562,
+          "stdout": "{\"decoded_images\":0,\"event\":\"verified\",\"files\":2,\"statuses\":{\"data_exported\":1}}\n",
+          "stderr": ""
+        },
+        {
+          "arguments": [
+            "verify",
+            "--manifest",
+            "<资料根>\\tools\\rurino-model-validation\\scratch\\model-readback-3o4ib5u7\\output\\manifest.jsonl",
+            "--level",
+            "decoded"
+          ],
+          "returncode": 1,
+          "wall_seconds": 0.007193500001449138,
+          "stdout": "",
+          "stderr": "错误：模型数值核验需要独立源数据与回读工具；文件哈希核验请使用 --level files\n"
+        },
+        {
+          "arguments": [
+            "model",
+            "--input",
+            "<资料根>\\archive\\game\\plain\\ppadv010_guitar.assetbundle",
+            "--catalog",
+            "<资料根>\\archive\\game\\catalog.json",
+            "--output",
+            "<资料根>\\tools\\rurino-model-validation\\scratch\\model-readback-3o4ib5u7\\output",
+            "--memory-budget",
+            "256MiB",
+            "--output-budget",
+            "64MiB"
+          ],
+          "returncode": 1,
+          "wall_seconds": 0.005790000002889428,
+          "stdout": "",
+          "stderr": "错误：模型导出要求新的或空的输出目录\n"
+        }
+      ]
+    },
+    {
+      "case": "memory_admission_rejection",
+      "passed": true,
+      "commands": [
+        {
+          "arguments": [
+            "model",
+            "--input",
+            "<资料根>\\archive\\game\\plain\\3d_costume_1001102101.assetbundle",
+            "--catalog",
+            "<资料根>\\archive\\game\\catalog.json",
+            "--output",
+            "<资料根>\\tools\\rurino-model-validation\\scratch\\model-rejection-obru2fs5\\output",
+            "--memory-budget",
+            "1",
+            "--output-budget",
+            "64MiB"
+          ],
+          "returncode": 1,
+          "wall_seconds": 0.010900399996899068,
+          "stdout": "",
+          "stderr": "错误：catalog 依赖索引超过软预算 at line 36 column 3\n"
+        }
+      ],
+      "remaining_files": 0
+    },
+    {
+      "case": "output_quota_rollback",
+      "passed": true,
+      "commands": [
+        {
+          "arguments": [
+            "model",
+            "--input",
+            "<资料根>\\archive\\game\\plain\\3d_costume_1001102101.assetbundle",
+            "--catalog",
+            "<资料根>\\archive\\game\\catalog.json",
+            "--output",
+            "<资料根>\\tools\\rurino-model-validation\\scratch\\model-rejection-mgf17m5i\\output",
+            "--memory-budget",
+            "256MiB",
+            "--output-budget",
+            "1"
+          ],
+          "returncode": 1,
+          "wall_seconds": 0.2920042000041576,
+          "stdout": "",
+          "stderr": "错误：GLB需要4329716字节，超过输出预算1\n"
+        }
+      ],
+      "remaining_files": 0
+    },
+    {
+      "case": "wrong_root_rejection",
+      "passed": true,
+      "commands": [
+        {
+          "arguments": [
+            "model",
+            "--input",
+            "<资料根>\\archive\\game\\plain\\3d_costume_1001102101.assetbundle",
+            "--catalog",
+            "<资料根>\\archive\\game\\catalog.json",
+            "--output",
+            "<资料根>\\tools\\rurino-model-validation\\scratch\\model-rejection-6wuzg1cg\\output",
+            "--memory-budget",
+            "256MiB",
+            "--output-budget",
+            "64MiB",
+            "--root-path-id",
+            "123456789"
+          ],
+          "returncode": 1,
+          "wall_seconds": 0.23854879999998957,
+          "stdout": "",
+          "stderr": "错误：指定 root-path-id 不是根文件中的 GameObject\n"
+        }
+      ],
+      "remaining_files": 0
+    },
+    {
+      "case": "missing_dependency_rejection",
+      "passed": true,
+      "commands": [
+        {
+          "arguments": [
+            "model",
+            "--input",
+            "<资料根>\\archive\\game\\plain\\3d_costume_1001102101.assetbundle",
+            "--output",
+            "<资料根>\\tools\\rurino-model-validation\\scratch\\model-missing-dependency-ysswezf4\\output",
+            "--memory-budget",
+            "256MiB",
+            "--output-budget",
+            "64MiB"
+          ],
+          "returncode": 1,
+          "wall_seconds": 0.012921199995616917,
+          "stdout": "",
+          "stderr": "错误：PPtr external file \"archiv<本地磁盘>/CAB-46ea692492fcb028f71044ac44ee34c7/CAB-46ea692492fcb028f71044ac44ee34c7\" (portable name \"CAB-46ea692492fcb028f71044ac44ee34c7\") was not found in the asset collection\n"
+        }
+      ]
+    },
+    {
+      "case": "explicit_root_selection",
+      "passed": true,
+      "commands": [
+        {
+          "arguments": [
+            "model",
+            "--input",
+            "<资料根>\\archive\\game\\plain\\3d_costume_1001102101.assetbundle",
+            "--catalog",
+            "<资料根>\\archive\\game\\catalog.json",
+            "--output",
+            "<资料根>\\tools\\rurino-model-validation\\scratch\\model-explicit-root-76cgqm4v\\output",
+            "--memory-budget",
+            "256MiB",
+            "--output-budget",
+            "64MiB",
+            "--root-path-id",
+            "6572941053131535792"
+          ],
+          "returncode": 0,
+          "wall_seconds": 0.35720299999957206,
+          "stdout": "{\"binary_bytes\":4151616,\"elapsed_seconds\":0.3390821,\"event\":\"model_exported\",\"glb_bytes\":4329716,\"materials\":10,\"meshes\":12,\"nodes\":254,\"output_bytes\":6224311,\"policy_key\":\"67160fb5a4ead240868085f8c25cae9ef97d0e9a62bde195584359fbaffae8cf\",\"renderers\":12,\"validation\":\"requires_independent_readback\"}\n",
+          "stderr": ""
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "glb_sha256": "896af72f5d0f8543c24ea369b3cd38ee9ce100a3611a586afe668e91b0edf53d",
+        "glb_bytes": 4329716,
+        "nodes": 254,
+        "renderers": 12,
+        "meshes": 12,
+        "vertices": 23238,
+        "attribute_arrays_compared": 74,
+        "morph_targets_compared": 129,
+        "skin_vertices_compared": 23238,
+        "independent_parser": "pygltflib 1.16.5 + separate byte accessor decoder",
+        "numeric_contract": "source UnityPy float32 bytes including sign of zero",
+        "material_properties_compared": 1718
+      }
+    },
+    {
+      "case": "tampered_vertex_rejection",
+      "passed": true,
+      "commands": [
+        {
+          "arguments": [
+            "model",
+            "--input",
+            "<资料根>\\archive\\game\\plain\\ppadv010_guitar.assetbundle",
+            "--catalog",
+            "<资料根>\\archive\\game\\catalog.json",
+            "--output",
+            "<资料根>\\tools\\rurino-model-validation\\scratch\\model-tamper-4f06n7we\\output",
+            "--memory-budget",
+            "256MiB",
+            "--output-budget",
+            "64MiB"
+          ],
+          "returncode": 0,
+          "wall_seconds": 0.21837510000477778,
+          "stdout": "{\"binary_bytes\":102728,\"elapsed_seconds\":0.2095059,\"event\":\"model_exported\",\"glb_bytes\":104596,\"materials\":1,\"meshes\":1,\"nodes\":1,\"output_bytes\":132707,\"policy_key\":\"5fb4d0ba5d355c1a6e3a3a9f927b63c4a5781e14e8db9c05b00fb62694db02a0\",\"renderers\":1,\"validation\":\"requires_independent_readback\"}\n",
+          "stderr": ""
+        },
+        {
+          "arguments": [
+            "verify",
+            "--manifest",
+            "<资料根>\\tools\\rurino-model-validation\\scratch\\model-tamper-4f06n7we\\output\\manifest.jsonl",
+            "--level",
+            "files"
+          ],
+          "returncode": 1,
+          "wall_seconds": 0.0076432999994722195,
+          "stdout": "",
+          "stderr": "错误：输出文件校验不符：<资料根>\\tools\\rurino-model-validation\\scratch\\model-tamper-4f06n7we\\output\\model.glb\n"
+        }
+      ],
+      "independent_rejection": true
+    }
+  ],
+  "passed": 8,
+  "total": 8,
+  "remaining_export_files": []
+}
