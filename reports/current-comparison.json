@@ -1,0 +1,2412 @@
+{
+  "schema": 1,
+  "executable_sha256": "39da537dd3a19cca956301b194a437b6c570f5da6633230e03ad3729046aa820",
+  "machine": {
+    "platform": "Windows-11-10.0.26100-SP0",
+    "logical_cpus": 12
+  },
+  "python_worker": {
+    "executable": "<用户>\\AppData\\Roaming\\uv\\python\\cpython-3.14-windows-x86_64-none\\python.exe",
+    "site_packages": "<资料根>\\tools\\assetbundle-decoding-evaluation\\python\\Lib\\site-packages",
+    "version": "3.14.0 (main, Oct 31 2025, 22:59:46) [MSC v.1944 64 bit (AMD64)]"
+  },
+  "summary": [
+    {
+      "case": "card",
+      "tool": "Rurino",
+      "runs": 3,
+      "all_valid": true,
+      "wall_seconds_median": 0.45862340000167023,
+      "peak_working_set_bytes_max": 15790080,
+      "peak_commit_bytes_max": 11018240,
+      "output_bytes": [
+        3108175,
+        3108175,
+        3108175
+      ]
+    },
+    {
+      "case": "card",
+      "tool": "UnityPy",
+      "runs": 3,
+      "all_valid": true,
+      "wall_seconds_median": 1.4768324000033317,
+      "peak_working_set_bytes_max": 138022912,
+      "peak_commit_bytes_max": 507080704,
+      "output_bytes": [
+        3000048,
+        3000048,
+        3000048
+      ]
+    },
+    {
+      "case": "sticker",
+      "tool": "Rurino",
+      "runs": 3,
+      "all_valid": true,
+      "wall_seconds_median": 0.03467770000133896,
+      "peak_working_set_bytes_max": 7974912,
+      "peak_commit_bytes_max": 3227648,
+      "output_bytes": [
+        169234,
+        169234,
+        169234
+      ]
+    },
+    {
+      "case": "sticker",
+      "tool": "UnityPy",
+      "runs": 3,
+      "all_valid": true,
+      "wall_seconds_median": 1.2477049000008265,
+      "peak_working_set_bytes_max": 123187200,
+      "peak_commit_bytes_max": 492388352,
+      "output_bytes": [
+        165796,
+        165796,
+        165796
+      ]
+    },
+    {
+      "case": "attribute",
+      "tool": "Rurino",
+      "runs": 3,
+      "all_valid": true,
+      "wall_seconds_median": 0.028134899999713525,
+      "peak_working_set_bytes_max": 6782976,
+      "peak_commit_bytes_max": 1974272,
+      "output_bytes": [
+        60190,
+        60190,
+        60190
+      ]
+    },
+    {
+      "case": "attribute",
+      "tool": "UnityPy",
+      "runs": 3,
+      "all_valid": true,
+      "wall_seconds_median": 1.255147500000021,
+      "peak_working_set_bytes_max": 122454016,
+      "peak_commit_bytes_max": 491536384,
+      "output_bytes": [
+        59128,
+        59128,
+        59128
+      ]
+    },
+    {
+      "case": "largest_atlas-png-one",
+      "tool": "Rurino",
+      "runs": 3,
+      "all_valid": true,
+      "wall_seconds_median": 0.8822459999937564,
+      "peak_working_set_bytes_max": 48295936,
+      "peak_commit_bytes_max": 43716608,
+      "output_bytes": [
+        5327936,
+        5327936,
+        5327936
+      ]
+    },
+    {
+      "case": "largest_atlas-png-one",
+      "tool": "UnityPy",
+      "runs": 3,
+      "all_valid": true,
+      "wall_seconds_median": 9.954393400003028,
+      "peak_working_set_bytes_max": 1440706560,
+      "peak_commit_bytes_max": 1801871360,
+      "output_bytes": [
+        5099135,
+        5099135,
+        5099135
+      ]
+    }
+  ],
+  "runs": [
+    {
+      "case": "card",
+      "tool": "Rurino",
+      "repeat": 1,
+      "command": [
+        "<资料根>\\tools\\rurino-encoding-build\\target\\release\\Rurino.exe",
+        "extract",
+        "--input",
+        "<资料根>\\archive\\game\\plain\\image_card_full_10217031.assetbundle",
+        "--output",
+        "<资料根>\\tools\\rurino-encoding-build\\test-stage\\scratch\\encoding-compare-_3n9pjrg",
+        "--format",
+        "png",
+        "--optimize",
+        "none",
+        "--optimize-seconds",
+        "5",
+        "--class",
+        "28",
+        "--profile",
+        "default",
+        "--mips",
+        "0",
+        "--memory-budget",
+        "256MiB",
+        "--output-budget",
+        "64MiB",
+        "--jobs",
+        "1"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "wall_seconds": 0.45862340000167023,
+      "kernel_process_seconds": 0.456933,
+      "cpu_seconds": 0.4375,
+      "peak_working_set_bytes": 15790080,
+      "peak_commit_bytes": 11018240,
+      "private_usage_sampled_max_bytes": 10997760,
+      "read_transfer_bytes": 1785617,
+      "write_transfer_bytes": 3110836,
+      "read_operations": 92,
+      "write_operations": 98,
+      "stdout": "{\"event\":\"bundle_complete\",\"input\":\"<资料根>\\\\archive\\\\game\\\\plain\\\\image_card_full_10217031.assetbundle\",\"io\":{\"meaning\":\"文件源成功读取请求字节，包含重复读取，不等于物理磁盘读取量\",\"source_read_bytes\":1785617,\"source_read_calls\":92},\"loader\":{\"admission_estimate_bytes\":1294737,\"budget_contract\":\"加载准入估计与解析上限；不包含编码器工作区和操作系统分配器开销，不是硬RSS限制\",\"classes\":{\"142\":1,\"213\":1,\"28\":1},\"entries\":2,\"entry_cache_allowance_bytes\":1004220,\"input_bytes\":831713,\"maximum_compressed_block_bytes\":127598,\"maximum_uncompressed_block_bytes\":131072,\"memory_budget_bytes\":268435456,\"metadata_heap_estimate_bytes\":31847,\"objects\":3,\"resources\":1,\"serialized_files\":1,\"serialized_metadata_bytes\":10457,\"storage_blocks\":7,\"uncompressed_entry_bytes\":873148,\"unity_versions\":[\"2022.3.62f2\"]},\"selected_objects\":1,\"selected_read_bytes\":953904,\"source_hash_read_bytes\":831713,\"source_hash_read_calls\":51}\n{\"elapsed_seconds\":0.448371,\"event\":\"summary\",\"failed\":0,\"memory_budget_bytes\":268435456,\"output_bytes\":3108175,\"per_worker_budget_bytes\":268435456,\"resumed\":0,\"selected\":1,\"statuses\":{\"decoded_verified\":1},\"succeeded\":1,\"workers\":1}\n",
+      "stderr": "",
+      "validation": {
+        "valid": true,
+        "images": [
+          {
+            "identity": [
+              "523030199669260869",
+              0,
+              0
+            ],
+            "path": "5c93f1d162fcc386c92af55f20c25b3f60f92bb2964209759a420397825b5fce/entry-0/523030199669260869/87c9d21bf10c95dd6d9899df256cbc3e59ab87297a52be46755f8641b738f2cc/mip-00.png",
+            "bytes": 3108175,
+            "sha256": "d96ae8422929fb2fb9ca9a3cb9430d44e94fe535c8cc7ef9b1fffb809d43bb40",
+            "format": "PNG",
+            "mode": "RGBA",
+            "rgba_sha256": "36caaf6c8bf5d84d2426d57866fa66c52e67fd784340f45096ead36c5d4ef0ef",
+            "encoding": null
+          }
+        ],
+        "image_count": 1,
+        "output_bytes": 3108175,
+        "format_counts": {
+          "PNG": 1
+        },
+        "mode_counts": {
+          "RGBA": 1
+        },
+        "metadata": [
+          {
+            "path_id": "523030199669260869",
+            "metadata": {
+              "alpha8_derived_rgb": null,
+              "color_space": 1,
+              "complete_image_size": 861696,
+              "dimension": 2,
+              "face_order": null,
+              "height": 1120,
+              "image_count": 1,
+              "layout": {
+                "face_stride": 861696,
+                "faces": 1,
+                "subresources": [
+                  {
+                    "bytes": 861696,
+                    "face": null,
+                    "height": 1120,
+                    "mip": 0,
+                    "offset": 0,
+                    "width": 1728
+                  }
+                ]
+              },
+              "mip_count": 1,
+              "mips_stripped": 0,
+              "payload_bytes": 861696,
+              "row_order": "unity_decoded_bottom_up",
+              "texture_format": 50,
+              "width": 1728
+            }
+          }
+        ]
+      }
+    },
+    {
+      "case": "card",
+      "tool": "Rurino",
+      "repeat": 2,
+      "command": [
+        "<资料根>\\tools\\rurino-encoding-build\\target\\release\\Rurino.exe",
+        "extract",
+        "--input",
+        "<资料根>\\archive\\game\\plain\\image_card_full_10217031.assetbundle",
+        "--output",
+        "<资料根>\\tools\\rurino-encoding-build\\test-stage\\scratch\\encoding-compare-5zbfffr6",
+        "--format",
+        "png",
+        "--optimize",
+        "none",
+        "--optimize-seconds",
+        "5",
+        "--class",
+        "28",
+        "--profile",
+        "default",
+        "--mips",
+        "0",
+        "--memory-budget",
+        "256MiB",
+        "--output-budget",
+        "64MiB",
+        "--jobs",
+        "1"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "wall_seconds": 0.4606943999970099,
+      "kernel_process_seconds": 0.4590354,
+      "cpu_seconds": 0.40625,
+      "peak_working_set_bytes": 15777792,
+      "peak_commit_bytes": 10989568,
+      "private_usage_sampled_max_bytes": 10969088,
+      "read_transfer_bytes": 1785617,
+      "write_transfer_bytes": 3110837,
+      "read_operations": 92,
+      "write_operations": 98,
+      "stdout": "{\"event\":\"bundle_complete\",\"input\":\"<资料根>\\\\archive\\\\game\\\\plain\\\\image_card_full_10217031.assetbundle\",\"io\":{\"meaning\":\"文件源成功读取请求字节，包含重复读取，不等于物理磁盘读取量\",\"source_read_bytes\":1785617,\"source_read_calls\":92},\"loader\":{\"admission_estimate_bytes\":1294737,\"budget_contract\":\"加载准入估计与解析上限；不包含编码器工作区和操作系统分配器开销，不是硬RSS限制\",\"classes\":{\"142\":1,\"213\":1,\"28\":1},\"entries\":2,\"entry_cache_allowance_bytes\":1004220,\"input_bytes\":831713,\"maximum_compressed_block_bytes\":127598,\"maximum_uncompressed_block_bytes\":131072,\"memory_budget_bytes\":268435456,\"metadata_heap_estimate_bytes\":31847,\"objects\":3,\"resources\":1,\"serialized_files\":1,\"serialized_metadata_bytes\":10457,\"storage_blocks\":7,\"uncompressed_entry_bytes\":873148,\"unity_versions\":[\"2022.3.62f2\"]},\"selected_objects\":1,\"selected_read_bytes\":953904,\"source_hash_read_bytes\":831713,\"source_hash_read_calls\":51}\n{\"elapsed_seconds\":0.4515543,\"event\":\"summary\",\"failed\":0,\"memory_budget_bytes\":268435456,\"output_bytes\":3108175,\"per_worker_budget_bytes\":268435456,\"resumed\":0,\"selected\":1,\"statuses\":{\"decoded_verified\":1},\"succeeded\":1,\"workers\":1}\n",
+      "stderr": "",
+      "validation": {
+        "valid": true,
+        "images": [
+          {
+            "identity": [
+              "523030199669260869",
+              0,
+              0
+            ],
+            "path": "5c93f1d162fcc386c92af55f20c25b3f60f92bb2964209759a420397825b5fce/entry-0/523030199669260869/87c9d21bf10c95dd6d9899df256cbc3e59ab87297a52be46755f8641b738f2cc/mip-00.png",
+            "bytes": 3108175,
+            "sha256": "d96ae8422929fb2fb9ca9a3cb9430d44e94fe535c8cc7ef9b1fffb809d43bb40",
+            "format": "PNG",
+            "mode": "RGBA",
+            "rgba_sha256": "36caaf6c8bf5d84d2426d57866fa66c52e67fd784340f45096ead36c5d4ef0ef",
+            "encoding": null
+          }
+        ],
+        "image_count": 1,
+        "output_bytes": 3108175,
+        "format_counts": {
+          "PNG": 1
+        },
+        "mode_counts": {
+          "RGBA": 1
+        },
+        "metadata": [
+          {
+            "path_id": "523030199669260869",
+            "metadata": {
+              "alpha8_derived_rgb": null,
+              "color_space": 1,
+              "complete_image_size": 861696,
+              "dimension": 2,
+              "face_order": null,
+              "height": 1120,
+              "image_count": 1,
+              "layout": {
+                "face_stride": 861696,
+                "faces": 1,
+                "subresources": [
+                  {
+                    "bytes": 861696,
+                    "face": null,
+                    "height": 1120,
+                    "mip": 0,
+                    "offset": 0,
+                    "width": 1728
+                  }
+                ]
+              },
+              "mip_count": 1,
+              "mips_stripped": 0,
+              "payload_bytes": 861696,
+              "row_order": "unity_decoded_bottom_up",
+              "texture_format": 50,
+              "width": 1728
+            }
+          }
+        ]
+      }
+    },
+    {
+      "case": "card",
+      "tool": "Rurino",
+      "repeat": 3,
+      "command": [
+        "<资料根>\\tools\\rurino-encoding-build\\target\\release\\Rurino.exe",
+        "extract",
+        "--input",
+        "<资料根>\\archive\\game\\plain\\image_card_full_10217031.assetbundle",
+        "--output",
+        "<资料根>\\tools\\rurino-encoding-build\\test-stage\\scratch\\encoding-compare-mj8in1xi",
+        "--format",
+        "png",
+        "--optimize",
+        "none",
+        "--optimize-seconds",
+        "5",
+        "--class",
+        "28",
+        "--profile",
+        "default",
+        "--mips",
+        "0",
+        "--memory-budget",
+        "256MiB",
+        "--output-budget",
+        "64MiB",
+        "--jobs",
+        "1"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "wall_seconds": 0.45806489999813493,
+      "kernel_process_seconds": 0.4563571,
+      "cpu_seconds": 0.453125,
+      "peak_working_set_bytes": 15790080,
+      "peak_commit_bytes": 11014144,
+      "private_usage_sampled_max_bytes": 10993664,
+      "read_transfer_bytes": 1785617,
+      "write_transfer_bytes": 3110836,
+      "read_operations": 92,
+      "write_operations": 98,
+      "stdout": "{\"event\":\"bundle_complete\",\"input\":\"<资料根>\\\\archive\\\\game\\\\plain\\\\image_card_full_10217031.assetbundle\",\"io\":{\"meaning\":\"文件源成功读取请求字节，包含重复读取，不等于物理磁盘读取量\",\"source_read_bytes\":1785617,\"source_read_calls\":92},\"loader\":{\"admission_estimate_bytes\":1294737,\"budget_contract\":\"加载准入估计与解析上限；不包含编码器工作区和操作系统分配器开销，不是硬RSS限制\",\"classes\":{\"142\":1,\"213\":1,\"28\":1},\"entries\":2,\"entry_cache_allowance_bytes\":1004220,\"input_bytes\":831713,\"maximum_compressed_block_bytes\":127598,\"maximum_uncompressed_block_bytes\":131072,\"memory_budget_bytes\":268435456,\"metadata_heap_estimate_bytes\":31847,\"objects\":3,\"resources\":1,\"serialized_files\":1,\"serialized_metadata_bytes\":10457,\"storage_blocks\":7,\"uncompressed_entry_bytes\":873148,\"unity_versions\":[\"2022.3.62f2\"]},\"selected_objects\":1,\"selected_read_bytes\":953904,\"source_hash_read_bytes\":831713,\"source_hash_read_calls\":51}\n{\"elapsed_seconds\":0.449023,\"event\":\"summary\",\"failed\":0,\"memory_budget_bytes\":268435456,\"output_bytes\":3108175,\"per_worker_budget_bytes\":268435456,\"resumed\":0,\"selected\":1,\"statuses\":{\"decoded_verified\":1},\"succeeded\":1,\"workers\":1}\n",
+      "stderr": "",
+      "validation": {
+        "valid": true,
+        "images": [
+          {
+            "identity": [
+              "523030199669260869",
+              0,
+              0
+            ],
+            "path": "5c93f1d162fcc386c92af55f20c25b3f60f92bb2964209759a420397825b5fce/entry-0/523030199669260869/87c9d21bf10c95dd6d9899df256cbc3e59ab87297a52be46755f8641b738f2cc/mip-00.png",
+            "bytes": 3108175,
+            "sha256": "d96ae8422929fb2fb9ca9a3cb9430d44e94fe535c8cc7ef9b1fffb809d43bb40",
+            "format": "PNG",
+            "mode": "RGBA",
+            "rgba_sha256": "36caaf6c8bf5d84d2426d57866fa66c52e67fd784340f45096ead36c5d4ef0ef",
+            "encoding": null
+          }
+        ],
+        "image_count": 1,
+        "output_bytes": 3108175,
+        "format_counts": {
+          "PNG": 1
+        },
+        "mode_counts": {
+          "RGBA": 1
+        },
+        "metadata": [
+          {
+            "path_id": "523030199669260869",
+            "metadata": {
+              "alpha8_derived_rgb": null,
+              "color_space": 1,
+              "complete_image_size": 861696,
+              "dimension": 2,
+              "face_order": null,
+              "height": 1120,
+              "image_count": 1,
+              "layout": {
+                "face_stride": 861696,
+                "faces": 1,
+                "subresources": [
+                  {
+                    "bytes": 861696,
+                    "face": null,
+                    "height": 1120,
+                    "mip": 0,
+                    "offset": 0,
+                    "width": 1728
+                  }
+                ]
+              },
+              "mip_count": 1,
+              "mips_stripped": 0,
+              "payload_bytes": 861696,
+              "row_order": "unity_decoded_bottom_up",
+              "texture_format": 50,
+              "width": 1728
+            }
+          }
+        ]
+      }
+    },
+    {
+      "case": "card",
+      "tool": "UnityPy",
+      "repeat": 1,
+      "command": [
+        "<用户>\\AppData\\Roaming\\uv\\python\\cpython-3.14-windows-x86_64-none\\python.exe",
+        "-c",
+        "import platform,runpy,sys;platform._wmi=None;sys.argv=sys.argv[1:];runpy.run_path(sys.argv[0],run_name='__main__')",
+        "<项目>\\scripts\\benchmark_unpacker.py",
+        "worker",
+        "--suite",
+        "<资料根>\\tools\\rurino-encoding-build\\test-stage\\scratch\\comparison-worker-suite.json",
+        "--case",
+        "card",
+        "--output",
+        "<资料根>\\tools\\rurino-encoding-build\\test-stage\\scratch\\encoding-compare-5z3v_xnc"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "wall_seconds": 1.4768324000033317,
+      "kernel_process_seconds": 1.4692394,
+      "cpu_seconds": 1.421875,
+      "peak_working_set_bytes": 137940992,
+      "peak_commit_bytes": 507060224,
+      "private_usage_sampled_max_bytes": 506982400,
+      "read_transfer_bytes": 14686665,
+      "write_transfer_bytes": 3000084,
+      "read_operations": 935,
+      "write_operations": 46,
+      "stdout": "{\"event\":\"summary\",\"outputs\":1}\n",
+      "stderr": "",
+      "validation": {
+        "valid": true,
+        "image_count": 1,
+        "output_bytes": 3000048
+      }
+    },
+    {
+      "case": "card",
+      "tool": "UnityPy",
+      "repeat": 2,
+      "command": [
+        "<用户>\\AppData\\Roaming\\uv\\python\\cpython-3.14-windows-x86_64-none\\python.exe",
+        "-c",
+        "import platform,runpy,sys;platform._wmi=None;sys.argv=sys.argv[1:];runpy.run_path(sys.argv[0],run_name='__main__')",
+        "<项目>\\scripts\\benchmark_unpacker.py",
+        "worker",
+        "--suite",
+        "<资料根>\\tools\\rurino-encoding-build\\test-stage\\scratch\\comparison-worker-suite.json",
+        "--case",
+        "card",
+        "--output",
+        "<资料根>\\tools\\rurino-encoding-build\\test-stage\\scratch\\encoding-compare-fx29vh2e"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "wall_seconds": 1.491745200000878,
+      "kernel_process_seconds": 1.483281,
+      "cpu_seconds": 1.40625,
+      "peak_working_set_bytes": 138022912,
+      "peak_commit_bytes": 507080704,
+      "private_usage_sampled_max_bytes": 507002880,
+      "read_transfer_bytes": 14686665,
+      "write_transfer_bytes": 3000084,
+      "read_operations": 935,
+      "write_operations": 46,
+      "stdout": "{\"event\":\"summary\",\"outputs\":1}\n",
+      "stderr": "",
+      "validation": {
+        "valid": true,
+        "image_count": 1,
+        "output_bytes": 3000048
+      }
+    },
+    {
+      "case": "card",
+      "tool": "UnityPy",
+      "repeat": 3,
+      "command": [
+        "<用户>\\AppData\\Roaming\\uv\\python\\cpython-3.14-windows-x86_64-none\\python.exe",
+        "-c",
+        "import platform,runpy,sys;platform._wmi=None;sys.argv=sys.argv[1:];runpy.run_path(sys.argv[0],run_name='__main__')",
+        "<项目>\\scripts\\benchmark_unpacker.py",
+        "worker",
+        "--suite",
+        "<资料根>\\tools\\rurino-encoding-build\\test-stage\\scratch\\comparison-worker-suite.json",
+        "--case",
+        "card",
+        "--output",
+        "<资料根>\\tools\\rurino-encoding-build\\test-stage\\scratch\\encoding-compare-pc8x3w0f"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "wall_seconds": 1.4719444000002113,
+      "kernel_process_seconds": 1.4644599,
+      "cpu_seconds": 1.375,
+      "peak_working_set_bytes": 137633792,
+      "peak_commit_bytes": 506667008,
+      "private_usage_sampled_max_bytes": 506593280,
+      "read_transfer_bytes": 14686665,
+      "write_transfer_bytes": 3000084,
+      "read_operations": 935,
+      "write_operations": 46,
+      "stdout": "{\"event\":\"summary\",\"outputs\":1}\n",
+      "stderr": "",
+      "validation": {
+        "valid": true,
+        "image_count": 1,
+        "output_bytes": 3000048
+      }
+    },
+    {
+      "case": "sticker",
+      "tool": "Rurino",
+      "repeat": 1,
+      "command": [
+        "<资料根>\\tools\\rurino-encoding-build\\target\\release\\Rurino.exe",
+        "extract",
+        "--input",
+        "<资料根>\\archive\\game\\plain\\image_sticker_20360121.assetbundle",
+        "--output",
+        "<资料根>\\tools\\rurino-encoding-build\\test-stage\\scratch\\encoding-compare-nzywm1ms",
+        "--format",
+        "png",
+        "--optimize",
+        "none",
+        "--optimize-seconds",
+        "5",
+        "--class",
+        "28",
+        "--profile",
+        "default",
+        "--mips",
+        "0",
+        "--memory-budget",
+        "256MiB",
+        "--output-budget",
+        "64MiB",
+        "--jobs",
+        "1"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "wall_seconds": 0.04331380000076024,
+      "kernel_process_seconds": 0.0415818,
+      "cpu_seconds": 0.046875,
+      "peak_working_set_bytes": 7942144,
+      "peak_commit_bytes": 3198976,
+      "private_usage_sampled_max_bytes": 3198976,
+      "read_transfer_bytes": 173447,
+      "write_transfer_bytes": 171877,
+      "read_operations": 40,
+      "write_operations": 8,
+      "stdout": "{\"event\":\"bundle_complete\",\"input\":\"<资料根>\\\\archive\\\\game\\\\plain\\\\image_sticker_20360121.assetbundle\",\"io\":{\"meaning\":\"文件源成功读取请求字节，包含重复读取，不等于物理磁盘读取量\",\"source_read_bytes\":173447,\"source_read_calls\":40},\"loader\":{\"admission_estimate_bytes\":520628,\"budget_contract\":\"加载准入估计与解析上限；不包含编码器工作区和操作系统分配器开销，不是硬RSS限制\",\"classes\":{\"142\":1,\"213\":1,\"28\":1},\"entries\":2,\"entry_cache_allowance_bytes\":305292,\"input_bytes\":59947,\"maximum_compressed_block_bytes\":52417,\"maximum_uncompressed_block_bytes\":131072,\"memory_budget_bytes\":268435456,\"metadata_heap_estimate_bytes\":31847,\"objects\":3,\"resources\":1,\"serialized_files\":1,\"serialized_metadata_bytes\":10457,\"storage_blocks\":2,\"uncompressed_entry_bytes\":174220,\"unity_versions\":[\"2022.3.62f2\"]},\"selected_objects\":1,\"selected_read_bytes\":113500,\"source_hash_read_bytes\":59947,\"source_hash_read_calls\":4}\n{\"elapsed_seconds\":0.0330852,\"event\":\"summary\",\"failed\":0,\"memory_budget_bytes\":268435456,\"output_bytes\":169234,\"per_worker_budget_bytes\":268435456,\"resumed\":0,\"selected\":1,\"statuses\":{\"decoded_verified\":1},\"succeeded\":1,\"workers\":1}\n",
+      "stderr": "",
+      "validation": {
+        "valid": true,
+        "images": [
+          {
+            "identity": [
+              "-2220235085048318963",
+              0,
+              0
+            ],
+            "path": "067952025750f9661d02d35eb129d1722a77442fd0b9741c83ccf454cefd7fc0/entry-0/-2220235085048318963/87c9d21bf10c95dd6d9899df256cbc3e59ab87297a52be46755f8641b738f2cc/mip-00.png",
+            "bytes": 169234,
+            "sha256": "b48e3cda70d8a44b45167ea4226576efb51d91f5de8888e6013bff45981dd73f",
+            "format": "PNG",
+            "mode": "RGBA",
+            "rgba_sha256": "6820c1990c0150f5c0d45fdcc5f39f98249443f5eabc8e255249e66da1d9301b",
+            "encoding": null
+          }
+        ],
+        "image_count": 1,
+        "output_bytes": 169234,
+        "format_counts": {
+          "PNG": 1
+        },
+        "mode_counts": {
+          "RGBA": 1
+        },
+        "metadata": [
+          {
+            "path_id": "-2220235085048318963",
+            "metadata": {
+              "alpha8_derived_rgb": null,
+              "color_space": 1,
+              "complete_image_size": 160000,
+              "dimension": 2,
+              "face_order": null,
+              "height": 600,
+              "image_count": 1,
+              "layout": {
+                "face_stride": 160000,
+                "faces": 1,
+                "subresources": [
+                  {
+                    "bytes": 160000,
+                    "face": null,
+                    "height": 600,
+                    "mip": 0,
+                    "offset": 0,
+                    "width": 600
+                  }
+                ]
+              },
+              "mip_count": 1,
+              "mips_stripped": 0,
+              "payload_bytes": 160000,
+              "row_order": "unity_decoded_bottom_up",
+              "texture_format": 50,
+              "width": 600
+            }
+          }
+        ]
+      }
+    },
+    {
+      "case": "sticker",
+      "tool": "Rurino",
+      "repeat": 2,
+      "command": [
+        "<资料根>\\tools\\rurino-encoding-build\\target\\release\\Rurino.exe",
+        "extract",
+        "--input",
+        "<资料根>\\archive\\game\\plain\\image_sticker_20360121.assetbundle",
+        "--output",
+        "<资料根>\\tools\\rurino-encoding-build\\test-stage\\scratch\\encoding-compare-a7el7z74",
+        "--format",
+        "png",
+        "--optimize",
+        "none",
+        "--optimize-seconds",
+        "5",
+        "--class",
+        "28",
+        "--profile",
+        "default",
+        "--mips",
+        "0",
+        "--memory-budget",
+        "256MiB",
+        "--output-budget",
+        "64MiB",
+        "--jobs",
+        "1"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "wall_seconds": 0.03399609999905806,
+      "kernel_process_seconds": 0.0322206,
+      "cpu_seconds": 0.03125,
+      "peak_working_set_bytes": 7966720,
+      "peak_commit_bytes": 3219456,
+      "private_usage_sampled_max_bytes": 3219456,
+      "read_transfer_bytes": 173447,
+      "write_transfer_bytes": 171877,
+      "read_operations": 40,
+      "write_operations": 8,
+      "stdout": "{\"event\":\"bundle_complete\",\"input\":\"<资料根>\\\\archive\\\\game\\\\plain\\\\image_sticker_20360121.assetbundle\",\"io\":{\"meaning\":\"文件源成功读取请求字节，包含重复读取，不等于物理磁盘读取量\",\"source_read_bytes\":173447,\"source_read_calls\":40},\"loader\":{\"admission_estimate_bytes\":520628,\"budget_contract\":\"加载准入估计与解析上限；不包含编码器工作区和操作系统分配器开销，不是硬RSS限制\",\"classes\":{\"142\":1,\"213\":1,\"28\":1},\"entries\":2,\"entry_cache_allowance_bytes\":305292,\"input_bytes\":59947,\"maximum_compressed_block_bytes\":52417,\"maximum_uncompressed_block_bytes\":131072,\"memory_budget_bytes\":268435456,\"metadata_heap_estimate_bytes\":31847,\"objects\":3,\"resources\":1,\"serialized_files\":1,\"serialized_metadata_bytes\":10457,\"storage_blocks\":2,\"uncompressed_entry_bytes\":174220,\"unity_versions\":[\"2022.3.62f2\"]},\"selected_objects\":1,\"selected_read_bytes\":113500,\"source_hash_read_bytes\":59947,\"source_hash_read_calls\":4}\n{\"elapsed_seconds\":0.0242913,\"event\":\"summary\",\"failed\":0,\"memory_budget_bytes\":268435456,\"output_bytes\":169234,\"per_worker_budget_bytes\":268435456,\"resumed\":0,\"selected\":1,\"statuses\":{\"decoded_verified\":1},\"succeeded\":1,\"workers\":1}\n",
+      "stderr": "",
+      "validation": {
+        "valid": true,
+        "images": [
+          {
+            "identity": [
+              "-2220235085048318963",
+              0,
+              0
+            ],
+            "path": "067952025750f9661d02d35eb129d1722a77442fd0b9741c83ccf454cefd7fc0/entry-0/-2220235085048318963/87c9d21bf10c95dd6d9899df256cbc3e59ab87297a52be46755f8641b738f2cc/mip-00.png",
+            "bytes": 169234,
+            "sha256": "b48e3cda70d8a44b45167ea4226576efb51d91f5de8888e6013bff45981dd73f",
+            "format": "PNG",
+            "mode": "RGBA",
+            "rgba_sha256": "6820c1990c0150f5c0d45fdcc5f39f98249443f5eabc8e255249e66da1d9301b",
+            "encoding": null
+          }
+        ],
+        "image_count": 1,
+        "output_bytes": 169234,
+        "format_counts": {
+          "PNG": 1
+        },
+        "mode_counts": {
+          "RGBA": 1
+        },
+        "metadata": [
+          {
+            "path_id": "-2220235085048318963",
+            "metadata": {
+              "alpha8_derived_rgb": null,
+              "color_space": 1,
+              "complete_image_size": 160000,
+              "dimension": 2,
+              "face_order": null,
+              "height": 600,
+              "image_count": 1,
+              "layout": {
+                "face_stride": 160000,
+                "faces": 1,
+                "subresources": [
+                  {
+                    "bytes": 160000,
+                    "face": null,
+                    "height": 600,
+                    "mip": 0,
+                    "offset": 0,
+                    "width": 600
+                  }
+                ]
+              },
+              "mip_count": 1,
+              "mips_stripped": 0,
+              "payload_bytes": 160000,
+              "row_order": "unity_decoded_bottom_up",
+              "texture_format": 50,
+              "width": 600
+            }
+          }
+        ]
+      }
+    },
+    {
+      "case": "sticker",
+      "tool": "Rurino",
+      "repeat": 3,
+      "command": [
+        "<资料根>\\tools\\rurino-encoding-build\\target\\release\\Rurino.exe",
+        "extract",
+        "--input",
+        "<资料根>\\archive\\game\\plain\\image_sticker_20360121.assetbundle",
+        "--output",
+        "<资料根>\\tools\\rurino-encoding-build\\test-stage\\scratch\\encoding-compare-x0p253li",
+        "--format",
+        "png",
+        "--optimize",
+        "none",
+        "--optimize-seconds",
+        "5",
+        "--class",
+        "28",
+        "--profile",
+        "default",
+        "--mips",
+        "0",
+        "--memory-budget",
+        "256MiB",
+        "--output-budget",
+        "64MiB",
+        "--jobs",
+        "1"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "wall_seconds": 0.03467770000133896,
+      "kernel_process_seconds": 0.0330064,
+      "cpu_seconds": 0.015625,
+      "peak_working_set_bytes": 7974912,
+      "peak_commit_bytes": 3227648,
+      "private_usage_sampled_max_bytes": 3227648,
+      "read_transfer_bytes": 173447,
+      "write_transfer_bytes": 171876,
+      "read_operations": 40,
+      "write_operations": 8,
+      "stdout": "{\"event\":\"bundle_complete\",\"input\":\"<资料根>\\\\archive\\\\game\\\\plain\\\\image_sticker_20360121.assetbundle\",\"io\":{\"meaning\":\"文件源成功读取请求字节，包含重复读取，不等于物理磁盘读取量\",\"source_read_bytes\":173447,\"source_read_calls\":40},\"loader\":{\"admission_estimate_bytes\":520628,\"budget_contract\":\"加载准入估计与解析上限；不包含编码器工作区和操作系统分配器开销，不是硬RSS限制\",\"classes\":{\"142\":1,\"213\":1,\"28\":1},\"entries\":2,\"entry_cache_allowance_bytes\":305292,\"input_bytes\":59947,\"maximum_compressed_block_bytes\":52417,\"maximum_uncompressed_block_bytes\":131072,\"memory_budget_bytes\":268435456,\"metadata_heap_estimate_bytes\":31847,\"objects\":3,\"resources\":1,\"serialized_files\":1,\"serialized_metadata_bytes\":10457,\"storage_blocks\":2,\"uncompressed_entry_bytes\":174220,\"unity_versions\":[\"2022.3.62f2\"]},\"selected_objects\":1,\"selected_read_bytes\":113500,\"source_hash_read_bytes\":59947,\"source_hash_read_calls\":4}\n{\"elapsed_seconds\":0.025553,\"event\":\"summary\",\"failed\":0,\"memory_budget_bytes\":268435456,\"output_bytes\":169234,\"per_worker_budget_bytes\":268435456,\"resumed\":0,\"selected\":1,\"statuses\":{\"decoded_verified\":1},\"succeeded\":1,\"workers\":1}\n",
+      "stderr": "",
+      "validation": {
+        "valid": true,
+        "images": [
+          {
+            "identity": [
+              "-2220235085048318963",
+              0,
+              0
+            ],
+            "path": "067952025750f9661d02d35eb129d1722a77442fd0b9741c83ccf454cefd7fc0/entry-0/-2220235085048318963/87c9d21bf10c95dd6d9899df256cbc3e59ab87297a52be46755f8641b738f2cc/mip-00.png",
+            "bytes": 169234,
+            "sha256": "b48e3cda70d8a44b45167ea4226576efb51d91f5de8888e6013bff45981dd73f",
+            "format": "PNG",
+            "mode": "RGBA",
+            "rgba_sha256": "6820c1990c0150f5c0d45fdcc5f39f98249443f5eabc8e255249e66da1d9301b",
+            "encoding": null
+          }
+        ],
+        "image_count": 1,
+        "output_bytes": 169234,
+        "format_counts": {
+          "PNG": 1
+        },
+        "mode_counts": {
+          "RGBA": 1
+        },
+        "metadata": [
+          {
+            "path_id": "-2220235085048318963",
+            "metadata": {
+              "alpha8_derived_rgb": null,
+              "color_space": 1,
+              "complete_image_size": 160000,
+              "dimension": 2,
+              "face_order": null,
+              "height": 600,
+              "image_count": 1,
+              "layout": {
+                "face_stride": 160000,
+                "faces": 1,
+                "subresources": [
+                  {
+                    "bytes": 160000,
+                    "face": null,
+                    "height": 600,
+                    "mip": 0,
+                    "offset": 0,
+                    "width": 600
+                  }
+                ]
+              },
+              "mip_count": 1,
+              "mips_stripped": 0,
+              "payload_bytes": 160000,
+              "row_order": "unity_decoded_bottom_up",
+              "texture_format": 50,
+              "width": 600
+            }
+          }
+        ]
+      }
+    },
+    {
+      "case": "sticker",
+      "tool": "UnityPy",
+      "repeat": 1,
+      "command": [
+        "<用户>\\AppData\\Roaming\\uv\\python\\cpython-3.14-windows-x86_64-none\\python.exe",
+        "-c",
+        "import platform,runpy,sys;platform._wmi=None;sys.argv=sys.argv[1:];runpy.run_path(sys.argv[0],run_name='__main__')",
+        "<项目>\\scripts\\benchmark_unpacker.py",
+        "worker",
+        "--suite",
+        "<资料根>\\tools\\rurino-encoding-build\\test-stage\\scratch\\comparison-worker-suite.json",
+        "--case",
+        "sticker",
+        "--output",
+        "<资料根>\\tools\\rurino-encoding-build\\test-stage\\scratch\\encoding-compare-0duh7qlr"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "wall_seconds": 1.2236374999993131,
+      "kernel_process_seconds": 1.2149505,
+      "cpu_seconds": 1.1875,
+      "peak_working_set_bytes": 122925056,
+      "peak_commit_bytes": 492138496,
+      "private_usage_sampled_max_bytes": 490692608,
+      "read_transfer_bytes": 11567378,
+      "write_transfer_bytes": 165832,
+      "read_operations": 929,
+      "write_operations": 3,
+      "stdout": "{\"event\":\"summary\",\"outputs\":1}\n",
+      "stderr": "",
+      "validation": {
+        "valid": true,
+        "image_count": 1,
+        "output_bytes": 165796
+      }
+    },
+    {
+      "case": "sticker",
+      "tool": "UnityPy",
+      "repeat": 2,
+      "command": [
+        "<用户>\\AppData\\Roaming\\uv\\python\\cpython-3.14-windows-x86_64-none\\python.exe",
+        "-c",
+        "import platform,runpy,sys;platform._wmi=None;sys.argv=sys.argv[1:];runpy.run_path(sys.argv[0],run_name='__main__')",
+        "<项目>\\scripts\\benchmark_unpacker.py",
+        "worker",
+        "--suite",
+        "<资料根>\\tools\\rurino-encoding-build\\test-stage\\scratch\\comparison-worker-suite.json",
+        "--case",
+        "sticker",
+        "--output",
+        "<资料根>\\tools\\rurino-encoding-build\\test-stage\\scratch\\encoding-compare-tz746cia"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "wall_seconds": 1.2694189999965602,
+      "kernel_process_seconds": 1.2619317,
+      "cpu_seconds": 1.21875,
+      "peak_working_set_bytes": 123187200,
+      "peak_commit_bytes": 492261376,
+      "private_usage_sampled_max_bytes": 492261376,
+      "read_transfer_bytes": 11567378,
+      "write_transfer_bytes": 165832,
+      "read_operations": 929,
+      "write_operations": 3,
+      "stdout": "{\"event\":\"summary\",\"outputs\":1}\n",
+      "stderr": "",
+      "validation": {
+        "valid": true,
+        "image_count": 1,
+        "output_bytes": 165796
+      }
+    },
+    {
+      "case": "sticker",
+      "tool": "UnityPy",
+      "repeat": 3,
+      "command": [
+        "<用户>\\AppData\\Roaming\\uv\\python\\cpython-3.14-windows-x86_64-none\\python.exe",
+        "-c",
+        "import platform,runpy,sys;platform._wmi=None;sys.argv=sys.argv[1:];runpy.run_path(sys.argv[0],run_name='__main__')",
+        "<项目>\\scripts\\benchmark_unpacker.py",
+        "worker",
+        "--suite",
+        "<资料根>\\tools\\rurino-encoding-build\\test-stage\\scratch\\comparison-worker-suite.json",
+        "--case",
+        "sticker",
+        "--output",
+        "<资料根>\\tools\\rurino-encoding-build\\test-stage\\scratch\\encoding-compare-m68juwzg"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "wall_seconds": 1.2477049000008265,
+      "kernel_process_seconds": 1.2396537,
+      "cpu_seconds": 1.171875,
+      "peak_working_set_bytes": 123097088,
+      "peak_commit_bytes": 492388352,
+      "private_usage_sampled_max_bytes": 492208128,
+      "read_transfer_bytes": 11567378,
+      "write_transfer_bytes": 165832,
+      "read_operations": 929,
+      "write_operations": 3,
+      "stdout": "{\"event\":\"summary\",\"outputs\":1}\n",
+      "stderr": "",
+      "validation": {
+        "valid": true,
+        "image_count": 1,
+        "output_bytes": 165796
+      }
+    },
+    {
+      "case": "attribute",
+      "tool": "Rurino",
+      "repeat": 1,
+      "command": [
+        "<资料根>\\tools\\rurino-encoding-build\\target\\release\\Rurino.exe",
+        "extract",
+        "--input",
+        "<资料根>\\archive\\game\\plain\\attribute.assetbundle",
+        "--output",
+        "<资料根>\\tools\\rurino-encoding-build\\test-stage\\scratch\\encoding-compare-1be9k3x0",
+        "--format",
+        "png",
+        "--optimize",
+        "none",
+        "--optimize-seconds",
+        "5",
+        "--class",
+        "28",
+        "--profile",
+        "default",
+        "--mips",
+        "0",
+        "--memory-budget",
+        "256MiB",
+        "--output-budget",
+        "64MiB",
+        "--jobs",
+        "1"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "wall_seconds": 0.029145300002710428,
+      "kernel_process_seconds": 0.0270981,
+      "cpu_seconds": 0.03125,
+      "peak_working_set_bytes": 6602752,
+      "peak_commit_bytes": 1921024,
+      "private_usage_sampled_max_bytes": 1449984,
+      "read_transfer_bytes": 89208,
+      "write_transfer_bytes": 68337,
+      "read_operations": 37,
+      "write_operations": 12,
+      "stdout": "{\"event\":\"bundle_complete\",\"input\":\"<资料根>\\\\archive\\\\game\\\\plain\\\\attribute.assetbundle\",\"io\":{\"meaning\":\"文件源成功读取请求字节，包含重复读取，不等于物理磁盘读取量\",\"source_read_bytes\":89208,\"source_read_calls\":37},\"loader\":{\"admission_estimate_bytes\":400575,\"budget_contract\":\"加载准入估计与解析上限；不包含编码器工作区和操作系统分配器开销，不是硬RSS限制\",\"classes\":{\"142\":1,\"213\":4,\"28\":5,\"687078895\":1},\"entries\":2,\"entry_cache_allowance_bytes\":220592,\"input_bytes\":29413,\"maximum_compressed_block_bytes\":29253,\"maximum_uncompressed_block_bytes\":110296,\"memory_budget_bytes\":268435456,\"metadata_heap_estimate_bytes\":40434,\"objects\":11,\"resources\":1,\"serialized_files\":1,\"serialized_metadata_bytes\":13257,\"storage_blocks\":1,\"uncompressed_entry_bytes\":110296,\"unity_versions\":[\"2022.3.62f2\"]},\"selected_objects\":5,\"selected_read_bytes\":59795,\"source_hash_read_bytes\":29413,\"source_hash_read_calls\":2}\n{\"elapsed_seconds\":0.019919,\"event\":\"summary\",\"failed\":0,\"memory_budget_bytes\":268435456,\"output_bytes\":60190,\"per_worker_budget_bytes\":268435456,\"resumed\":0,\"selected\":5,\"statuses\":{\"decoded_verified\":5},\"succeeded\":5,\"workers\":1}\n",
+      "stderr": "",
+      "validation": {
+        "valid": true,
+        "images": [
+          {
+            "identity": [
+              "-7147137085381945342",
+              0,
+              0
+            ],
+            "path": "b80c47fd54f8d67f76b8a9d047591618f2dfd235212a143b8a7c586e98ccbc1c/entry-0/-7147137085381945342/87c9d21bf10c95dd6d9899df256cbc3e59ab87297a52be46755f8641b738f2cc/mip-00.png",
+            "bytes": 29769,
+            "sha256": "bce91d88eb1962b3ed9edbd4b9e0d3b1b96b04f4d8a0a40813d0a280cb755b3c",
+            "format": "PNG",
+            "mode": "RGBA",
+            "rgba_sha256": "076125f37c28d2a724c72332b10d8f09c51f595b6c846de029b1171f33aa1eea",
+            "encoding": null
+          },
+          {
+            "identity": [
+              "-5867964867391515087",
+              0,
+              0
+            ],
+            "path": "b80c47fd54f8d67f76b8a9d047591618f2dfd235212a143b8a7c586e98ccbc1c/entry-0/-5867964867391515087/87c9d21bf10c95dd6d9899df256cbc3e59ab87297a52be46755f8641b738f2cc/mip-00.png",
+            "bytes": 8796,
+            "sha256": "12f81a7350631311ddb044530a48125ed74e7b3cf80b9bf3e128eb63d94a0768",
+            "format": "PNG",
+            "mode": "RGBA",
+            "rgba_sha256": "241ade24ec76831b0cc10cbc396e2f7abb06f7a8b0b6ec2b1c7851d784ba088d",
+            "encoding": null
+          },
+          {
+            "identity": [
+              "6871024357544553126",
+              0,
+              0
+            ],
+            "path": "b80c47fd54f8d67f76b8a9d047591618f2dfd235212a143b8a7c586e98ccbc1c/entry-0/6871024357544553126/87c9d21bf10c95dd6d9899df256cbc3e59ab87297a52be46755f8641b738f2cc/mip-00.png",
+            "bytes": 8845,
+            "sha256": "6166e903ae364e73325dd8d4fa9928cd396542103f22105a6e0ba859c6e380a9",
+            "format": "PNG",
+            "mode": "RGBA",
+            "rgba_sha256": "f5cdc405d593537dc4c977dd9ae0bdc13815984c89ef510a168cac85194edb5c",
+            "encoding": null
+          },
+          {
+            "identity": [
+              "7911883591890673744",
+              0,
+              0
+            ],
+            "path": "b80c47fd54f8d67f76b8a9d047591618f2dfd235212a143b8a7c586e98ccbc1c/entry-0/7911883591890673744/87c9d21bf10c95dd6d9899df256cbc3e59ab87297a52be46755f8641b738f2cc/mip-00.png",
+            "bytes": 6806,
+            "sha256": "5adbb631628a45fc9e9bd023f6b16ef726c30f1df1b863cb30a01688de3ca0cf",
+            "format": "PNG",
+            "mode": "RGBA",
+            "rgba_sha256": "09b2cc7b73201ab91ca924c1361e66dca73717d17d725ef25a31f63569f90d51",
+            "encoding": null
+          },
+          {
+            "identity": [
+              "8781399112093863619",
+              0,
+              0
+            ],
+            "path": "b80c47fd54f8d67f76b8a9d047591618f2dfd235212a143b8a7c586e98ccbc1c/entry-0/8781399112093863619/87c9d21bf10c95dd6d9899df256cbc3e59ab87297a52be46755f8641b738f2cc/mip-00.png",
+            "bytes": 5974,
+            "sha256": "eb2b8b786adde8c40a5d50b1c2eb26b4e14574b3fd5b6955492000b35f285c6c",
+            "format": "PNG",
+            "mode": "RGBA",
+            "rgba_sha256": "f6879443964cfa56a158c68f314c33ae49fff7ed69faefdf649900f7e365d9e7",
+            "encoding": null
+          }
+        ],
+        "image_count": 5,
+        "output_bytes": 60190,
+        "format_counts": {
+          "PNG": 5
+        },
+        "mode_counts": {
+          "RGBA": 5
+        },
+        "metadata": [
+          {
+            "path_id": "-7147137085381945342",
+            "metadata": {
+              "alpha8_derived_rgb": null,
+              "color_space": 1,
+              "complete_image_size": 65536,
+              "dimension": 2,
+              "face_order": null,
+              "height": 256,
+              "image_count": 1,
+              "layout": {
+                "face_stride": 65536,
+                "faces": 1,
+                "subresources": [
+                  {
+                    "bytes": 65536,
+                    "face": null,
+                    "height": 256,
+                    "mip": 0,
+                    "offset": 0,
+                    "width": 256
+                  }
+                ]
+              },
+              "mip_count": 1,
+              "mips_stripped": 0,
+              "payload_bytes": 65536,
+              "row_order": "unity_decoded_bottom_up",
+              "texture_format": 47,
+              "width": 256
+            }
+          },
+          {
+            "path_id": "-5867964867391515087",
+            "metadata": {
+              "alpha8_derived_rgb": null,
+              "color_space": 1,
+              "complete_image_size": 6400,
+              "dimension": 2,
+              "face_order": null,
+              "height": 120,
+              "image_count": 1,
+              "layout": {
+                "face_stride": 6400,
+                "faces": 1,
+                "subresources": [
+                  {
+                    "bytes": 6400,
+                    "face": null,
+                    "height": 120,
+                    "mip": 0,
+                    "offset": 0,
+                    "width": 120
+                  }
+                ]
+              },
+              "mip_count": 1,
+              "mips_stripped": 0,
+              "payload_bytes": 6400,
+              "row_order": "unity_decoded_bottom_up",
+              "texture_format": 50,
+              "width": 120
+            }
+          },
+          {
+            "path_id": "6871024357544553126",
+            "metadata": {
+              "alpha8_derived_rgb": null,
+              "color_space": 1,
+              "complete_image_size": 6400,
+              "dimension": 2,
+              "face_order": null,
+              "height": 120,
+              "image_count": 1,
+              "layout": {
+                "face_stride": 6400,
+                "faces": 1,
+                "subresources": [
+                  {
+                    "bytes": 6400,
+                    "face": null,
+                    "height": 120,
+                    "mip": 0,
+                    "offset": 0,
+                    "width": 120
+                  }
+                ]
+              },
+              "mip_count": 1,
+              "mips_stripped": 0,
+              "payload_bytes": 6400,
+              "row_order": "unity_decoded_bottom_up",
+              "texture_format": 50,
+              "width": 120
+            }
+          },
+          {
+            "path_id": "7911883591890673744",
+            "metadata": {
+              "alpha8_derived_rgb": null,
+              "color_space": 1,
+              "complete_image_size": 6400,
+              "dimension": 2,
+              "face_order": null,
+              "height": 120,
+              "image_count": 1,
+              "layout": {
+                "face_stride": 6400,
+                "faces": 1,
+                "subresources": [
+                  {
+                    "bytes": 6400,
+                    "face": null,
+                    "height": 120,
+                    "mip": 0,
+                    "offset": 0,
+                    "width": 120
+                  }
+                ]
+              },
+              "mip_count": 1,
+              "mips_stripped": 0,
+              "payload_bytes": 6400,
+              "row_order": "unity_decoded_bottom_up",
+              "texture_format": 50,
+              "width": 120
+            }
+          },
+          {
+            "path_id": "8781399112093863619",
+            "metadata": {
+              "alpha8_derived_rgb": null,
+              "color_space": 1,
+              "complete_image_size": 6400,
+              "dimension": 2,
+              "face_order": null,
+              "height": 120,
+              "image_count": 1,
+              "layout": {
+                "face_stride": 6400,
+                "faces": 1,
+                "subresources": [
+                  {
+                    "bytes": 6400,
+                    "face": null,
+                    "height": 120,
+                    "mip": 0,
+                    "offset": 0,
+                    "width": 120
+                  }
+                ]
+              },
+              "mip_count": 1,
+              "mips_stripped": 0,
+              "payload_bytes": 6400,
+              "row_order": "unity_decoded_bottom_up",
+              "texture_format": 50,
+              "width": 120
+            }
+          }
+        ]
+      }
+    },
+    {
+      "case": "attribute",
+      "tool": "Rurino",
+      "repeat": 2,
+      "command": [
+        "<资料根>\\tools\\rurino-encoding-build\\target\\release\\Rurino.exe",
+        "extract",
+        "--input",
+        "<资料根>\\archive\\game\\plain\\attribute.assetbundle",
+        "--output",
+        "<资料根>\\tools\\rurino-encoding-build\\test-stage\\scratch\\encoding-compare-w9cbvned",
+        "--format",
+        "png",
+        "--optimize",
+        "none",
+        "--optimize-seconds",
+        "5",
+        "--class",
+        "28",
+        "--profile",
+        "default",
+        "--mips",
+        "0",
+        "--memory-budget",
+        "256MiB",
+        "--output-budget",
+        "64MiB",
+        "--jobs",
+        "1"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "wall_seconds": 0.028134899999713525,
+      "kernel_process_seconds": 0.0263939,
+      "cpu_seconds": 0.03125,
+      "peak_working_set_bytes": 6602752,
+      "peak_commit_bytes": 1925120,
+      "private_usage_sampled_max_bytes": 1323008,
+      "read_transfer_bytes": 89208,
+      "write_transfer_bytes": 68338,
+      "read_operations": 37,
+      "write_operations": 12,
+      "stdout": "{\"event\":\"bundle_complete\",\"input\":\"<资料根>\\\\archive\\\\game\\\\plain\\\\attribute.assetbundle\",\"io\":{\"meaning\":\"文件源成功读取请求字节，包含重复读取，不等于物理磁盘读取量\",\"source_read_bytes\":89208,\"source_read_calls\":37},\"loader\":{\"admission_estimate_bytes\":400575,\"budget_contract\":\"加载准入估计与解析上限；不包含编码器工作区和操作系统分配器开销，不是硬RSS限制\",\"classes\":{\"142\":1,\"213\":4,\"28\":5,\"687078895\":1},\"entries\":2,\"entry_cache_allowance_bytes\":220592,\"input_bytes\":29413,\"maximum_compressed_block_bytes\":29253,\"maximum_uncompressed_block_bytes\":110296,\"memory_budget_bytes\":268435456,\"metadata_heap_estimate_bytes\":40434,\"objects\":11,\"resources\":1,\"serialized_files\":1,\"serialized_metadata_bytes\":13257,\"storage_blocks\":1,\"uncompressed_entry_bytes\":110296,\"unity_versions\":[\"2022.3.62f2\"]},\"selected_objects\":5,\"selected_read_bytes\":59795,\"source_hash_read_bytes\":29413,\"source_hash_read_calls\":2}\n{\"elapsed_seconds\":0.0186168,\"event\":\"summary\",\"failed\":0,\"memory_budget_bytes\":268435456,\"output_bytes\":60190,\"per_worker_budget_bytes\":268435456,\"resumed\":0,\"selected\":5,\"statuses\":{\"decoded_verified\":5},\"succeeded\":5,\"workers\":1}\n",
+      "stderr": "",
+      "validation": {
+        "valid": true,
+        "images": [
+          {
+            "identity": [
+              "-7147137085381945342",
+              0,
+              0
+            ],
+            "path": "b80c47fd54f8d67f76b8a9d047591618f2dfd235212a143b8a7c586e98ccbc1c/entry-0/-7147137085381945342/87c9d21bf10c95dd6d9899df256cbc3e59ab87297a52be46755f8641b738f2cc/mip-00.png",
+            "bytes": 29769,
+            "sha256": "bce91d88eb1962b3ed9edbd4b9e0d3b1b96b04f4d8a0a40813d0a280cb755b3c",
+            "format": "PNG",
+            "mode": "RGBA",
+            "rgba_sha256": "076125f37c28d2a724c72332b10d8f09c51f595b6c846de029b1171f33aa1eea",
+            "encoding": null
+          },
+          {
+            "identity": [
+              "-5867964867391515087",
+              0,
+              0
+            ],
+            "path": "b80c47fd54f8d67f76b8a9d047591618f2dfd235212a143b8a7c586e98ccbc1c/entry-0/-5867964867391515087/87c9d21bf10c95dd6d9899df256cbc3e59ab87297a52be46755f8641b738f2cc/mip-00.png",
+            "bytes": 8796,
+            "sha256": "12f81a7350631311ddb044530a48125ed74e7b3cf80b9bf3e128eb63d94a0768",
+            "format": "PNG",
+            "mode": "RGBA",
+            "rgba_sha256": "241ade24ec76831b0cc10cbc396e2f7abb06f7a8b0b6ec2b1c7851d784ba088d",
+            "encoding": null
+          },
+          {
+            "identity": [
+              "6871024357544553126",
+              0,
+              0
+            ],
+            "path": "b80c47fd54f8d67f76b8a9d047591618f2dfd235212a143b8a7c586e98ccbc1c/entry-0/6871024357544553126/87c9d21bf10c95dd6d9899df256cbc3e59ab87297a52be46755f8641b738f2cc/mip-00.png",
+            "bytes": 8845,
+            "sha256": "6166e903ae364e73325dd8d4fa9928cd396542103f22105a6e0ba859c6e380a9",
+            "format": "PNG",
+            "mode": "RGBA",
+            "rgba_sha256": "f5cdc405d593537dc4c977dd9ae0bdc13815984c89ef510a168cac85194edb5c",
+            "encoding": null
+          },
+          {
+            "identity": [
+              "7911883591890673744",
+              0,
+              0
+            ],
+            "path": "b80c47fd54f8d67f76b8a9d047591618f2dfd235212a143b8a7c586e98ccbc1c/entry-0/7911883591890673744/87c9d21bf10c95dd6d9899df256cbc3e59ab87297a52be46755f8641b738f2cc/mip-00.png",
+            "bytes": 6806,
+            "sha256": "5adbb631628a45fc9e9bd023f6b16ef726c30f1df1b863cb30a01688de3ca0cf",
+            "format": "PNG",
+            "mode": "RGBA",
+            "rgba_sha256": "09b2cc7b73201ab91ca924c1361e66dca73717d17d725ef25a31f63569f90d51",
+            "encoding": null
+          },
+          {
+            "identity": [
+              "8781399112093863619",
+              0,
+              0
+            ],
+            "path": "b80c47fd54f8d67f76b8a9d047591618f2dfd235212a143b8a7c586e98ccbc1c/entry-0/8781399112093863619/87c9d21bf10c95dd6d9899df256cbc3e59ab87297a52be46755f8641b738f2cc/mip-00.png",
+            "bytes": 5974,
+            "sha256": "eb2b8b786adde8c40a5d50b1c2eb26b4e14574b3fd5b6955492000b35f285c6c",
+            "format": "PNG",
+            "mode": "RGBA",
+            "rgba_sha256": "f6879443964cfa56a158c68f314c33ae49fff7ed69faefdf649900f7e365d9e7",
+            "encoding": null
+          }
+        ],
+        "image_count": 5,
+        "output_bytes": 60190,
+        "format_counts": {
+          "PNG": 5
+        },
+        "mode_counts": {
+          "RGBA": 5
+        },
+        "metadata": [
+          {
+            "path_id": "-7147137085381945342",
+            "metadata": {
+              "alpha8_derived_rgb": null,
+              "color_space": 1,
+              "complete_image_size": 65536,
+              "dimension": 2,
+              "face_order": null,
+              "height": 256,
+              "image_count": 1,
+              "layout": {
+                "face_stride": 65536,
+                "faces": 1,
+                "subresources": [
+                  {
+                    "bytes": 65536,
+                    "face": null,
+                    "height": 256,
+                    "mip": 0,
+                    "offset": 0,
+                    "width": 256
+                  }
+                ]
+              },
+              "mip_count": 1,
+              "mips_stripped": 0,
+              "payload_bytes": 65536,
+              "row_order": "unity_decoded_bottom_up",
+              "texture_format": 47,
+              "width": 256
+            }
+          },
+          {
+            "path_id": "-5867964867391515087",
+            "metadata": {
+              "alpha8_derived_rgb": null,
+              "color_space": 1,
+              "complete_image_size": 6400,
+              "dimension": 2,
+              "face_order": null,
+              "height": 120,
+              "image_count": 1,
+              "layout": {
+                "face_stride": 6400,
+                "faces": 1,
+                "subresources": [
+                  {
+                    "bytes": 6400,
+                    "face": null,
+                    "height": 120,
+                    "mip": 0,
+                    "offset": 0,
+                    "width": 120
+                  }
+                ]
+              },
+              "mip_count": 1,
+              "mips_stripped": 0,
+              "payload_bytes": 6400,
+              "row_order": "unity_decoded_bottom_up",
+              "texture_format": 50,
+              "width": 120
+            }
+          },
+          {
+            "path_id": "6871024357544553126",
+            "metadata": {
+              "alpha8_derived_rgb": null,
+              "color_space": 1,
+              "complete_image_size": 6400,
+              "dimension": 2,
+              "face_order": null,
+              "height": 120,
+              "image_count": 1,
+              "layout": {
+                "face_stride": 6400,
+                "faces": 1,
+                "subresources": [
+                  {
+                    "bytes": 6400,
+                    "face": null,
+                    "height": 120,
+                    "mip": 0,
+                    "offset": 0,
+                    "width": 120
+                  }
+                ]
+              },
+              "mip_count": 1,
+              "mips_stripped": 0,
+              "payload_bytes": 6400,
+              "row_order": "unity_decoded_bottom_up",
+              "texture_format": 50,
+              "width": 120
+            }
+          },
+          {
+            "path_id": "7911883591890673744",
+            "metadata": {
+              "alpha8_derived_rgb": null,
+              "color_space": 1,
+              "complete_image_size": 6400,
+              "dimension": 2,
+              "face_order": null,
+              "height": 120,
+              "image_count": 1,
+              "layout": {
+                "face_stride": 6400,
+                "faces": 1,
+                "subresources": [
+                  {
+                    "bytes": 6400,
+                    "face": null,
+                    "height": 120,
+                    "mip": 0,
+                    "offset": 0,
+                    "width": 120
+                  }
+                ]
+              },
+              "mip_count": 1,
+              "mips_stripped": 0,
+              "payload_bytes": 6400,
+              "row_order": "unity_decoded_bottom_up",
+              "texture_format": 50,
+              "width": 120
+            }
+          },
+          {
+            "path_id": "8781399112093863619",
+            "metadata": {
+              "alpha8_derived_rgb": null,
+              "color_space": 1,
+              "complete_image_size": 6400,
+              "dimension": 2,
+              "face_order": null,
+              "height": 120,
+              "image_count": 1,
+              "layout": {
+                "face_stride": 6400,
+                "faces": 1,
+                "subresources": [
+                  {
+                    "bytes": 6400,
+                    "face": null,
+                    "height": 120,
+                    "mip": 0,
+                    "offset": 0,
+                    "width": 120
+                  }
+                ]
+              },
+              "mip_count": 1,
+              "mips_stripped": 0,
+              "payload_bytes": 6400,
+              "row_order": "unity_decoded_bottom_up",
+              "texture_format": 50,
+              "width": 120
+            }
+          }
+        ]
+      }
+    },
+    {
+      "case": "attribute",
+      "tool": "Rurino",
+      "repeat": 3,
+      "command": [
+        "<资料根>\\tools\\rurino-encoding-build\\target\\release\\Rurino.exe",
+        "extract",
+        "--input",
+        "<资料根>\\archive\\game\\plain\\attribute.assetbundle",
+        "--output",
+        "<资料根>\\tools\\rurino-encoding-build\\test-stage\\scratch\\encoding-compare-vb3zysw3",
+        "--format",
+        "png",
+        "--optimize",
+        "none",
+        "--optimize-seconds",
+        "5",
+        "--class",
+        "28",
+        "--profile",
+        "default",
+        "--mips",
+        "0",
+        "--memory-budget",
+        "256MiB",
+        "--output-budget",
+        "64MiB",
+        "--jobs",
+        "1"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "wall_seconds": 0.02752920000057202,
+      "kernel_process_seconds": 0.0257963,
+      "cpu_seconds": 0.03125,
+      "peak_working_set_bytes": 6782976,
+      "peak_commit_bytes": 1974272,
+      "private_usage_sampled_max_bytes": 1269760,
+      "read_transfer_bytes": 89208,
+      "write_transfer_bytes": 68338,
+      "read_operations": 37,
+      "write_operations": 12,
+      "stdout": "{\"event\":\"bundle_complete\",\"input\":\"<资料根>\\\\archive\\\\game\\\\plain\\\\attribute.assetbundle\",\"io\":{\"meaning\":\"文件源成功读取请求字节，包含重复读取，不等于物理磁盘读取量\",\"source_read_bytes\":89208,\"source_read_calls\":37},\"loader\":{\"admission_estimate_bytes\":400575,\"budget_contract\":\"加载准入估计与解析上限；不包含编码器工作区和操作系统分配器开销，不是硬RSS限制\",\"classes\":{\"142\":1,\"213\":4,\"28\":5,\"687078895\":1},\"entries\":2,\"entry_cache_allowance_bytes\":220592,\"input_bytes\":29413,\"maximum_compressed_block_bytes\":29253,\"maximum_uncompressed_block_bytes\":110296,\"memory_budget_bytes\":268435456,\"metadata_heap_estimate_bytes\":40434,\"objects\":11,\"resources\":1,\"serialized_files\":1,\"serialized_metadata_bytes\":13257,\"storage_blocks\":1,\"uncompressed_entry_bytes\":110296,\"unity_versions\":[\"2022.3.62f2\"]},\"selected_objects\":5,\"selected_read_bytes\":59795,\"source_hash_read_bytes\":29413,\"source_hash_read_calls\":2}\n{\"elapsed_seconds\":0.0184597,\"event\":\"summary\",\"failed\":0,\"memory_budget_bytes\":268435456,\"output_bytes\":60190,\"per_worker_budget_bytes\":268435456,\"resumed\":0,\"selected\":5,\"statuses\":{\"decoded_verified\":5},\"succeeded\":5,\"workers\":1}\n",
+      "stderr": "",
+      "validation": {
+        "valid": true,
+        "images": [
+          {
+            "identity": [
+              "-7147137085381945342",
+              0,
+              0
+            ],
+            "path": "b80c47fd54f8d67f76b8a9d047591618f2dfd235212a143b8a7c586e98ccbc1c/entry-0/-7147137085381945342/87c9d21bf10c95dd6d9899df256cbc3e59ab87297a52be46755f8641b738f2cc/mip-00.png",
+            "bytes": 29769,
+            "sha256": "bce91d88eb1962b3ed9edbd4b9e0d3b1b96b04f4d8a0a40813d0a280cb755b3c",
+            "format": "PNG",
+            "mode": "RGBA",
+            "rgba_sha256": "076125f37c28d2a724c72332b10d8f09c51f595b6c846de029b1171f33aa1eea",
+            "encoding": null
+          },
+          {
+            "identity": [
+              "-5867964867391515087",
+              0,
+              0
+            ],
+            "path": "b80c47fd54f8d67f76b8a9d047591618f2dfd235212a143b8a7c586e98ccbc1c/entry-0/-5867964867391515087/87c9d21bf10c95dd6d9899df256cbc3e59ab87297a52be46755f8641b738f2cc/mip-00.png",
+            "bytes": 8796,
+            "sha256": "12f81a7350631311ddb044530a48125ed74e7b3cf80b9bf3e128eb63d94a0768",
+            "format": "PNG",
+            "mode": "RGBA",
+            "rgba_sha256": "241ade24ec76831b0cc10cbc396e2f7abb06f7a8b0b6ec2b1c7851d784ba088d",
+            "encoding": null
+          },
+          {
+            "identity": [
+              "6871024357544553126",
+              0,
+              0
+            ],
+            "path": "b80c47fd54f8d67f76b8a9d047591618f2dfd235212a143b8a7c586e98ccbc1c/entry-0/6871024357544553126/87c9d21bf10c95dd6d9899df256cbc3e59ab87297a52be46755f8641b738f2cc/mip-00.png",
+            "bytes": 8845,
+            "sha256": "6166e903ae364e73325dd8d4fa9928cd396542103f22105a6e0ba859c6e380a9",
+            "format": "PNG",
+            "mode": "RGBA",
+            "rgba_sha256": "f5cdc405d593537dc4c977dd9ae0bdc13815984c89ef510a168cac85194edb5c",
+            "encoding": null
+          },
+          {
+            "identity": [
+              "7911883591890673744",
+              0,
+              0
+            ],
+            "path": "b80c47fd54f8d67f76b8a9d047591618f2dfd235212a143b8a7c586e98ccbc1c/entry-0/7911883591890673744/87c9d21bf10c95dd6d9899df256cbc3e59ab87297a52be46755f8641b738f2cc/mip-00.png",
+            "bytes": 6806,
+            "sha256": "5adbb631628a45fc9e9bd023f6b16ef726c30f1df1b863cb30a01688de3ca0cf",
+            "format": "PNG",
+            "mode": "RGBA",
+            "rgba_sha256": "09b2cc7b73201ab91ca924c1361e66dca73717d17d725ef25a31f63569f90d51",
+            "encoding": null
+          },
+          {
+            "identity": [
+              "8781399112093863619",
+              0,
+              0
+            ],
+            "path": "b80c47fd54f8d67f76b8a9d047591618f2dfd235212a143b8a7c586e98ccbc1c/entry-0/8781399112093863619/87c9d21bf10c95dd6d9899df256cbc3e59ab87297a52be46755f8641b738f2cc/mip-00.png",
+            "bytes": 5974,
+            "sha256": "eb2b8b786adde8c40a5d50b1c2eb26b4e14574b3fd5b6955492000b35f285c6c",
+            "format": "PNG",
+            "mode": "RGBA",
+            "rgba_sha256": "f6879443964cfa56a158c68f314c33ae49fff7ed69faefdf649900f7e365d9e7",
+            "encoding": null
+          }
+        ],
+        "image_count": 5,
+        "output_bytes": 60190,
+        "format_counts": {
+          "PNG": 5
+        },
+        "mode_counts": {
+          "RGBA": 5
+        },
+        "metadata": [
+          {
+            "path_id": "-7147137085381945342",
+            "metadata": {
+              "alpha8_derived_rgb": null,
+              "color_space": 1,
+              "complete_image_size": 65536,
+              "dimension": 2,
+              "face_order": null,
+              "height": 256,
+              "image_count": 1,
+              "layout": {
+                "face_stride": 65536,
+                "faces": 1,
+                "subresources": [
+                  {
+                    "bytes": 65536,
+                    "face": null,
+                    "height": 256,
+                    "mip": 0,
+                    "offset": 0,
+                    "width": 256
+                  }
+                ]
+              },
+              "mip_count": 1,
+              "mips_stripped": 0,
+              "payload_bytes": 65536,
+              "row_order": "unity_decoded_bottom_up",
+              "texture_format": 47,
+              "width": 256
+            }
+          },
+          {
+            "path_id": "-5867964867391515087",
+            "metadata": {
+              "alpha8_derived_rgb": null,
+              "color_space": 1,
+              "complete_image_size": 6400,
+              "dimension": 2,
+              "face_order": null,
+              "height": 120,
+              "image_count": 1,
+              "layout": {
+                "face_stride": 6400,
+                "faces": 1,
+                "subresources": [
+                  {
+                    "bytes": 6400,
+                    "face": null,
+                    "height": 120,
+                    "mip": 0,
+                    "offset": 0,
+                    "width": 120
+                  }
+                ]
+              },
+              "mip_count": 1,
+              "mips_stripped": 0,
+              "payload_bytes": 6400,
+              "row_order": "unity_decoded_bottom_up",
+              "texture_format": 50,
+              "width": 120
+            }
+          },
+          {
+            "path_id": "6871024357544553126",
+            "metadata": {
+              "alpha8_derived_rgb": null,
+              "color_space": 1,
+              "complete_image_size": 6400,
+              "dimension": 2,
+              "face_order": null,
+              "height": 120,
+              "image_count": 1,
+              "layout": {
+                "face_stride": 6400,
+                "faces": 1,
+                "subresources": [
+                  {
+                    "bytes": 6400,
+                    "face": null,
+                    "height": 120,
+                    "mip": 0,
+                    "offset": 0,
+                    "width": 120
+                  }
+                ]
+              },
+              "mip_count": 1,
+              "mips_stripped": 0,
+              "payload_bytes": 6400,
+              "row_order": "unity_decoded_bottom_up",
+              "texture_format": 50,
+              "width": 120
+            }
+          },
+          {
+            "path_id": "7911883591890673744",
+            "metadata": {
+              "alpha8_derived_rgb": null,
+              "color_space": 1,
+              "complete_image_size": 6400,
+              "dimension": 2,
+              "face_order": null,
+              "height": 120,
+              "image_count": 1,
+              "layout": {
+                "face_stride": 6400,
+                "faces": 1,
+                "subresources": [
+                  {
+                    "bytes": 6400,
+                    "face": null,
+                    "height": 120,
+                    "mip": 0,
+                    "offset": 0,
+                    "width": 120
+                  }
+                ]
+              },
+              "mip_count": 1,
+              "mips_stripped": 0,
+              "payload_bytes": 6400,
+              "row_order": "unity_decoded_bottom_up",
+              "texture_format": 50,
+              "width": 120
+            }
+          },
+          {
+            "path_id": "8781399112093863619",
+            "metadata": {
+              "alpha8_derived_rgb": null,
+              "color_space": 1,
+              "complete_image_size": 6400,
+              "dimension": 2,
+              "face_order": null,
+              "height": 120,
+              "image_count": 1,
+              "layout": {
+                "face_stride": 6400,
+                "faces": 1,
+                "subresources": [
+                  {
+                    "bytes": 6400,
+                    "face": null,
+                    "height": 120,
+                    "mip": 0,
+                    "offset": 0,
+                    "width": 120
+                  }
+                ]
+              },
+              "mip_count": 1,
+              "mips_stripped": 0,
+              "payload_bytes": 6400,
+              "row_order": "unity_decoded_bottom_up",
+              "texture_format": 50,
+              "width": 120
+            }
+          }
+        ]
+      }
+    },
+    {
+      "case": "attribute",
+      "tool": "UnityPy",
+      "repeat": 1,
+      "command": [
+        "<用户>\\AppData\\Roaming\\uv\\python\\cpython-3.14-windows-x86_64-none\\python.exe",
+        "-c",
+        "import platform,runpy,sys;platform._wmi=None;sys.argv=sys.argv[1:];runpy.run_path(sys.argv[0],run_name='__main__')",
+        "<项目>\\scripts\\benchmark_unpacker.py",
+        "worker",
+        "--suite",
+        "<资料根>\\tools\\rurino-encoding-build\\test-stage\\scratch\\comparison-worker-suite.json",
+        "--case",
+        "attribute",
+        "--output",
+        "<资料根>\\tools\\rurino-encoding-build\\test-stage\\scratch\\encoding-compare-bmteglyp"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "wall_seconds": 1.255147500000021,
+      "kernel_process_seconds": 1.247561,
+      "cpu_seconds": 1.171875,
+      "peak_working_set_bytes": 122454016,
+      "peak_commit_bytes": 491536384,
+      "private_usage_sampled_max_bytes": 491536384,
+      "read_transfer_bytes": 10529222,
+      "write_transfer_bytes": 59164,
+      "read_operations": 929,
+      "write_operations": 6,
+      "stdout": "{\"event\":\"summary\",\"outputs\":5}\n",
+      "stderr": "",
+      "validation": {
+        "valid": true,
+        "image_count": 5,
+        "output_bytes": 59128
+      }
+    },
+    {
+      "case": "attribute",
+      "tool": "UnityPy",
+      "repeat": 2,
+      "command": [
+        "<用户>\\AppData\\Roaming\\uv\\python\\cpython-3.14-windows-x86_64-none\\python.exe",
+        "-c",
+        "import platform,runpy,sys;platform._wmi=None;sys.argv=sys.argv[1:];runpy.run_path(sys.argv[0],run_name='__main__')",
+        "<项目>\\scripts\\benchmark_unpacker.py",
+        "worker",
+        "--suite",
+        "<资料根>\\tools\\rurino-encoding-build\\test-stage\\scratch\\comparison-worker-suite.json",
+        "--case",
+        "attribute",
+        "--output",
+        "<资料根>\\tools\\rurino-encoding-build\\test-stage\\scratch\\encoding-compare-0k4b299w"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "wall_seconds": 1.232156699996267,
+      "kernel_process_seconds": 1.2230394,
+      "cpu_seconds": 1.15625,
+      "peak_working_set_bytes": 122081280,
+      "peak_commit_bytes": 491118592,
+      "private_usage_sampled_max_bytes": 491053056,
+      "read_transfer_bytes": 10529222,
+      "write_transfer_bytes": 59164,
+      "read_operations": 929,
+      "write_operations": 6,
+      "stdout": "{\"event\":\"summary\",\"outputs\":5}\n",
+      "stderr": "",
+      "validation": {
+        "valid": true,
+        "image_count": 5,
+        "output_bytes": 59128
+      }
+    },
+    {
+      "case": "attribute",
+      "tool": "UnityPy",
+      "repeat": 3,
+      "command": [
+        "<用户>\\AppData\\Roaming\\uv\\python\\cpython-3.14-windows-x86_64-none\\python.exe",
+        "-c",
+        "import platform,runpy,sys;platform._wmi=None;sys.argv=sys.argv[1:];runpy.run_path(sys.argv[0],run_name='__main__')",
+        "<项目>\\scripts\\benchmark_unpacker.py",
+        "worker",
+        "--suite",
+        "<资料根>\\tools\\rurino-encoding-build\\test-stage\\scratch\\comparison-worker-suite.json",
+        "--case",
+        "attribute",
+        "--output",
+        "<资料根>\\tools\\rurino-encoding-build\\test-stage\\scratch\\encoding-compare-bnegxfhr"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "wall_seconds": 1.261510799995449,
+      "kernel_process_seconds": 1.2518137,
+      "cpu_seconds": 1.21875,
+      "peak_working_set_bytes": 122028032,
+      "peak_commit_bytes": 491315200,
+      "private_usage_sampled_max_bytes": 491261952,
+      "read_transfer_bytes": 10529222,
+      "write_transfer_bytes": 59164,
+      "read_operations": 928,
+      "write_operations": 6,
+      "stdout": "{\"event\":\"summary\",\"outputs\":5}\n",
+      "stderr": "",
+      "validation": {
+        "valid": true,
+        "image_count": 5,
+        "output_bytes": 59128
+      }
+    },
+    {
+      "case": "largest_atlas-png-one",
+      "tool": "Rurino",
+      "repeat": 1,
+      "command": [
+        "<资料根>\\tools\\rurino-encoding-build\\target\\release\\Rurino.exe",
+        "extract",
+        "--input",
+        "<资料根>\\archive\\game\\plain\\profpartscard.assetbundle",
+        "--output",
+        "<资料根>\\tools\\rurino-encoding-build\\test-stage\\scratch\\encoding-compare-7eli4_c8",
+        "--format",
+        "png",
+        "--optimize",
+        "none",
+        "--optimize-seconds",
+        "5",
+        "--class",
+        "28",
+        "--profile",
+        "default",
+        "--mips",
+        "0",
+        "--memory-budget",
+        "256MiB",
+        "--output-budget",
+        "64MiB",
+        "--jobs",
+        "1",
+        "--path-id",
+        "-8648059866976116929"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "wall_seconds": 0.8822459999937564,
+      "kernel_process_seconds": 0.8803491,
+      "cpu_seconds": 0.84375,
+      "peak_working_set_bytes": 48295936,
+      "peak_commit_bytes": 43716608,
+      "private_usage_sampled_max_bytes": 43687936,
+      "read_transfer_bytes": 165957085,
+      "write_transfer_bytes": 5330672,
+      "read_operations": 10060,
+      "write_operations": 167,
+      "stdout": "{\"event\":\"bundle_complete\",\"input\":\"<资料根>\\\\archive\\\\game\\\\plain\\\\profpartscard.assetbundle\",\"io\":{\"meaning\":\"文件源成功读取请求字节，包含重复读取，不等于物理磁盘读取量\",\"source_read_bytes\":165957085,\"source_read_calls\":10060},\"loader\":{\"admission_estimate_bytes\":17259093,\"budget_contract\":\"加载准入估计与解析上限；不包含编码器工作区和操作系统分配器开销，不是硬RSS限制\",\"classes\":{\"142\":1,\"213\":1587,\"28\":1627,\"687078895\":1},\"entries\":2,\"entry_cache_allowance_bytes\":16777216,\"input_bytes\":163712241,\"maximum_compressed_block_bytes\":130891,\"maximum_uncompressed_block_bytes\":131072,\"memory_budget_bytes\":268435456,\"metadata_heap_estimate_bytes\":219914,\"objects\":3216,\"resources\":1,\"serialized_files\":1,\"serialized_metadata_bytes\":90177,\"storage_blocks\":2281,\"uncompressed_entry_bytes\":298934132,\"unity_versions\":[\"2022.3.62f2\"]},\"selected_objects\":1,\"selected_read_bytes\":2244844,\"source_hash_read_bytes\":163712241,\"source_hash_read_calls\":9993}\n{\"elapsed_seconds\":0.8732432,\"event\":\"summary\",\"failed\":0,\"memory_budget_bytes\":268435456,\"output_bytes\":5327936,\"per_worker_budget_bytes\":268435456,\"resumed\":0,\"selected\":1,\"statuses\":{\"decoded_verified\":1},\"succeeded\":1,\"workers\":1}\n",
+      "stderr": "",
+      "validation": {
+        "valid": true,
+        "images": [
+          {
+            "identity": [
+              "-8648059866976116929",
+              0,
+              0
+            ],
+            "path": "b33f3af8a0bd53d56959ed089835f3be32917c4e966480ad8dae37b13315199a/entry-0/-8648059866976116929/97611061691ba1975f30bf1ef07c7c93add34bb926332b3f2f70eb3434eb3df4/mip-00.png",
+            "bytes": 5327936,
+            "sha256": "956fd85d7f37e291246c3e0f477bad354f40eb6df1ae0b2edc59df93a65a1610",
+            "format": "PNG",
+            "mode": "RGBA",
+            "rgba_sha256": "0b56261d4f15023df731b8e30cd91f564da6d6db74514098cd54004a0e8ee697",
+            "encoding": null
+          }
+        ],
+        "image_count": 1,
+        "output_bytes": 5327936,
+        "format_counts": {
+          "PNG": 1
+        },
+        "mode_counts": {
+          "RGBA": 1
+        },
+        "metadata": [
+          {
+            "path_id": "-8648059866976116929",
+            "metadata": {
+              "alpha8_derived_rgb": null,
+              "color_space": 1,
+              "complete_image_size": 4194304,
+              "dimension": 2,
+              "face_order": null,
+              "height": 2048,
+              "image_count": 1,
+              "layout": {
+                "face_stride": 4194304,
+                "faces": 1,
+                "subresources": [
+                  {
+                    "bytes": 4194304,
+                    "face": null,
+                    "height": 2048,
+                    "mip": 0,
+                    "offset": 0,
+                    "width": 2048
+                  }
+                ]
+              },
+              "mip_count": 1,
+              "mips_stripped": 0,
+              "payload_bytes": 4194304,
+              "row_order": "unity_decoded_bottom_up",
+              "texture_format": 47,
+              "width": 2048
+            }
+          }
+        ]
+      }
+    },
+    {
+      "case": "largest_atlas-png-one",
+      "tool": "Rurino",
+      "repeat": 2,
+      "command": [
+        "<资料根>\\tools\\rurino-encoding-build\\target\\release\\Rurino.exe",
+        "extract",
+        "--input",
+        "<资料根>\\archive\\game\\plain\\profpartscard.assetbundle",
+        "--output",
+        "<资料根>\\tools\\rurino-encoding-build\\test-stage\\scratch\\encoding-compare-krujb3z7",
+        "--format",
+        "png",
+        "--optimize",
+        "none",
+        "--optimize-seconds",
+        "5",
+        "--class",
+        "28",
+        "--profile",
+        "default",
+        "--mips",
+        "0",
+        "--memory-budget",
+        "256MiB",
+        "--output-budget",
+        "64MiB",
+        "--jobs",
+        "1",
+        "--path-id",
+        "-8648059866976116929"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "wall_seconds": 0.8701634000026388,
+      "kernel_process_seconds": 0.8683143,
+      "cpu_seconds": 0.8125,
+      "peak_working_set_bytes": 48254976,
+      "peak_commit_bytes": 43692032,
+      "private_usage_sampled_max_bytes": 43679744,
+      "read_transfer_bytes": 165957085,
+      "write_transfer_bytes": 5330672,
+      "read_operations": 10060,
+      "write_operations": 167,
+      "stdout": "{\"event\":\"bundle_complete\",\"input\":\"<资料根>\\\\archive\\\\game\\\\plain\\\\profpartscard.assetbundle\",\"io\":{\"meaning\":\"文件源成功读取请求字节，包含重复读取，不等于物理磁盘读取量\",\"source_read_bytes\":165957085,\"source_read_calls\":10060},\"loader\":{\"admission_estimate_bytes\":17259093,\"budget_contract\":\"加载准入估计与解析上限；不包含编码器工作区和操作系统分配器开销，不是硬RSS限制\",\"classes\":{\"142\":1,\"213\":1587,\"28\":1627,\"687078895\":1},\"entries\":2,\"entry_cache_allowance_bytes\":16777216,\"input_bytes\":163712241,\"maximum_compressed_block_bytes\":130891,\"maximum_uncompressed_block_bytes\":131072,\"memory_budget_bytes\":268435456,\"metadata_heap_estimate_bytes\":219914,\"objects\":3216,\"resources\":1,\"serialized_files\":1,\"serialized_metadata_bytes\":90177,\"storage_blocks\":2281,\"uncompressed_entry_bytes\":298934132,\"unity_versions\":[\"2022.3.62f2\"]},\"selected_objects\":1,\"selected_read_bytes\":2244844,\"source_hash_read_bytes\":163712241,\"source_hash_read_calls\":9993}\n{\"elapsed_seconds\":0.8565437,\"event\":\"summary\",\"failed\":0,\"memory_budget_bytes\":268435456,\"output_bytes\":5327936,\"per_worker_budget_bytes\":268435456,\"resumed\":0,\"selected\":1,\"statuses\":{\"decoded_verified\":1},\"succeeded\":1,\"workers\":1}\n",
+      "stderr": "",
+      "validation": {
+        "valid": true,
+        "images": [
+          {
+            "identity": [
+              "-8648059866976116929",
+              0,
+              0
+            ],
+            "path": "b33f3af8a0bd53d56959ed089835f3be32917c4e966480ad8dae37b13315199a/entry-0/-8648059866976116929/97611061691ba1975f30bf1ef07c7c93add34bb926332b3f2f70eb3434eb3df4/mip-00.png",
+            "bytes": 5327936,
+            "sha256": "956fd85d7f37e291246c3e0f477bad354f40eb6df1ae0b2edc59df93a65a1610",
+            "format": "PNG",
+            "mode": "RGBA",
+            "rgba_sha256": "0b56261d4f15023df731b8e30cd91f564da6d6db74514098cd54004a0e8ee697",
+            "encoding": null
+          }
+        ],
+        "image_count": 1,
+        "output_bytes": 5327936,
+        "format_counts": {
+          "PNG": 1
+        },
+        "mode_counts": {
+          "RGBA": 1
+        },
+        "metadata": [
+          {
+            "path_id": "-8648059866976116929",
+            "metadata": {
+              "alpha8_derived_rgb": null,
+              "color_space": 1,
+              "complete_image_size": 4194304,
+              "dimension": 2,
+              "face_order": null,
+              "height": 2048,
+              "image_count": 1,
+              "layout": {
+                "face_stride": 4194304,
+                "faces": 1,
+                "subresources": [
+                  {
+                    "bytes": 4194304,
+                    "face": null,
+                    "height": 2048,
+                    "mip": 0,
+                    "offset": 0,
+                    "width": 2048
+                  }
+                ]
+              },
+              "mip_count": 1,
+              "mips_stripped": 0,
+              "payload_bytes": 4194304,
+              "row_order": "unity_decoded_bottom_up",
+              "texture_format": 47,
+              "width": 2048
+            }
+          }
+        ]
+      }
+    },
+    {
+      "case": "largest_atlas-png-one",
+      "tool": "Rurino",
+      "repeat": 3,
+      "command": [
+        "<资料根>\\tools\\rurino-encoding-build\\target\\release\\Rurino.exe",
+        "extract",
+        "--input",
+        "<资料根>\\archive\\game\\plain\\profpartscard.assetbundle",
+        "--output",
+        "<资料根>\\tools\\rurino-encoding-build\\test-stage\\scratch\\encoding-compare-yjjjqrhy",
+        "--format",
+        "png",
+        "--optimize",
+        "none",
+        "--optimize-seconds",
+        "5",
+        "--class",
+        "28",
+        "--profile",
+        "default",
+        "--mips",
+        "0",
+        "--memory-budget",
+        "256MiB",
+        "--output-budget",
+        "64MiB",
+        "--jobs",
+        "1",
+        "--path-id",
+        "-8648059866976116929"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "wall_seconds": 0.884901199999149,
+      "kernel_process_seconds": 0.8832393,
+      "cpu_seconds": 0.8125,
+      "peak_working_set_bytes": 48291840,
+      "peak_commit_bytes": 43708416,
+      "private_usage_sampled_max_bytes": 43679744,
+      "read_transfer_bytes": 165957085,
+      "write_transfer_bytes": 5330672,
+      "read_operations": 10060,
+      "write_operations": 167,
+      "stdout": "{\"event\":\"bundle_complete\",\"input\":\"<资料根>\\\\archive\\\\game\\\\plain\\\\profpartscard.assetbundle\",\"io\":{\"meaning\":\"文件源成功读取请求字节，包含重复读取，不等于物理磁盘读取量\",\"source_read_bytes\":165957085,\"source_read_calls\":10060},\"loader\":{\"admission_estimate_bytes\":17259093,\"budget_contract\":\"加载准入估计与解析上限；不包含编码器工作区和操作系统分配器开销，不是硬RSS限制\",\"classes\":{\"142\":1,\"213\":1587,\"28\":1627,\"687078895\":1},\"entries\":2,\"entry_cache_allowance_bytes\":16777216,\"input_bytes\":163712241,\"maximum_compressed_block_bytes\":130891,\"maximum_uncompressed_block_bytes\":131072,\"memory_budget_bytes\":268435456,\"metadata_heap_estimate_bytes\":219914,\"objects\":3216,\"resources\":1,\"serialized_files\":1,\"serialized_metadata_bytes\":90177,\"storage_blocks\":2281,\"uncompressed_entry_bytes\":298934132,\"unity_versions\":[\"2022.3.62f2\"]},\"selected_objects\":1,\"selected_read_bytes\":2244844,\"source_hash_read_bytes\":163712241,\"source_hash_read_calls\":9993}\n{\"elapsed_seconds\":0.8738314,\"event\":\"summary\",\"failed\":0,\"memory_budget_bytes\":268435456,\"output_bytes\":5327936,\"per_worker_budget_bytes\":268435456,\"resumed\":0,\"selected\":1,\"statuses\":{\"decoded_verified\":1},\"succeeded\":1,\"workers\":1}\n",
+      "stderr": "",
+      "validation": {
+        "valid": true,
+        "images": [
+          {
+            "identity": [
+              "-8648059866976116929",
+              0,
+              0
+            ],
+            "path": "b33f3af8a0bd53d56959ed089835f3be32917c4e966480ad8dae37b13315199a/entry-0/-8648059866976116929/97611061691ba1975f30bf1ef07c7c93add34bb926332b3f2f70eb3434eb3df4/mip-00.png",
+            "bytes": 5327936,
+            "sha256": "956fd85d7f37e291246c3e0f477bad354f40eb6df1ae0b2edc59df93a65a1610",
+            "format": "PNG",
+            "mode": "RGBA",
+            "rgba_sha256": "0b56261d4f15023df731b8e30cd91f564da6d6db74514098cd54004a0e8ee697",
+            "encoding": null
+          }
+        ],
+        "image_count": 1,
+        "output_bytes": 5327936,
+        "format_counts": {
+          "PNG": 1
+        },
+        "mode_counts": {
+          "RGBA": 1
+        },
+        "metadata": [
+          {
+            "path_id": "-8648059866976116929",
+            "metadata": {
+              "alpha8_derived_rgb": null,
+              "color_space": 1,
+              "complete_image_size": 4194304,
+              "dimension": 2,
+              "face_order": null,
+              "height": 2048,
+              "image_count": 1,
+              "layout": {
+                "face_stride": 4194304,
+                "faces": 1,
+                "subresources": [
+                  {
+                    "bytes": 4194304,
+                    "face": null,
+                    "height": 2048,
+                    "mip": 0,
+                    "offset": 0,
+                    "width": 2048
+                  }
+                ]
+              },
+              "mip_count": 1,
+              "mips_stripped": 0,
+              "payload_bytes": 4194304,
+              "row_order": "unity_decoded_bottom_up",
+              "texture_format": 47,
+              "width": 2048
+            }
+          }
+        ]
+      }
+    },
+    {
+      "case": "largest_atlas-png-one",
+      "tool": "UnityPy",
+      "repeat": 1,
+      "command": [
+        "<用户>\\AppData\\Roaming\\uv\\python\\cpython-3.14-windows-x86_64-none\\python.exe",
+        "-c",
+        "import platform,runpy,sys;platform._wmi=None;sys.argv=sys.argv[1:];runpy.run_path(sys.argv[0],run_name='__main__')",
+        "<项目>\\scripts\\benchmark_unpacker.py",
+        "worker",
+        "--suite",
+        "<资料根>\\tools\\rurino-encoding-build\\test-stage\\scratch\\comparison-worker-suite.json",
+        "--case",
+        "largest_atlas-png-one",
+        "--output",
+        "<资料根>\\tools\\rurino-encoding-build\\test-stage\\scratch\\encoding-compare-68trms4b"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "wall_seconds": 9.908103199995821,
+      "kernel_process_seconds": 9.8991345,
+      "cpu_seconds": 9.625,
+      "peak_working_set_bytes": 1440083968,
+      "peak_commit_bytes": 1801674752,
+      "private_usage_sampled_max_bytes": 1784811520,
+      "read_transfer_bytes": 177567193,
+      "write_transfer_bytes": 5099171,
+      "read_operations": 2177,
+      "write_operations": 78,
+      "stdout": "{\"event\":\"summary\",\"outputs\":1}\n",
+      "stderr": "",
+      "validation": {
+        "valid": true,
+        "image_count": 1,
+        "output_bytes": 5099135
+      }
+    },
+    {
+      "case": "largest_atlas-png-one",
+      "tool": "UnityPy",
+      "repeat": 2,
+      "command": [
+        "<用户>\\AppData\\Roaming\\uv\\python\\cpython-3.14-windows-x86_64-none\\python.exe",
+        "-c",
+        "import platform,runpy,sys;platform._wmi=None;sys.argv=sys.argv[1:];runpy.run_path(sys.argv[0],run_name='__main__')",
+        "<项目>\\scripts\\benchmark_unpacker.py",
+        "worker",
+        "--suite",
+        "<资料根>\\tools\\rurino-encoding-build\\test-stage\\scratch\\comparison-worker-suite.json",
+        "--case",
+        "largest_atlas-png-one",
+        "--output",
+        "<资料根>\\tools\\rurino-encoding-build\\test-stage\\scratch\\encoding-compare-a38w_ohc"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "wall_seconds": 9.954393400003028,
+      "kernel_process_seconds": 9.9430284,
+      "cpu_seconds": 9.71875,
+      "peak_working_set_bytes": 1440706560,
+      "peak_commit_bytes": 1801871360,
+      "private_usage_sampled_max_bytes": 1801859072,
+      "read_transfer_bytes": 177567193,
+      "write_transfer_bytes": 5099171,
+      "read_operations": 2178,
+      "write_operations": 78,
+      "stdout": "{\"event\":\"summary\",\"outputs\":1}\n",
+      "stderr": "",
+      "validation": {
+        "valid": true,
+        "image_count": 1,
+        "output_bytes": 5099135
+      }
+    },
+    {
+      "case": "largest_atlas-png-one",
+      "tool": "UnityPy",
+      "repeat": 3,
+      "command": [
+        "<用户>\\AppData\\Roaming\\uv\\python\\cpython-3.14-windows-x86_64-none\\python.exe",
+        "-c",
+        "import platform,runpy,sys;platform._wmi=None;sys.argv=sys.argv[1:];runpy.run_path(sys.argv[0],run_name='__main__')",
+        "<项目>\\scripts\\benchmark_unpacker.py",
+        "worker",
+        "--suite",
+        "<资料根>\\tools\\rurino-encoding-build\\test-stage\\scratch\\comparison-worker-suite.json",
+        "--case",
+        "largest_atlas-png-one",
+        "--output",
+        "<资料根>\\tools\\rurino-encoding-build\\test-stage\\scratch\\encoding-compare-5l1z1oqr"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "wall_seconds": 10.034921999998915,
+      "kernel_process_seconds": 10.0261842,
+      "cpu_seconds": 9.734375,
+      "peak_working_set_bytes": 1439809536,
+      "peak_commit_bytes": 1800445952,
+      "private_usage_sampled_max_bytes": 1800380416,
+      "read_transfer_bytes": 177567193,
+      "write_transfer_bytes": 5099171,
+      "read_operations": 2178,
+      "write_operations": 78,
+      "stdout": "{\"event\":\"summary\",\"outputs\":1}\n",
+      "stderr": "",
+      "validation": {
+        "valid": true,
+        "image_count": 1,
+        "output_bytes": 5099135
+      }
+    }
+  ],
+  "notes": [
+    "Rurino为profile=default、optimize=none；UnityPy PNG compress_level=6。",
+    "每工具每样本三次独立进程，时间含启动和导入，像素核验在计时外。",
+    "Windows内核PeakWorkingSetSize累计峰值；Python直接运行base executable避免launcher偏差。",
+    "未清空操作系统文件缓存；测试顺序固定，没有并发基准。",
+    "PNG编码算法不同，体积差异单列，不推断为纯解码器性能。",
+    "本机WMI查询挂起，两侧基准脚本均禁用platform的WMI探测并使用系统API回退。"
+  ],
+  "remaining_image_files": 0
+}

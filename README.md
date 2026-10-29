@@ -2,12 +2,13 @@
 
 按需读取、有界输出和可核验无损导出的 Rust AssetBundle 命令行工具。
 
-## 首版能力
+## 能力
 
 - `inspect` 仅读取容器与对象表，输出分类、内存准入估计和源读取请求统计，不解析全部对象名称。
 - `plan` 根据文件、目录或 catalog 的精确类型／逻辑名筛选生成固定 SHA-256 计划。
-- `extract` 支持原生载荷、Texture2D PNG、Cubemap 六面与 mip、TextAsset、字体和视频原字节。
-- `verify` 核对文件 SHA-256，并可重新解码 PNG 核对完整 RGBA。
+- `extract` 支持原生载荷、Texture2D PNG／无损 WebP、Cubemap 六面与 mip、TextAsset、字体和视频原字节。
+- `verify` 核对文件 SHA-256，并可重新解码 PNG／WebP 核对尺寸与完整 RGBA。
+- 可选 PNG 体积优化，以及 PNG／无损 WebP 的逐图最小候选选择。
 - 支持有界并发、内存软预算、输出配额、断点恢复；失败对象清理部分输出，状态写入 JSONL。
 
 核心固定为 `unity-rs-core 0.6.1`。按需 entry 及 Region 保留资源区间，避免默认加载器将所有 entry 展开为完整 Vec。
@@ -34,12 +35,20 @@ Rurino inspect --input <plain目录> --catalog <catalog.json> --label <逻辑名
 Rurino plan --input <资源.assetbundle> --class 28 --format png --output <plan.jsonl>
 Rurino extract --plan <plan.jsonl> --output <目录> --memory-budget 256MiB --output-budget 512MiB --jobs 2
 Rurino extract --input <资源.assetbundle> --class 89 --format png --mips all --output <目录>
+Rurino extract --input <资源.assetbundle> --class 28 --format png --optimize balanced --output <目录>
+Rurino extract --input <资源.assetbundle> --class 28 --format auto --optimize small --jobs 1 --output <目录>
 Rurino verify --manifest <目录/manifest.jsonl> --level decoded
 ```
 
 `--class`、`--path-id`、`--input` 可重复指定。目录枚举限当前层 `.assetbundle`；catalog 仅选择 ResourceType=1，标签和类型精确相交筛选。常用类 ID：Texture2D=28、TextAsset=49、Cubemap=89、Font=128、VideoClip=329、RenderTexture=84。
 
-PNG 的 `--profile fast|default|best` 对应核心 PNG 编码器的压缩配置，像素一致；`fast` 优先速度，文件可能更大。首版尚未接入 oxipng 优化或 WebP 导出。
+PNG 的 `--profile fast|default|best` 对应基线 PNG 编码器的压缩配置，像素一致；默认 `fast` 优先速度，文件可能更大。
+
+`--optimize none|balanced|small` 默认 `none`，PNG 沿用流式写出；`balanced`／`small` 分别使用 oxipng 2／4 级搜索，并允许无损缩减 RGB、灰度、索引色与位深。候选必须重新解码，与原始显示顺序的完整 RGBA 一致才可采用，PNG 优化不会选取比基线更大的文件。
+
+`--format webp` 输出无损 WebP；`--format auto` 在基线 PNG、所选 PNG 优化候选与无损 WebP 中逐图选小，因此同一任务可能同时产生 `.png` 和 `.webp`。显式 WebP 不承诺小于 PNG。WebP 使用 image-webp 的 VP8L 编码器，其压缩比与 libwebp 的不同配置需要分别测量。
+
+`--optimize-seconds 5` 限制每张图的可选搜索时间，从基线编码与核验完成后开始计时；它是软截止，不会中断正在运行的压缩试验。设为 `0` 跳过可选搜索，显式 WebP 仍执行必要编码和核验。内存不足时 PNG 优化／auto 保留已核验基线；显式 WebP 无法满足预算则报错。每张图的清单记录候选大小、耗时、验证状态、选择结果和跳过原因。
 
 `--mips all` 导出全部存储级别，Cubemap 会依次输出六面。默认 `--mips 0` 输出首个存储 mip。Alpha8 派生 PNG 默认填 RGB=0，可用 `--alpha8-rgb 255` 明确选择白色；源 alpha 不变。
 
@@ -51,15 +60,17 @@ PNG 的 `--profile fast|default|best` 对应核心 PNG 编码器的压缩配置�
 
 `native` 保留原生像素载荷、文本／字体／视频字节，或尚未支持类型的原始对象片段；其状态为 `raw_verified`，不等于语义解码成功。原始对象片段必须与原始序列化文件、依赖和来源清单一起使用，不能独自还原完整 bundle。
 
-PNG 导出核对全部 RGBA，透明像素 RGB 也参与哈希。纹理原生输出另存 mip／面布局；PNG 某个 mip 的像素无损不能替代原始压缩块和整条 mip 链的保留。首版 PNG 只对明确允许的 8 位源格式承诺；HDR／浮点等未覆盖格式可使用原生载荷保存。
+PNG／WebP 的像素核验覆盖完整 RGBA，透明像素 RGB 也参与哈希。纹理原生输出另存 mip／面布局；某个 mip 的像素无损不能替代原始压缩块和整条 mip 链的保留。图片导出只对明确允许的 8 位源格式承诺；HDR／浮点等未覆盖格式可使用原生载荷保存。
 
-RenderTexture 和 0×0 动态字体纹理没有静态画面，分别标记 `metadata_only`／`expected_empty`。PNG 模式未支持的类型标记 `decoded_not_supported`，不会将 raw 回退冒充图片输出。首版不重建 Shader 执行、模型渲染或动画播放。
+纹理的 `m_ColorSpace` 保存在元数据中。图片导出不做色彩空间转换，也不额外合成 ICC；本工具处理 AssetBundle 纹理，不处理任意已有 PNG 的元数据优化。
 
-内存参数控制加载准入估计、解析上限和每任务解码工作区，包含有界 entry 缓存估计；它是软预算，不是操作系统 RSS 硬限制。并发按原包分配预算；最大块或任务超过额度会拒绝，无法通过增大队列绕过。
+RenderTexture 和 0×0 动态字体纹理没有静态画面，分别标记 `metadata_only`／`expected_empty`。图片模式未支持的类型标记 `decoded_not_supported`，不会将 raw 回退冒充图片输出。本工具不重建 Shader 执行、模型渲染或动画播放。
+
+内存参数控制加载准入估计、解析上限和每任务解码工作区，包含有界 entry 缓存、候选缓冲和重新解码的估计；它是软预算，不是操作系统 RSS 硬限制。并发按原包分配预算；最大块或任务超过额度会拒绝，无法通过增大队列绕过。候选顺序编码，oxipng 不启用内部多线程；较大图片可用 `--jobs 1` 将任务预算集中到当前原包。
 
 ## 验证与性能
 
-固定输入身份、三轮结果和测量方法见 [性能报告](docs/performance.md)。原始游戏资源和图片不进入仓库，测试输出使用临时目录，核验后清理。
+当前三轮性能、无损优化收益和 UnityPy 对比见 [0.2.0 性能报告](docs/performance-v02.md)，首版基线见 [0.1.0 报告](docs/performance.md)。原始游戏资源和图片不进入仓库，测试输出使用临时目录，核验后清理。
 
 Windows 基准使用真实工作进程的内核峰值工作集和提交量；会绕过 Python venv 启动器，避免低估峰值。基准脚本依赖独立 Python 环境中的 UnityPy 1.25.4、Pillow 13 和 NumPy，使用方式见报告。
 
