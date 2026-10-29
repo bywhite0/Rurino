@@ -1,0 +1,3 @@
+﻿case,tool,runs,all_valid,wall_seconds_median,wall_seconds_min,peak_working_set_bytes_max,peak_commit_bytes_max,output_bytes
+largest_atlas-png-one,Rurino,3,True,0.8762170999980299,0.8598209999981918,50958336,46120960,"[5327936, 5327936, 5327936]"
+largest_atlas-png-one,unitypy,3,True,9.948020000003453,9.922954800000298,1447530496,1807417344,"[5099135, 5099135, 5099135]"

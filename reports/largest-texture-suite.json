@@ -1,0 +1,77 @@
+{
+  "schema": 1,
+  "inputs": {
+    "largest_atlas": {
+      "path": "profpartscard.assetbundle",
+      "bytes": 163712241,
+      "sha256": "b33f3af8a0bd53d56959ed089835f3be32917c4e966480ad8dae37b13315199a"
+    }
+  },
+  "cases": [
+    {
+      "id": "largest_atlas-png-one",
+      "input": "largest_atlas",
+      "operation": "png",
+      "classes": [
+        28
+      ],
+      "path_ids": [
+        "-8648059866976116929"
+      ],
+      "mips": "0",
+      "profile": "default",
+      "tools": [
+        "Rurino",
+        "unitypy"
+      ],
+      "expected": [
+        {
+          "path_id": "-8648059866976116929",
+          "face": 0,
+          "mip": 0,
+          "width": 2048,
+          "height": 2048,
+          "rgba_sha256": "0b56261d4f15023df731b8e30cd91f564da6d6db74514098cd54004a0e8ee697"
+        }
+      ],
+      "source_metadata": {
+        "class": "Texture2D",
+        "class_id": 28,
+        "path_id": "-8648059866976116929",
+        "name": "sactx-4-2048x2048-ETC2-profpartscard-b1d3ce09",
+        "unity_version": "2022.3.62f2",
+        "byte_size": 252,
+        "m_Width": 2048,
+        "m_Height": 2048,
+        "m_ImageCount": 1,
+        "m_TextureFormat": 47,
+        "m_MipCount": 1,
+        "m_TextureDimension": 2,
+        "m_ColorSpace": 1,
+        "m_MipMap": null,
+        "m_CompleteImageSize": 4194304,
+        "has_image_data_field": true,
+        "inline_image_bytes": 0,
+        "stream": {
+          "path": "archive:/CAB-698d03ae9493b531f61c0b52f4eeedbd/CAB-698d03ae9493b531f61c0b52f4eeedbd.resS",
+          "offset": 2408448,
+          "size": 4194304
+        },
+        "format_name": "ETC2_RGBA8",
+        "rgba8_preserves_source_precision": true
+      }
+    }
+  ],
+  "oracle": {
+    "UnityPy": "1.25.4",
+    "Pillow": "13.0.0"
+  },
+  "notes": [
+    "仅选择已核验元数据的一张2048²ETC2图集页。",
+    "输入和oracle在计时外生成；不调用官方Rust CLI以避免它不支持path ID过滤而导出整个图集。",
+    "每次独立进程，输出1张PNG完成完整RGBA验证后立即删除。"
+  ],
+  "oracle_prepare_seconds": 8.305450699997891,
+  "metadata_sha256": "914f49b05bf6fd340fef6176df6820c3bc8a672e29cf8a11f1f7ac163a6676ff",
+  "usage": "固定输入和oracle参考；复验时重新生成实际路径。"
+}

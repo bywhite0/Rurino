@@ -1,0 +1,743 @@
+{
+  "schema": 1,
+  "inputs": {
+    "card": {
+      "path": "image_card_full_10217031.assetbundle",
+      "bytes": 831713,
+      "sha256": "5c93f1d162fcc386c92af55f20c25b3f60f92bb2964209759a420397825b5fce"
+    },
+    "spine": {
+      "path": "ingame_chara_sd_spine_1033_025.assetbundle",
+      "bytes": 1348824,
+      "sha256": "807ac90fd863cc9991462295984e596b225ed020924ff6e6ed4d5892f63b184c"
+    },
+    "attribute": {
+      "path": "attribute.assetbundle",
+      "bytes": 29413,
+      "sha256": "b80c47fd54f8d67f76b8a9d047591618f2dfd235212a143b8a7c586e98ccbc1c"
+    },
+    "cube": {
+      "path": "__reflectionprobe-0.exr.assetbundle",
+      "bytes": 2460,
+      "sha256": "ad0140eaa504dbb45976a59c4f6eab1798ec985805126164cd1099b9e8e4b516"
+    },
+    "font": {
+      "path": "raid_event_bg_900040.assetbundle",
+      "bytes": 10066396,
+      "sha256": "7ecbe907f5869220e5900c4a909134d22207f95213d07dc7faf1ba4a3d12a832"
+    },
+    "video": {
+      "path": "__sc_ppadv734_104finalemovie_tex0.mp4.assetbundle",
+      "bytes": 8091,
+      "sha256": "4baa667ccf06e87668a5a56041c85440e543bcfbf7abd1e10e86ae311c2d9c46"
+    },
+    "largest_atlas": {
+      "path": "profpartscard.assetbundle",
+      "bytes": 163712241,
+      "sha256": "b33f3af8a0bd53d56959ed089835f3be32917c4e966480ad8dae37b13315199a"
+    }
+  },
+  "cases": [
+    {
+      "id": "card-inspect",
+      "input": "card",
+      "operation": "inspect",
+      "tools": [
+        "Rurino",
+        "unitypy",
+        "unity-rs"
+      ],
+      "expected_objects": 3
+    },
+    {
+      "id": "spine-inspect",
+      "input": "spine",
+      "operation": "inspect",
+      "tools": [
+        "Rurino",
+        "unitypy",
+        "unity-rs"
+      ],
+      "expected_objects": 123
+    },
+    {
+      "id": "attribute-inspect",
+      "input": "attribute",
+      "operation": "inspect",
+      "tools": [
+        "Rurino",
+        "unitypy",
+        "unity-rs"
+      ],
+      "expected_objects": 11
+    },
+    {
+      "id": "font-inspect",
+      "input": "font",
+      "operation": "inspect",
+      "tools": [
+        "Rurino",
+        "unitypy",
+        "unity-rs"
+      ],
+      "expected_objects": 1065
+    },
+    {
+      "id": "largest_atlas-inspect",
+      "input": "largest_atlas",
+      "operation": "inspect",
+      "tools": [
+        "Rurino",
+        "unitypy",
+        "unity-rs"
+      ],
+      "expected_objects": 3216,
+      "expected_basis": "独立55包元数据扫描；本次prepare不加载最大图集"
+    },
+    {
+      "id": "card-png",
+      "input": "card",
+      "operation": "png",
+      "classes": [
+        28
+      ],
+      "mips": "0",
+      "tools": [
+        "Rurino",
+        "unitypy",
+        "unity-rs"
+      ],
+      "expected": [
+        {
+          "path_id": "523030199669260869",
+          "face": 0,
+          "mip": 0,
+          "width": 1728,
+          "height": 1120,
+          "rgba_sha256": "36caaf6c8bf5d84d2426d57866fa66c52e67fd784340f45096ead36c5d4ef0ef"
+        }
+      ]
+    },
+    {
+      "id": "card-png-fast",
+      "input": "card",
+      "operation": "png",
+      "classes": [
+        28
+      ],
+      "mips": "0",
+      "profile": "fast",
+      "tools": [
+        "Rurino"
+      ],
+      "expected": [
+        {
+          "path_id": "523030199669260869",
+          "face": 0,
+          "mip": 0,
+          "width": 1728,
+          "height": 1120,
+          "rgba_sha256": "36caaf6c8bf5d84d2426d57866fa66c52e67fd784340f45096ead36c5d4ef0ef"
+        }
+      ]
+    },
+    {
+      "id": "attribute-png",
+      "input": "attribute",
+      "operation": "png",
+      "classes": [
+        28
+      ],
+      "mips": "0",
+      "tools": [
+        "Rurino",
+        "unitypy",
+        "unity-rs"
+      ],
+      "expected": [
+        {
+          "path_id": "-7147137085381945342",
+          "face": 0,
+          "mip": 0,
+          "width": 256,
+          "height": 256,
+          "rgba_sha256": "076125f37c28d2a724c72332b10d8f09c51f595b6c846de029b1171f33aa1eea"
+        },
+        {
+          "path_id": "-5867964867391515087",
+          "face": 0,
+          "mip": 0,
+          "width": 120,
+          "height": 120,
+          "rgba_sha256": "241ade24ec76831b0cc10cbc396e2f7abb06f7a8b0b6ec2b1c7851d784ba088d"
+        },
+        {
+          "path_id": "6871024357544553126",
+          "face": 0,
+          "mip": 0,
+          "width": 120,
+          "height": 120,
+          "rgba_sha256": "f5cdc405d593537dc4c977dd9ae0bdc13815984c89ef510a168cac85194edb5c"
+        },
+        {
+          "path_id": "7911883591890673744",
+          "face": 0,
+          "mip": 0,
+          "width": 120,
+          "height": 120,
+          "rgba_sha256": "09b2cc7b73201ab91ca924c1361e66dca73717d17d725ef25a31f63569f90d51"
+        },
+        {
+          "path_id": "8781399112093863619",
+          "face": 0,
+          "mip": 0,
+          "width": 120,
+          "height": 120,
+          "rgba_sha256": "f6879443964cfa56a158c68f314c33ae49fff7ed69faefdf649900f7e365d9e7"
+        }
+      ]
+    },
+    {
+      "id": "spine-text-native",
+      "input": "spine",
+      "operation": "native",
+      "classes": [
+        49
+      ],
+      "tools": [
+        "Rurino",
+        "unitypy",
+        "unity-rs"
+      ],
+      "expected": [
+        {
+          "path_id": "8193518204031962791",
+          "bytes": 14466,
+          "sha256": "7f644629ba2ea3131580f57fe73727fddfc4b37ad993e9271154852627849a3a"
+        },
+        {
+          "path_id": "8776932937373273585",
+          "bytes": 2066608,
+          "sha256": "22d0499bc50d36e4c6b8635842da293693b5cf007d153f404900bc252651f5ed"
+        }
+      ]
+    },
+    {
+      "id": "font-native",
+      "input": "font",
+      "operation": "native",
+      "classes": [
+        128
+      ],
+      "tools": [
+        "Rurino",
+        "unitypy",
+        "unity-rs"
+      ],
+      "expected": [
+        {
+          "path_id": "-5093877558688107406",
+          "bytes": 4564400,
+          "sha256": "f3650257a76587d564f62421f8d1bab69a9f3d7e7b9fe02a2275177e8c84bd8e"
+        },
+        {
+          "path_id": "3663450074856023530",
+          "bytes": 159848,
+          "sha256": "b0499eb6bef276af5e98726f6476ad2a09fa0a792e430be776811890b0a9e4b1"
+        },
+        {
+          "path_id": "5060633948378548087",
+          "bytes": 2248888,
+          "sha256": "0158b00278325067c436d64b5105124a9dc3118d5b5f4e5f570ff437422d03e9"
+        },
+        {
+          "path_id": "7521109468503195915",
+          "bytes": 156520,
+          "sha256": "8d909883de81344e0fbcfef30e931872e92d9aeecdf85b6dcf6e0b28c078e98e"
+        },
+        {
+          "path_id": "8767520867788510147",
+          "bytes": 158192,
+          "sha256": "78f127277756ae464f4eb665ce214cb6315746f6f4193e95b31f18f4b3e97527"
+        }
+      ]
+    },
+    {
+      "id": "video-native",
+      "input": "video",
+      "operation": "native",
+      "classes": [
+        329
+      ],
+      "tools": [
+        "Rurino",
+        "unitypy",
+        "unity-rs"
+      ],
+      "expected": [
+        {
+          "path_id": "-1436500439978063445",
+          "bytes": 19430,
+          "sha256": "90dd752c88adbdb743b6714a75e967e142cbd5f205009318fe90626d4c8433e1"
+        }
+      ]
+    },
+    {
+      "id": "cube-all-png",
+      "input": "cube",
+      "operation": "png",
+      "classes": [
+        89
+      ],
+      "mips": "all",
+      "tools": [
+        "Rurino",
+        "unitypy"
+      ],
+      "expected": [
+        {
+          "path_id": "-1065673747721114125",
+          "face": 0,
+          "mip": 0,
+          "width": 128,
+          "height": 128,
+          "rgba_sha256": "db2335a79576250e16cbdc291d9e0882ad61b813317e95bd30ce8bb95c72d93b"
+        },
+        {
+          "path_id": "-1065673747721114125",
+          "face": 0,
+          "mip": 1,
+          "width": 64,
+          "height": 64,
+          "rgba_sha256": "792e872ad84b661af5f534dcc786c5c5bffa2089c486666b32167e74c1b93766"
+        },
+        {
+          "path_id": "-1065673747721114125",
+          "face": 0,
+          "mip": 2,
+          "width": 32,
+          "height": 32,
+          "rgba_sha256": "1cb7de4b51d722a52932a3b24fecfa4a94eb8a7e562886ee78aca908e4c4c490"
+        },
+        {
+          "path_id": "-1065673747721114125",
+          "face": 0,
+          "mip": 3,
+          "width": 16,
+          "height": 16,
+          "rgba_sha256": "5e9fbd7d7d2ba04b229e98805636b3b99fea2d99755fcd9a0c07b0d193509366"
+        },
+        {
+          "path_id": "-1065673747721114125",
+          "face": 0,
+          "mip": 4,
+          "width": 8,
+          "height": 8,
+          "rgba_sha256": "34df6e5ab08c1fc733e00d2626fe5968f70caeec2bbf23c2e4540d19ffdd6980"
+        },
+        {
+          "path_id": "-1065673747721114125",
+          "face": 0,
+          "mip": 5,
+          "width": 4,
+          "height": 4,
+          "rgba_sha256": "28329c85209c4d87f1113b0f7b8869f81978c30de8f76d848da65523bcd1924e"
+        },
+        {
+          "path_id": "-1065673747721114125",
+          "face": 0,
+          "mip": 6,
+          "width": 2,
+          "height": 2,
+          "rgba_sha256": "2ecad2d233a20209496023e1f15b6227bb4d1dd238a69148671a19460138a0f6"
+        },
+        {
+          "path_id": "-1065673747721114125",
+          "face": 0,
+          "mip": 7,
+          "width": 1,
+          "height": 1,
+          "rgba_sha256": "eaec6f1202b01d88d18f72d71f9f18c1e46bce14643d8083674ad2334c012706"
+        },
+        {
+          "path_id": "-1065673747721114125",
+          "face": 1,
+          "mip": 0,
+          "width": 128,
+          "height": 128,
+          "rgba_sha256": "db2335a79576250e16cbdc291d9e0882ad61b813317e95bd30ce8bb95c72d93b"
+        },
+        {
+          "path_id": "-1065673747721114125",
+          "face": 1,
+          "mip": 1,
+          "width": 64,
+          "height": 64,
+          "rgba_sha256": "792e872ad84b661af5f534dcc786c5c5bffa2089c486666b32167e74c1b93766"
+        },
+        {
+          "path_id": "-1065673747721114125",
+          "face": 1,
+          "mip": 2,
+          "width": 32,
+          "height": 32,
+          "rgba_sha256": "1cb7de4b51d722a52932a3b24fecfa4a94eb8a7e562886ee78aca908e4c4c490"
+        },
+        {
+          "path_id": "-1065673747721114125",
+          "face": 1,
+          "mip": 3,
+          "width": 16,
+          "height": 16,
+          "rgba_sha256": "5e9fbd7d7d2ba04b229e98805636b3b99fea2d99755fcd9a0c07b0d193509366"
+        },
+        {
+          "path_id": "-1065673747721114125",
+          "face": 1,
+          "mip": 4,
+          "width": 8,
+          "height": 8,
+          "rgba_sha256": "34df6e5ab08c1fc733e00d2626fe5968f70caeec2bbf23c2e4540d19ffdd6980"
+        },
+        {
+          "path_id": "-1065673747721114125",
+          "face": 1,
+          "mip": 5,
+          "width": 4,
+          "height": 4,
+          "rgba_sha256": "28329c85209c4d87f1113b0f7b8869f81978c30de8f76d848da65523bcd1924e"
+        },
+        {
+          "path_id": "-1065673747721114125",
+          "face": 1,
+          "mip": 6,
+          "width": 2,
+          "height": 2,
+          "rgba_sha256": "2ecad2d233a20209496023e1f15b6227bb4d1dd238a69148671a19460138a0f6"
+        },
+        {
+          "path_id": "-1065673747721114125",
+          "face": 1,
+          "mip": 7,
+          "width": 1,
+          "height": 1,
+          "rgba_sha256": "eaec6f1202b01d88d18f72d71f9f18c1e46bce14643d8083674ad2334c012706"
+        },
+        {
+          "path_id": "-1065673747721114125",
+          "face": 2,
+          "mip": 0,
+          "width": 128,
+          "height": 128,
+          "rgba_sha256": "db2335a79576250e16cbdc291d9e0882ad61b813317e95bd30ce8bb95c72d93b"
+        },
+        {
+          "path_id": "-1065673747721114125",
+          "face": 2,
+          "mip": 1,
+          "width": 64,
+          "height": 64,
+          "rgba_sha256": "792e872ad84b661af5f534dcc786c5c5bffa2089c486666b32167e74c1b93766"
+        },
+        {
+          "path_id": "-1065673747721114125",
+          "face": 2,
+          "mip": 2,
+          "width": 32,
+          "height": 32,
+          "rgba_sha256": "1cb7de4b51d722a52932a3b24fecfa4a94eb8a7e562886ee78aca908e4c4c490"
+        },
+        {
+          "path_id": "-1065673747721114125",
+          "face": 2,
+          "mip": 3,
+          "width": 16,
+          "height": 16,
+          "rgba_sha256": "5e9fbd7d7d2ba04b229e98805636b3b99fea2d99755fcd9a0c07b0d193509366"
+        },
+        {
+          "path_id": "-1065673747721114125",
+          "face": 2,
+          "mip": 4,
+          "width": 8,
+          "height": 8,
+          "rgba_sha256": "34df6e5ab08c1fc733e00d2626fe5968f70caeec2bbf23c2e4540d19ffdd6980"
+        },
+        {
+          "path_id": "-1065673747721114125",
+          "face": 2,
+          "mip": 5,
+          "width": 4,
+          "height": 4,
+          "rgba_sha256": "28329c85209c4d87f1113b0f7b8869f81978c30de8f76d848da65523bcd1924e"
+        },
+        {
+          "path_id": "-1065673747721114125",
+          "face": 2,
+          "mip": 6,
+          "width": 2,
+          "height": 2,
+          "rgba_sha256": "2ecad2d233a20209496023e1f15b6227bb4d1dd238a69148671a19460138a0f6"
+        },
+        {
+          "path_id": "-1065673747721114125",
+          "face": 2,
+          "mip": 7,
+          "width": 1,
+          "height": 1,
+          "rgba_sha256": "eaec6f1202b01d88d18f72d71f9f18c1e46bce14643d8083674ad2334c012706"
+        },
+        {
+          "path_id": "-1065673747721114125",
+          "face": 3,
+          "mip": 0,
+          "width": 128,
+          "height": 128,
+          "rgba_sha256": "db2335a79576250e16cbdc291d9e0882ad61b813317e95bd30ce8bb95c72d93b"
+        },
+        {
+          "path_id": "-1065673747721114125",
+          "face": 3,
+          "mip": 1,
+          "width": 64,
+          "height": 64,
+          "rgba_sha256": "792e872ad84b661af5f534dcc786c5c5bffa2089c486666b32167e74c1b93766"
+        },
+        {
+          "path_id": "-1065673747721114125",
+          "face": 3,
+          "mip": 2,
+          "width": 32,
+          "height": 32,
+          "rgba_sha256": "1cb7de4b51d722a52932a3b24fecfa4a94eb8a7e562886ee78aca908e4c4c490"
+        },
+        {
+          "path_id": "-1065673747721114125",
+          "face": 3,
+          "mip": 3,
+          "width": 16,
+          "height": 16,
+          "rgba_sha256": "5e9fbd7d7d2ba04b229e98805636b3b99fea2d99755fcd9a0c07b0d193509366"
+        },
+        {
+          "path_id": "-1065673747721114125",
+          "face": 3,
+          "mip": 4,
+          "width": 8,
+          "height": 8,
+          "rgba_sha256": "34df6e5ab08c1fc733e00d2626fe5968f70caeec2bbf23c2e4540d19ffdd6980"
+        },
+        {
+          "path_id": "-1065673747721114125",
+          "face": 3,
+          "mip": 5,
+          "width": 4,
+          "height": 4,
+          "rgba_sha256": "28329c85209c4d87f1113b0f7b8869f81978c30de8f76d848da65523bcd1924e"
+        },
+        {
+          "path_id": "-1065673747721114125",
+          "face": 3,
+          "mip": 6,
+          "width": 2,
+          "height": 2,
+          "rgba_sha256": "2ecad2d233a20209496023e1f15b6227bb4d1dd238a69148671a19460138a0f6"
+        },
+        {
+          "path_id": "-1065673747721114125",
+          "face": 3,
+          "mip": 7,
+          "width": 1,
+          "height": 1,
+          "rgba_sha256": "eaec6f1202b01d88d18f72d71f9f18c1e46bce14643d8083674ad2334c012706"
+        },
+        {
+          "path_id": "-1065673747721114125",
+          "face": 4,
+          "mip": 0,
+          "width": 128,
+          "height": 128,
+          "rgba_sha256": "0c10480dc46940bcaabb8fa9453e5e028223c2f4fab80dc3bbe1e75b0c4fdb9a"
+        },
+        {
+          "path_id": "-1065673747721114125",
+          "face": 4,
+          "mip": 1,
+          "width": 64,
+          "height": 64,
+          "rgba_sha256": "9dd9a6055a09192360fcf2e07330f861611abfcb4dbd8f025e09a0fb08b5d27b"
+        },
+        {
+          "path_id": "-1065673747721114125",
+          "face": 4,
+          "mip": 2,
+          "width": 32,
+          "height": 32,
+          "rgba_sha256": "0377cded3f6b9c8c03b9c84280053950b7498e3d6aa92262c38a0fa49636456b"
+        },
+        {
+          "path_id": "-1065673747721114125",
+          "face": 4,
+          "mip": 3,
+          "width": 16,
+          "height": 16,
+          "rgba_sha256": "5e9fbd7d7d2ba04b229e98805636b3b99fea2d99755fcd9a0c07b0d193509366"
+        },
+        {
+          "path_id": "-1065673747721114125",
+          "face": 4,
+          "mip": 4,
+          "width": 8,
+          "height": 8,
+          "rgba_sha256": "34df6e5ab08c1fc733e00d2626fe5968f70caeec2bbf23c2e4540d19ffdd6980"
+        },
+        {
+          "path_id": "-1065673747721114125",
+          "face": 4,
+          "mip": 5,
+          "width": 4,
+          "height": 4,
+          "rgba_sha256": "28329c85209c4d87f1113b0f7b8869f81978c30de8f76d848da65523bcd1924e"
+        },
+        {
+          "path_id": "-1065673747721114125",
+          "face": 4,
+          "mip": 6,
+          "width": 2,
+          "height": 2,
+          "rgba_sha256": "2ecad2d233a20209496023e1f15b6227bb4d1dd238a69148671a19460138a0f6"
+        },
+        {
+          "path_id": "-1065673747721114125",
+          "face": 4,
+          "mip": 7,
+          "width": 1,
+          "height": 1,
+          "rgba_sha256": "eaec6f1202b01d88d18f72d71f9f18c1e46bce14643d8083674ad2334c012706"
+        },
+        {
+          "path_id": "-1065673747721114125",
+          "face": 5,
+          "mip": 0,
+          "width": 128,
+          "height": 128,
+          "rgba_sha256": "db2335a79576250e16cbdc291d9e0882ad61b813317e95bd30ce8bb95c72d93b"
+        },
+        {
+          "path_id": "-1065673747721114125",
+          "face": 5,
+          "mip": 1,
+          "width": 64,
+          "height": 64,
+          "rgba_sha256": "792e872ad84b661af5f534dcc786c5c5bffa2089c486666b32167e74c1b93766"
+        },
+        {
+          "path_id": "-1065673747721114125",
+          "face": 5,
+          "mip": 2,
+          "width": 32,
+          "height": 32,
+          "rgba_sha256": "1cb7de4b51d722a52932a3b24fecfa4a94eb8a7e562886ee78aca908e4c4c490"
+        },
+        {
+          "path_id": "-1065673747721114125",
+          "face": 5,
+          "mip": 3,
+          "width": 16,
+          "height": 16,
+          "rgba_sha256": "5e9fbd7d7d2ba04b229e98805636b3b99fea2d99755fcd9a0c07b0d193509366"
+        },
+        {
+          "path_id": "-1065673747721114125",
+          "face": 5,
+          "mip": 4,
+          "width": 8,
+          "height": 8,
+          "rgba_sha256": "34df6e5ab08c1fc733e00d2626fe5968f70caeec2bbf23c2e4540d19ffdd6980"
+        },
+        {
+          "path_id": "-1065673747721114125",
+          "face": 5,
+          "mip": 5,
+          "width": 4,
+          "height": 4,
+          "rgba_sha256": "28329c85209c4d87f1113b0f7b8869f81978c30de8f76d848da65523bcd1924e"
+        },
+        {
+          "path_id": "-1065673747721114125",
+          "face": 5,
+          "mip": 6,
+          "width": 2,
+          "height": 2,
+          "rgba_sha256": "2ecad2d233a20209496023e1f15b6227bb4d1dd238a69148671a19460138a0f6"
+        },
+        {
+          "path_id": "-1065673747721114125",
+          "face": 5,
+          "mip": 7,
+          "width": 1,
+          "height": 1,
+          "rgba_sha256": "eaec6f1202b01d88d18f72d71f9f18c1e46bce14643d8083674ad2334c012706"
+        }
+      ]
+    },
+    {
+      "id": "cube-native",
+      "input": "cube",
+      "operation": "native",
+      "classes": [
+        89
+      ],
+      "tools": [
+        "Rurino",
+        "unitypy"
+      ],
+      "expected": [
+        {
+          "path_id": "-1065673747721114125",
+          "bytes": 63072,
+          "sha256": "61cdba2cc4aa4c1c473fc2c53ec8d3d9ffef7749faf7c383b866d2eb31478006"
+        }
+      ]
+    },
+    {
+      "id": "alpha8-png",
+      "input": "font",
+      "operation": "png",
+      "classes": [
+        28
+      ],
+      "path_ids": [
+        "-7477645124050682085"
+      ],
+      "mips": "0",
+      "tools": [
+        "Rurino",
+        "unitypy"
+      ],
+      "expected": [
+        {
+          "path_id": "-7477645124050682085",
+          "face": 0,
+          "mip": 0,
+          "width": 512,
+          "height": 256,
+          "rgba_sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541"
+        }
+      ],
+      "semantic_note": "Alpha8原生只存alpha；本工具派生RGB选择0，与UnityPy一致；官方Rust填255，不能混为同一RGBA。"
+    }
+  ],
+  "oracle": {
+    "UnityPy": "1.25.4",
+    "Pillow": "13.0.0"
+  },
+  "notes": [
+    "输入SHA和独立oracle在计时外生成；每个case使用独立进程，运行期间不刷新系统磁盘缓存。",
+    "inspect比较容器加载和对象计数；工具内部可能执行不同的名称和依赖索引工作。",
+    "最大图集只运行inspect，禁止批量像素输出；其对象数依据前期独立元数据扫描。",
+    "Cubemap六面和全部mip使用明确ASTC块布局oracle；官方unity-rs 0.6.1不支持该语义，未混入raw回退。",
+    "每次运行完成后先核验输出，再清理该次临时目录；不会保留整套图片。"
+  ],
+  "usage": "这是固定输入身份与oracle参考。运行时使用prepare在本地生成含实际路径的suite。"
+}
