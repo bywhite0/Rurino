@@ -17,12 +17,18 @@ use unity_rs_core::texture::{
 };
 use unity_rs_core::type_tree::{TypeTreeReadLimits, TypeValue};
 
+use crate::encoding::{
+    EncodedFormat, EncodingReport, EncodingRequest, OptimizationEffort, encode_image,
+};
+
 pub type ExportResult<T> = Result<T, Box<dyn Error + Send + Sync>>;
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub enum ExportFormat {
     Native,
     Png,
+    Webp,
+    Auto,
 }
 
 #[derive(Debug, Clone)]
@@ -32,6 +38,8 @@ pub struct ExportRequest {
     pub decoder_budget_bytes: u64,
     pub png_compression: PngCompression,
     pub alpha8_rgb: u8,
+    pub optimize: OptimizationEffort,
+    pub optimize_seconds: u64,
 }
 
 impl Default for ExportRequest {
@@ -42,6 +50,8 @@ impl Default for ExportRequest {
             decoder_budget_bytes: 128 * 1024 * 1024,
             png_compression: PngCompression::Fast,
             alpha8_rgb: 0,
+            optimize: OptimizationEffort::None,
+            optimize_seconds: 5,
         }
     }
 }
@@ -57,6 +67,8 @@ pub struct OutputDescriptor {
     pub height: Option<u32>,
     pub rgba_sha256: Option<String>,
     pub source_payload_sha256: Option<String>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub encoding: Option<EncodingReport>,
 }
 
 #[derive(Debug, Clone, Serialize)]
@@ -83,6 +95,7 @@ pub struct ObjectExport {
 
 pub enum OutputContent<'a> {
     Region(&'a Region),
+    Encoded(&'a [u8]),
     Png {
         image: &'a RgbaImage,
         options: &'a ImageEncodeOptions,
@@ -93,6 +106,10 @@ impl OutputContent<'_> {
     pub fn write_to<W: Write>(&self, writer: &mut W) -> ExportResult<u64> {
         match self {
             Self::Region(region) => Ok(region.copy_range(0, region.len(), writer)?),
+            Self::Encoded(bytes) => {
+                writer.write_all(bytes)?;
+                Ok(bytes.len() as u64)
+            }
             Self::Png { image, options } => Ok(write_rgba_image_with_options(
                 image,
                 ImageFormat::Png,
@@ -343,11 +360,36 @@ fn export_texture(
                     pixel[..3].fill(request.alpha8_rgb);
                 });
             }
+            let encoded = if request.format == ExportFormat::Png
+                && request.optimize == OptimizationEffort::None
+            {
+                None
+            } else {
+                Some(encode_image(
+                    &image,
+                    &EncodingRequest {
+                        format: match request.format {
+                            ExportFormat::Png => EncodedFormat::Png,
+                            ExportFormat::Webp => EncodedFormat::Webp,
+                            ExportFormat::Auto => EncodedFormat::Auto,
+                            ExportFormat::Native => unreachable!(),
+                        },
+                        effort: request.optimize,
+                        compression: request.png_compression,
+                        budget_bytes: request.decoder_budget_bytes,
+                        timeout_seconds: request.optimize_seconds,
+                    },
+                )?)
+            };
+            let extension = encoded
+                .as_ref()
+                .map(|value| value.format.extension())
+                .unwrap_or("png");
             let descriptor = OutputDescriptor {
                 relative_name: if cube {
-                    format!("face-{face}/mip-{mip:02}.png")
+                    format!("face-{face}/mip-{mip:02}.{extension}")
                 } else {
-                    format!("mip-{mip:02}.png")
+                    format!("mip-{mip:02}.{extension}")
                 },
                 kind: kind.into(),
                 name: texture.name.clone(),
@@ -357,6 +399,7 @@ fn export_texture(
                 height: Some(height),
                 rgba_sha256: Some(hash_display_rgba(&image)),
                 source_payload_sha256: None,
+                encoding: encoded.as_ref().map(|value| value.report.clone()),
             };
             let options = ImageEncodeOptions {
                 png_compression: request.png_compression,
@@ -365,9 +408,12 @@ fn export_texture(
             };
             let output = sink.write(
                 &descriptor,
-                OutputContent::Png {
-                    image: &image,
-                    options: &options,
+                match &encoded {
+                    Some(value) => OutputContent::Encoded(&value.bytes),
+                    None => OutputContent::Png {
+                        image: &image,
+                        options: &options,
+                    },
                 },
             )?;
             result.outputs.push(ExportedFile { descriptor, output });
@@ -410,6 +456,7 @@ fn descriptor(relative_name: &str, kind: &str, name: &str) -> OutputDescriptor {
         height: None,
         rgba_sha256: None,
         source_payload_sha256: None,
+        encoding: None,
     }
 }
 

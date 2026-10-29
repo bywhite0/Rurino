@@ -1,6 +1,6 @@
 # 第三方许可与来源
 
-本清单按 Cargo.lock 和 `cargo metadata --offline --locked --filter-platform x86_64-pc-windows-msvc` 解析的非开发依赖生成，共 91 个第三方 crate；包含目标平台适用的运行与构建依赖。
+本清单按 Cargo.lock 和 `cargo metadata --offline --locked --filter-platform x86_64-pc-windows-msvc` 解析的非开发依赖生成，共 96 个第三方 crate；包含目标平台适用的运行与构建依赖。
 
 Rurino 自有代码使用 MIT 许可。第三方依赖各自的许可表达式与版权声明仍适用，不将整个依赖图表述为 MIT。多选许可保留 crate 内全部可用许可文本，AND 许可同时保留其附加文本。
 
@@ -73,6 +73,8 @@ MPL-2.0 为这些文件保留其许可，不改变独立自有代码的 MIT 声�
 | jpeg-encoder | 0.7.1 | (MIT OR Apache-2.0) AND IJG | [来源](https://github.com/vstroebel/jpeg-encoder) | [LICENSE-APACHE](licenses/jpeg-encoder-0.7.1/LICENSE-APACHE)、[LICENSE-IJG](licenses/jpeg-encoder-0.7.1/LICENSE-IJG)、[LICENSE-MIT](licenses/jpeg-encoder-0.7.1/LICENSE-MIT) |
 | lazy_static | 1.5.1 | MIT OR Apache-2.0 | [来源](https://github.com/rust-lang-nursery/lazy-static.rs) | [LICENSE-APACHE](licenses/lazy_static-1.5.1/LICENSE-APACHE)、[LICENSE-MIT](licenses/lazy_static-1.5.1/LICENSE-MIT) |
 | lewton | 0.10.2 | MIT OR Apache-2.0 | [来源](https://github.com/RustAudio/lewton) | [LICENSE](licenses/lewton-0.10.2/LICENSE) |
+| libdeflate-sys | 1.26.1 | Apache-2.0 | [来源](https://github.com/libdeflater/libdeflater) | [LICENSE](licenses/libdeflate-sys-1.26.1/LICENSE)、[libdeflate/COPYING](licenses/libdeflate-sys-1.26.1/libdeflate/COPYING) |
+| libdeflater | 1.26.1 | Apache-2.0 | [来源](https://github.com/libdeflater/libdeflater) | [LICENSE](licenses/libdeflater-1.26.1/LICENSE) |
 | log | 0.4.34 | MIT OR Apache-2.0 | [来源](https://github.com/rust-lang/log) | [LICENSE-APACHE](licenses/log-0.4.34/LICENSE-APACHE)、[LICENSE-MIT](licenses/log-0.4.34/LICENSE-MIT) |
 | lz4_flex | 0.14.0 | MIT | [来源](https://github.com/pseitz/lz4_flex) | [LICENSE](licenses/lz4_flex-0.14.0/LICENSE) |
 | lzma-rust2 | 0.21.0 | Apache-2.0 | [来源](https://github.com/hasenbanck/lzma-rust2/) | [LICENSE](licenses/lzma-rust2-0.21.0/LICENSE) |
@@ -82,6 +84,7 @@ MPL-2.0 为这些文件保留其许可，不改变独立自有代码的 MIT 声�
 | num-complex | 0.4.6 | MIT OR Apache-2.0 | [来源](https://github.com/rust-num/num-complex) | [LICENSE-APACHE](licenses/num-complex-0.4.6/LICENSE-APACHE)、[LICENSE-MIT](licenses/num-complex-0.4.6/LICENSE-MIT) |
 | num-traits | 0.2.19 | MIT OR Apache-2.0 | [来源](https://github.com/rust-num/num-traits) | [LICENSE-APACHE](licenses/num-traits-0.2.19/LICENSE-APACHE)、[LICENSE-MIT](licenses/num-traits-0.2.19/LICENSE-MIT) |
 | once_cell_polyfill | 1.70.2 | MIT OR Apache-2.0 | [来源](https://github.com/polyfill-rs/once_cell_polyfill) | [LICENSE-APACHE](licenses/once_cell_polyfill-1.70.2/LICENSE-APACHE)、[LICENSE-MIT](licenses/once_cell_polyfill-1.70.2/LICENSE-MIT) |
+| oxipng | 10.2.1 | MIT | [来源](https://github.com/oxipng/oxipng) | [LICENSE](licenses/oxipng-10.2.1/LICENSE) |
 | paste | 1.0.15 | MIT OR Apache-2.0 | [来源](https://github.com/dtolnay/paste) | [LICENSE-APACHE](licenses/paste-1.0.15/LICENSE-APACHE)、[LICENSE-MIT](licenses/paste-1.0.15/LICENSE-MIT) |
 | pkg-config | 0.3.34 | MIT OR Apache-2.0 | [来源](https://github.com/rust-lang/pkg-config-rs) | [LICENSE-APACHE](licenses/pkg-config-0.3.34/LICENSE-APACHE)、[LICENSE-MIT](licenses/pkg-config-0.3.34/LICENSE-MIT) |
 | png | 0.18.1 | MIT OR Apache-2.0 | [来源](https://github.com/image-rs/image-png) | [LICENSE-APACHE](licenses/png-0.18.1/LICENSE-APACHE)、[LICENSE-MIT](licenses/png-0.18.1/LICENSE-MIT) |
@@ -90,7 +93,9 @@ MPL-2.0 为这些文件保留其许可，不改变独立自有代码的 MIT 声�
 | quick-error | 2.0.1 | MIT/Apache-2.0 | [来源](http://github.com/tailhook/quick-error) | [LICENSE-APACHE](licenses/quick-error-2.0.1/LICENSE-APACHE)、[LICENSE-MIT](licenses/quick-error-2.0.1/LICENSE-MIT) |
 | quote | 1.0.47 | MIT OR Apache-2.0 | [来源](https://github.com/dtolnay/quote) | [LICENSE-APACHE](licenses/quote-1.0.47/LICENSE-APACHE)、[LICENSE-MIT](licenses/quote-1.0.47/LICENSE-MIT) |
 | regex-lite | 0.1.9 | MIT OR Apache-2.0 | [来源](https://github.com/rust-lang/regex) | [LICENSE-APACHE](licenses/regex-lite-0.1.9/LICENSE-APACHE)、[LICENSE-MIT](licenses/regex-lite-0.1.9/LICENSE-MIT) |
+| rgb | 0.8.53 | MIT | [来源](https://github.com/kornelski/rust-rgb) | [LICENSE](licenses/rgb-0.8.53/LICENSE) |
 | ruopus | 0.1.2 | MIT | [来源](https://github.com/jmg049/ruopus) | [LICENSE](licenses/ruopus-0.1.2/LICENSE) |
+| rustc-hash | 2.1.3 | Apache-2.0 OR MIT | [来源](https://github.com/rust-lang/rustc-hash) | [LICENSE-APACHE](licenses/rustc-hash-2.1.3/LICENSE-APACHE)、[LICENSE-MIT](licenses/rustc-hash-2.1.3/LICENSE-MIT) |
 | serde | 1.0.229 | MIT OR Apache-2.0 | [来源](https://github.com/serde-rs/serde) | [LICENSE-APACHE](licenses/serde-1.0.229/LICENSE-APACHE)、[LICENSE-MIT](licenses/serde-1.0.229/LICENSE-MIT) |
 | serde_core | 1.0.229 | MIT OR Apache-2.0 | [来源](https://github.com/serde-rs/serde) | [LICENSE-APACHE](licenses/serde_core-1.0.229/LICENSE-APACHE)、[LICENSE-MIT](licenses/serde_core-1.0.229/LICENSE-MIT) |
 | serde_derive | 1.0.229 | MIT OR Apache-2.0 | [来源](https://github.com/serde-rs/serde) | [LICENSE-APACHE](licenses/serde_derive-1.0.229/LICENSE-APACHE)、[LICENSE-MIT](licenses/serde_derive-1.0.229/LICENSE-MIT) |

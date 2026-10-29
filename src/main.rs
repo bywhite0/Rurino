@@ -1,4 +1,5 @@
 mod catalog;
+mod encoding;
 mod export;
 mod loading;
 
@@ -106,6 +107,12 @@ struct Selection {
     profile: Profile,
     #[arg(long, default_value_t = 0)]
     alpha8_rgb: u8,
+    #[arg(long, value_enum, default_value = "none")]
+    #[serde(default)]
+    optimize: Optimize,
+    #[arg(long, default_value_t = 5)]
+    #[serde(default = "default_optimize_seconds")]
+    optimize_seconds: u64,
 }
 
 #[derive(Clone, Copy, Serialize, Deserialize, ValueEnum, PartialEq, Eq)]
@@ -113,6 +120,21 @@ struct Selection {
 enum Format {
     Native,
     Png,
+    Webp,
+    Auto,
+}
+
+#[derive(Clone, Copy, Default, Serialize, Deserialize, ValueEnum)]
+#[serde(rename_all = "lowercase")]
+enum Optimize {
+    #[default]
+    None,
+    Balanced,
+    Small,
+}
+
+fn default_optimize_seconds() -> u64 {
+    5
 }
 
 #[derive(Clone, Copy, Serialize, Deserialize, ValueEnum, PartialEq, Eq)]
@@ -179,6 +201,8 @@ struct StoredOutput {
 struct StoredDescriptor {
     rgba_sha256: Option<String>,
     source_payload_sha256: Option<String>,
+    width: Option<u32>,
+    height: Option<u32>,
 }
 
 #[derive(Deserialize)]
@@ -516,10 +540,11 @@ fn extract_bundle(
         return Err(format!("加载后解码预算不足：{}", input.display()).into());
     }
     let request = ExportRequest {
-        format: if selection.format == Format::Png {
-            ExportFormat::Png
-        } else {
-            ExportFormat::Native
+        format: match selection.format {
+            Format::Native => ExportFormat::Native,
+            Format::Png => ExportFormat::Png,
+            Format::Webp => ExportFormat::Webp,
+            Format::Auto => ExportFormat::Auto,
         },
         all_mips: selection.mips == Mips::All,
         decoder_budget_bytes: decoder_budget,
@@ -529,10 +554,17 @@ fn extract_bundle(
             Profile::Best => PngCompression::Best,
         },
         alpha8_rgb: selection.alpha8_rgb,
+        optimize: match selection.optimize {
+            Optimize::None => encoding::OptimizationEffort::None,
+            Optimize::Balanced => encoding::OptimizationEffort::Balanced,
+            Optimize::Small => encoding::OptimizationEffort::Small,
+        },
+        optimize_seconds: selection.optimize_seconds,
     };
     let policy_key = hash_bytes(&serde_json::to_vec(&json!({
         "tool": env!("CARGO_PKG_VERSION"), "core": "0.6.1", "export_schema": 1,
             "export_implementation": hash_bytes(include_bytes!("export.rs")),
+            "encoding_implementation": hash_bytes(include_bytes!("encoding.rs")),
         "selection": selection,
     }))?);
     let mut processed = 0usize;
@@ -714,24 +746,23 @@ fn verify(path: &Path, level: VerifyLevel, memory_budget: u64) -> export::Export
             }
             if level == VerifyLevel::Decoded {
                 if let Some(expected) = entry.descriptor.rgba_sha256 {
-                    let mut decoder = png::Decoder::new(BufReader::new(File::open(&file)?));
-                    decoder.set_limits(png::Limits {
-                        bytes: (memory_budget / 2) as usize,
-                    });
-                    let mut reader = decoder.read_info()?;
-                    let size = reader.output_buffer_size().ok_or("PNG输出大小溢出")?;
-                    if size as u64 > memory_budget / 2 {
-                        return Err("PNG验证帧超过内存预算".into());
+                    if entry.output.bytes > memory_budget / 4 {
+                        return Err("图片文件超过验证读取预算".into());
                     }
-                    let mut buffer = vec![0; size];
-                    let info = reader.next_frame(&mut buffer)?;
-                    if info.color_type != png::ColorType::Rgba
-                        || info.bit_depth != png::BitDepth::Eight
+                    let format = match file.extension().and_then(|value| value.to_str()) {
+                        Some("png") => encoding::EncodedFormat::Png,
+                        Some("webp") => encoding::EncodedFormat::Webp,
+                        _ => return Err("像素验证不支持该图片扩展名".into()),
+                    };
+                    let image =
+                        encoding::decoded_image_hash(&fs::read(&file)?, format, memory_budget)?;
+                    if Some(image.width) != entry.descriptor.width
+                        || Some(image.height) != entry.descriptor.height
                     {
-                        return Err("首版像素验证要求8位RGBA PNG".into());
+                        return Err("图片尺寸与清单不符".into());
                     }
-                    if hash_bytes(&buffer[..info.buffer_size()]) != expected {
-                        return Err("PNG像素SHA-256不符".into());
+                    if image.rgba_sha256 != expected {
+                        return Err("图片像素SHA-256不符".into());
                     }
                     decoded += 1;
                 } else if entry
@@ -748,7 +779,7 @@ fn verify(path: &Path, level: VerifyLevel, memory_budget: u64) -> export::Export
     }
     println!(
         "{}",
-        json!({"event": "verified", "files": checked, "decoded_pngs": decoded, "statuses": statuses})
+        json!({"event": "verified", "files": checked, "decoded_images": decoded, "statuses": statuses})
     );
     Ok(())
 }

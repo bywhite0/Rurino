@@ -185,11 +185,14 @@ fn sorted_unique(paths: Vec<PathBuf>) -> ExportResult<Vec<PathBuf>> {
 mod tests {
     use std::fs;
     use std::path::Path;
+    use std::sync::atomic::{AtomicU64, Ordering};
     use std::time::{SystemTime, UNIX_EPOCH};
 
     use serde::de::DeserializeSeed;
 
     use super::{CatalogSelection, collect_inputs, validate_label};
+
+    static TEMPORARY_SEQUENCE: AtomicU64 = AtomicU64::new(0);
 
     fn with_catalog(data: &[u8], check: impl FnOnce(&Path, &Path)) {
         let temporary = std::env::temp_dir().canonicalize().unwrap();
@@ -198,8 +201,9 @@ mod tests {
             .unwrap()
             .as_nanos();
         let root = temporary.join(format!(
-            "rurino-catalog-{}-{identifier}",
-            std::process::id()
+            "rurino-catalog-{}-{identifier}-{}",
+            std::process::id(),
+            TEMPORARY_SEQUENCE.fetch_add(1, Ordering::Relaxed)
         ));
         fs::create_dir(&root).unwrap();
         let files = ["one.assetbundle", "two.assetbundle", "catalog.json"];
