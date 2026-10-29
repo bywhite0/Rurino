@@ -1,0 +1,262 @@
+{
+  "schema": 1,
+  "source_sha256": "ea92b2e702aa44afeb98e3362cfbd302584b8b68d199fea9fed7a950696572b3",
+  "frames": [
+    {
+      "name": "source_defaults",
+      "operations": []
+    },
+    {
+      "name": "absolute_root",
+      "operations": [
+        {
+          "op": "root_motion",
+          "node": 1,
+          "position": [
+            -5,
+            6,
+            7
+          ],
+          "rotation": [
+            0.0,
+            0.7071067811865476,
+            0.0,
+            0.7071067811865476
+          ]
+        }
+      ]
+    },
+    {
+      "name": "absolute_root_repeated",
+      "operations": [
+        {
+          "op": "root_motion",
+          "node": 1,
+          "position": [
+            -5,
+            6,
+            7
+          ],
+          "rotation": [
+            0.0,
+            0.7071067811865476,
+            0.0,
+            0.7071067811865476
+          ]
+        },
+        {
+          "op": "root_motion",
+          "node": 1,
+          "position": [
+            -5,
+            6,
+            7
+          ],
+          "rotation": [
+            0.0,
+            0.7071067811865476,
+            0.0,
+            0.7071067811865476
+          ]
+        }
+      ]
+    },
+    {
+      "name": "face_world_and_local",
+      "operations": [
+        {
+          "op": "face_sync",
+          "upper_chest": {
+            "source": 3,
+            "target": 4
+          },
+          "local_rotations": [
+            {
+              "source": 5,
+              "target": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "root_then_face",
+      "operations": [
+        {
+          "op": "root_motion",
+          "node": 1,
+          "position": [
+            -5,
+            6,
+            7
+          ],
+          "rotation": [
+            0.0,
+            0.7071067811865476,
+            0.0,
+            0.7071067811865476
+          ]
+        },
+        {
+          "op": "face_sync",
+          "upper_chest": {
+            "source": 3,
+            "target": 4
+          },
+          "local_rotations": [
+            {
+              "source": 5,
+              "target": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "unclamped_morph",
+      "operations": [
+        {
+          "op": "set_blend_shape",
+          "renderer": 0,
+          "index": 0,
+          "weight": -120.5
+        },
+        {
+          "op": "set_blend_shape",
+          "renderer": 0,
+          "index": 2,
+          "weight": 240.25
+        }
+      ]
+    },
+    {
+      "name": "cry_indexed_load_renderer_write",
+      "operations": [
+        {
+          "op": "set_property_block",
+          "renderer": 0,
+          "material_index": null,
+          "ints": {
+            "renderer_only": 9
+          }
+        },
+        {
+          "op": "set_property_block",
+          "renderer": 0,
+          "material_index": 1,
+          "ints": {
+            "seed": 4,
+            "_UseCryParameters": 8
+          }
+        },
+        {
+          "op": "cry_eye_init",
+          "controller": "eye",
+          "renderer": 0,
+          "material_index": 1,
+          "distortion_node": 7,
+          "property": "_UseCryParameters"
+        },
+        {
+          "op": "cry_eye",
+          "controller": "eye",
+          "is_cry": true
+        }
+      ]
+    },
+    {
+      "name": "cry_missing_slot_does_not_fallback",
+      "operations": [
+        {
+          "op": "set_property_block",
+          "renderer": 0,
+          "material_index": null,
+          "ints": {
+            "renderer_only": 9
+          }
+        },
+        {
+          "op": "cry_eye_init",
+          "controller": "eye",
+          "renderer": 0,
+          "material_index": 1,
+          "distortion_node": 7,
+          "property": "_UseCryParameters"
+        },
+        {
+          "op": "cry_eye",
+          "controller": "eye",
+          "is_cry": true
+        }
+      ]
+    },
+    {
+      "name": "cry_cached_slot_does_not_reload",
+      "operations": [
+        {
+          "op": "set_property_block",
+          "renderer": 0,
+          "material_index": 1,
+          "ints": {
+            "seed": 4
+          }
+        },
+        {
+          "op": "cry_eye_init",
+          "controller": "eye",
+          "renderer": 0,
+          "material_index": 1,
+          "distortion_node": 7,
+          "property": "_UseCryParameters"
+        },
+        {
+          "op": "set_property_block",
+          "renderer": 0,
+          "material_index": 1,
+          "ints": {
+            "seed": 99
+          }
+        },
+        {
+          "op": "cry_eye",
+          "controller": "eye",
+          "is_cry": true
+        },
+        {
+          "op": "cry_eye",
+          "controller": "eye",
+          "is_cry": false
+        }
+      ]
+    },
+    {
+      "name": "parent_inactive",
+      "operations": [
+        {
+          "op": "set_active",
+          "node": 7,
+          "active": false
+        }
+      ]
+    },
+    {
+      "name": "nonunit_rotation_calculation_only",
+      "operations": [
+        {
+          "op": "set_local_trs",
+          "node": 2,
+          "rotation": [
+            0,
+            0,
+            0,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "name": "source_defaults_again",
+      "operations": []
+    }
+  ]
+}

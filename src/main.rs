@@ -5,6 +5,8 @@ mod loading;
 mod model;
 mod model_glb;
 mod model_source;
+mod pose;
+mod pose_rules;
 
 use std::collections::{BTreeMap, HashMap};
 use std::fs::{self, File, OpenOptions};
@@ -40,6 +42,20 @@ struct Cli {
 
 #[derive(Subcommand)]
 enum Command {
+    Pose {
+        #[arg(long, conflicts_with = "scene", required_unless_present = "scene")]
+        model: Option<PathBuf>,
+        #[arg(long, conflicts_with = "model", required_unless_present = "model")]
+        scene: Option<PathBuf>,
+        #[arg(long)]
+        state: PathBuf,
+        #[arg(long)]
+        output: PathBuf,
+        #[arg(long, default_value = "256MiB", value_parser = parse_bytes)]
+        memory_budget: u64,
+        #[arg(long, default_value = "64MiB", value_parser = parse_bytes)]
+        output_budget: u64,
+    },
     Model {
         #[arg(long)]
         input: PathBuf,
@@ -351,6 +367,21 @@ fn main() {
 
 fn run(cli: Cli) -> export::ExportResult<()> {
     match cli.command {
+        Command::Pose {
+            model,
+            scene,
+            state,
+            output,
+            memory_budget,
+            output_budget,
+        } => pose::export_pose(pose::PoseOptions {
+            model,
+            scene,
+            state,
+            output,
+            memory_budget,
+            output_budget,
+        }),
         Command::Model {
             input,
             catalog,

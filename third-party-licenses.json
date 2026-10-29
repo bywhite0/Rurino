@@ -2,7 +2,7 @@
   "schema": 1,
   "target": "x86_64-pc-windows-msvc",
   "project_license": "MIT",
-  "cargo_lock_sha256": "7c4a114565a40ec9cebcb6c8aee90ee993c18b3274dd8606707bfe545837ee7d",
+  "cargo_lock_sha256": "f3cd42265312aa1803cc8b1b37f3d375a8688c4c9ea9fbf2dc4dadb5ea8bee61",
   "package_count": 96,
   "license_file_count": 189,
   "license_expression_counts": {
