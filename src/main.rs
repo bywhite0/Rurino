@@ -2,6 +2,9 @@ mod catalog;
 mod encoding;
 mod export;
 mod loading;
+mod model;
+mod model_glb;
+mod model_source;
 
 use std::collections::{BTreeMap, HashMap};
 use std::fs::{self, File, OpenOptions};
@@ -37,6 +40,24 @@ struct Cli {
 
 #[derive(Subcommand)]
 enum Command {
+    Model {
+        #[arg(long)]
+        input: PathBuf,
+        #[arg(long)]
+        catalog: Option<PathBuf>,
+        #[arg(long = "dependency", conflicts_with = "catalog")]
+        dependencies: Vec<PathBuf>,
+        #[arg(long, allow_hyphen_values = true)]
+        root_path_id: Option<i64>,
+        #[arg(long, default_value_t = 0)]
+        root_file_index: usize,
+        #[arg(long)]
+        output: PathBuf,
+        #[arg(long, default_value = "256MiB", value_parser = parse_bytes)]
+        memory_budget: u64,
+        #[arg(long, default_value = "64MiB", value_parser = parse_bytes)]
+        output_budget: u64,
+    },
     Inspect {
         #[command(flatten)]
         source: SourceArgs,
@@ -256,6 +277,18 @@ impl OutputSink for FileSink<'_> {
         descriptor: &OutputDescriptor,
         content: OutputContent<'_>,
     ) -> export::ExportResult<WrittenOutput> {
+        Ok(self
+            .write_content(descriptor, |writer| content.write_to(writer))?
+            .0)
+    }
+}
+
+impl FileSink<'_> {
+    fn write_content<T>(
+        &mut self,
+        descriptor: &OutputDescriptor,
+        operation: impl FnOnce(&mut QuotaWriter<'_>) -> export::ExportResult<T>,
+    ) -> export::ExportResult<(WrittenOutput, T)> {
         let leaf = Path::new(&descriptor.relative_name);
         if !safe_relative(&descriptor.relative_name) {
             return Err("输出名称必须是目录内的相对路径".into());
@@ -276,18 +309,21 @@ impl OutputSink for FileSink<'_> {
             used: self.used,
             limit: self.output_budget,
         };
-        let result = content.write_to(&mut writer).and_then(|_| {
+        let result = operation(&mut writer).and_then(|value| {
             writer.flush()?;
-            Ok(())
+            Ok(value)
         });
         let bytes = writer.bytes;
         let sha256 = format!("{:x}", writer.hash.clone().finalize());
         drop(writer);
-        if let Err(error) = result {
-            self.used.fetch_sub(bytes, Ordering::AcqRel);
-            let _ = fs::remove_file(&temporary);
-            return Err(error);
-        }
+        let value = match result {
+            Ok(value) => value,
+            Err(error) => {
+                self.used.fetch_sub(bytes, Ordering::AcqRel);
+                let _ = fs::remove_file(&temporary);
+                return Err(error);
+            }
+        };
         if target.exists() {
             let previous_bytes = target.metadata()?.len();
             fs::remove_file(&target)?;
@@ -295,11 +331,14 @@ impl OutputSink for FileSink<'_> {
         }
         fs::rename(temporary, &target)?;
         self.published.push((target, bytes));
-        Ok(WrittenOutput {
-            path: relative.to_string_lossy().replace('\\', "/"),
-            bytes,
-            sha256,
-        })
+        Ok((
+            WrittenOutput {
+                path: relative.to_string_lossy().replace('\\', "/"),
+                bytes,
+                sha256,
+            },
+            value,
+        ))
     }
 }
 
@@ -312,6 +351,25 @@ fn main() {
 
 fn run(cli: Cli) -> export::ExportResult<()> {
     match cli.command {
+        Command::Model {
+            input,
+            catalog,
+            dependencies,
+            root_path_id,
+            root_file_index,
+            output,
+            memory_budget,
+            output_budget,
+        } => model::extract_model(model::ModelOptions {
+            input,
+            catalog,
+            dependencies,
+            root_path_id,
+            root_file_index,
+            output,
+            memory_budget,
+            output_budget,
+        }),
         Command::Inspect {
             source,
             memory_budget,
@@ -745,6 +803,12 @@ fn verify(path: &Path, level: VerifyLevel, memory_budget: u64) -> export::Export
                 return Err(format!("输出文件校验不符：{}", file.display()).into());
             }
             if level == VerifyLevel::Decoded {
+                if file.extension().is_some_and(|value| value == "glb") {
+                    return Err(
+                        "模型数值核验需要独立源数据与回读工具；文件哈希核验请使用 --level files"
+                            .into(),
+                    );
+                }
                 if let Some(expected) = entry.descriptor.rgba_sha256 {
                     if entry.output.bytes > memory_budget / 4 {
                         return Err("图片文件超过验证读取预算".into());
